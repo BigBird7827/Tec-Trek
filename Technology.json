@@ -1,6 +1,6 @@
 {
-  "Version": 10,
-  "GeneratedUTC": "2025-12-14T08:21:33Z",
+  "Version": 11,
+  "GeneratedUTC": "2025-12-14T09:54:15Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -22,6 +22,13 @@
       "Description": "Holographic projection systems: holodecks, holoemitters, photonic interfaces, and mobile holograms.",
       "SortOrder": 30,
       "SidebarText": "Holography covers projector and emitter systems that create hologram...s) that let photonic programs function in day‑to‑day ship operations."
+    },
+    {
+      "ID": "cloaking",
+      "Name": "Cloaking",
+      "Description": "Stealth systems that conceal ships and craft by reducing visibility to the eye and to sensors.",
+      "SortOrder": 40,
+      "SidebarText": "Cloaking devices generate a ship‑scale field that redirects light and other energy around a vessel, making it difficult to detect visually and by many sensors. On screen, cloaking is treated as a major tactical advantage because it lets a ship approach, reposition, or withdraw without presenting a reliable target.\n\nCloaking is also portrayed as a constrained operating mode. It is tied into ship systems, demands significant power, and often comes with tactical limitations that force the ship to expose itself at key moments. Countermeasures evolve in parallel, with Starfleet developing tachyon-based scans and multi‑ship detection grids designed to reveal cloaked ships under the right conditions."
     }
   ],
   "Technologies": [
@@ -1077,7 +1084,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Holo%20Projector.png",
+        "Image": "",
         "Gallery": []
       }
     },
@@ -1187,7 +1194,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.webp",
+        "Image": "",
         "Gallery": []
       }
     },
@@ -1327,7 +1334,226 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Mobile%20Emitter.png",
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-romulan-cloaking-device",
+      "Name": "Romulan Cloaking Device",
+      "SystemID": "cloaking",
+      "Type": "Device",
+      "Summary": "Shipboard hardware that generates a cloaking field around a vessel, reducing detectability by redirecting light and other energy around the hull. It is introduced as a decisive Romulan advantage—allowing approach, maneuver, and engagement timing to be controlled while the ship remains difficult to locate.\n\nAcross later stories, cloaking is portrayed as an operating mode with constraints and countermeasures: cloaked ships often expose themselves to take actions that require a stable target solution, and Starfleet develops tachyon‑based techniques (including detection grids) to reveal cloaked vessels.",
+      "Sections": {
+        "What it is": "A Romulan cloaking device is presented as shipboard equipment that creates a cloaking field (early dialogue may frame it as an “invisibility” system). The field redirects light and other energy around the vessel so it appears absent to the eye and is difficult for standard sensors to lock onto.",
+        "On-screen behavior": "Romulan ships routinely use cloak tactically to control range and timing: they approach unseen, maneuver for advantage, and choose when to reveal themselves for a strike or scan.\n\nEven in early appearances, the Enterprise may detect motion or other indirect signatures despite the ship not being visually present, reinforcing that “invisible” does not mean “undetectable under every circumstance.”",
+        "Operational tradeoffs": "Cloaking is consistently portrayed as power-hungry and tightly coupled to other ship systems. Many stories stage engagements as a cycle of cloak for movement and positioning, then decloak to take action that requires full system access.\n\nFor Tec‑Trek purposes, the recurring takeaway is that a cloak is an operational mode with constraints and procedures—one that shapes tactics as much as it provides concealment.",
+        "Counter-detection": "Starfleet’s best-known countermeasure is the tachyon detection grid: multiple ships project tachyon beams to form a field that can reveal a cloaked vessel passing through. Tachyon scans and sweeps are also used in other depictions as a focused attempt to detect cloak-related signatures.",
+        "Federation policy context": "In the 24th century, Federation policy is explicitly constrained by the Treaty of Algeron, which prohibits Starfleet from developing or using cloaking devices. A later exception is portrayed when a Romulan cloaking device is installed on the USS Defiant under specified restrictions and oversight."
+      },
+      "RelatedTechIDs": [],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Balance of Terror",
+          "Season": 1,
+          "Episode": 14,
+          "Notes": "Romulan warbird uses an “invisibility” system; Enterprise detects a moving object while nothing is visible."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Enterprise Incident",
+          "Season": 3,
+          "Episode": 2,
+          "Notes": "Enterprise steals and employs a Romulan cloaking device."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Redemption II",
+          "Season": 5,
+          "Episode": 1,
+          "Notes": "Starfleet deploys a tachyon detection grid to expose cloaked ships."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Pegasus",
+          "Season": 7,
+          "Episode": 12,
+          "Notes": "Treaty of Algeron is cited as prohibiting Federation cloaking technology; an illegal cloak is central to the plot."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Search, Part I",
+          "Season": 3,
+          "Episode": 1,
+          "Notes": "USS Defiant is equipped with a Romulan cloaking device for Dominion-related operations under restrictions."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Early “invisibility screen” framing",
+          "Summary": "Early appearances frame the effect as an invisibility system; later portrayals standardize the concept as a cloaking field that hides the ship visually and complicates sensor tracking."
+        },
+        {
+          "Name": "Treaty-bounded Federation use (Romulan device)",
+          "Summary": "A limited-use configuration where a Romulan cloak is installed on a Starfleet ship under explicit operational restrictions and oversight."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Cloaking field",
+          "Definition": "A projected field that redirects light and other energy around a vessel, reducing visual and sensor detectability."
+        },
+        {
+          "Term": "Tachyon detection grid",
+          "Definition": "A multi-ship countermeasure using active tachyon beams to form a field that can reveal cloaked vessels passing through."
+        },
+        {
+          "Term": "Tachyon scan",
+          "Definition": "A focused search using tachyon emissions intended to detect signatures associated with cloaking fields."
+        },
+        {
+          "Term": "Decloak window",
+          "Definition": "The brief tactical exposure that can occur when a ship transitions between cloaked and uncloaked states."
+        }
+      ],
+      "Operators": [
+        "Romulan Star Empire",
+        "United Federation of Planets / Starfleet (restricted use via Romulan device)"
+      ],
+      "Constraints": [
+        "Cloak operation is portrayed as power-intensive and system-coupled.",
+        "Many depictions stage combat as a decloak-to-act cycle rather than continuous cloaked engagement.",
+        "Prepared opponents can sometimes expose cloaked ships with tachyon-based countermeasures."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "Romulan Star Empire"
+        ],
+        "FirstSeen": "TOS: Balance of Terror",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-klingon-cloaking-device",
+      "Name": "Klingon Cloaking Device",
+      "SystemID": "cloaking",
+      "Type": "Device",
+      "Summary": "A shipboard cloaking system used to conceal Klingon vessels—most iconically Birds-of-Prey—while they maneuver into position for attack or withdrawal. On screen, Klingon cloak tactics emphasize ambush: close while hidden, reveal briefly to strike, then disappear again.\n\nBaseline portrayals generally require a ship to decloak to fire, and opponents can sometimes reveal cloaked ships using specialized detection methods such as tachyon-based scans and grids. A notable exception is a prototype Bird‑of‑Prey depicted as firing torpedoes while remaining cloaked.",
+      "Sections": {
+        "Tactical pattern": "Klingon cloak use is typically staged as an ambush tool. Cloaked ships close to favorable range and angle, decloak to attack, and recloak to reposition or disengage.\n\nThis makes the cloak less about permanent invisibility and more about controlling engagement distance and timing.",
+        "Platforms and deployment": "Cloaking is strongly associated with Klingon Birds-of-Prey across multiple eras, and it also appears on other Klingon vessels in various stories. Regardless of platform, the cloak is treated as integrated ship equipment rather than a one-off trick.",
+        "Typical limitations": "Most portrayals keep a consistent baseline: a ship decloaks to fire. This baseline matters because stories treat the ability to fire while cloaked as a special case rather than a default feature.",
+        "Detection and exposure": "Cloaked Klingon ships can still produce indirect cues under certain conditions. In one film depiction, observers notice spatial distortions associated with a cloaked Bird-of-Prey.\n\nPrepared opponents also employ tachyon-based methods and detection grids to expose cloaked ships.",
+        "Exceptional variants": "A prototype Bird-of-Prey is depicted as firing torpedoes while remaining cloaked. The capability is portrayed as extraordinary and strategically dangerous."
+      },
+      "RelatedTechIDs": [],
+      "Appearances": [
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek III: The Search for Spock",
+          "Season": null,
+          "Episode": null,
+          "Notes": "A Klingon Bird-of-Prey uses a cloaking device; spatial distortions are noticed by Enterprise crew."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek VI: The Undiscovered Country",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Prototype Bird-of-Prey is depicted as firing torpedoes while cloaked."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TAS",
+          "Title": "The Time Trap",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Early depiction referencing Klingon cloaking capability."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Redemption II",
+          "Season": 5,
+          "Episode": 1,
+          "Notes": "Tachyon detection grid is deployed as a cloak countermeasure in a conflict involving Klingon/Romulan forces."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Standard Bird-of-Prey cloak",
+          "Summary": "Baseline cloak behavior used for approach and ambush; typically paired with decloak-to-fire staging."
+        },
+        {
+          "Name": "Fire-while-cloaked prototype",
+          "Summary": "Rare variant depicted as enabling torpedo fire while cloaked; treated as extraordinary rather than standard."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Cloak-state transition",
+          "Definition": "The activation/deactivation phase of the cloak where a ship may briefly become detectable or tactically committed."
+        },
+        {
+          "Term": "Spatial distortion",
+          "Definition": "A subtle visual cue associated with a cloaked ship in at least one on-screen depiction."
+        },
+        {
+          "Term": "Tachyon scan",
+          "Definition": "A tachyon-based search method used to detect signatures associated with cloaking fields."
+        },
+        {
+          "Term": "Tachyon detection grid",
+          "Definition": "A multi-ship field of tachyon beams used to reveal cloaked vessels passing through."
+        }
+      ],
+      "Operators": [
+        "Klingon Empire"
+      ],
+      "Constraints": [
+        "Standard operation is generally staged as decloak-to-fire, with rare special-case exceptions.",
+        "Cloaked vessels can sometimes be exposed by specialized countermeasures such as tachyon-based methods.",
+        "Cloak tactics are timing-dependent; concealment helps but does not eliminate risk."
+      ],
+      "Meta": {
+        "Series": [
+          "FILM",
+          "TAS",
+          "TNG"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "Klingon Empire"
+        ],
+        "FirstSeen": "FILM: Star Trek III: The Search for Spock",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
         "Gallery": []
       }
     }
