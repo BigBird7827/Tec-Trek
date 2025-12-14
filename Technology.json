@@ -1,12 +1,13 @@
 {
-  "Version": 2,
-  "GeneratedUTC": "2025-12-14T04:35:31Z",
+  "Version": 3,
+  "GeneratedUTC": "2025-12-14T05:11:51Z",
   "Systems": [
     {
       "ID": "propulsion",
       "Name": "Propulsion",
       "Description": "Warp, impulse, maneuvering thrusters, inertial management.",
-      "SortOrder": 10
+      "SortOrder": 10,
+      "SidebarText": "Warp, impulse, maneuvering thrusters, inertial management.\n\nFeatured: Warp drive\n\nNotes:\n• Warp operation depends on stable warp field geometry; asymmetry or coil imbalance can force a shutdown.\n• High warp output competes with other ship systems for power; emergency routing is common during combat or damage control.\n• Warp travel can be unsafe or impossible in certain spatial anomalies, dense fields, or subspace‑distorted regions."
     }
   ],
   "Technologies": [
