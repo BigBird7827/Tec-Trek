@@ -1,6 +1,6 @@
 {
-  "Version": 3,
-  "GeneratedUTC": "2025-12-14T05:11:51Z",
+  "Version": 5,
+  "GeneratedUTC": "2025-12-14T05:37:08Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -177,6 +177,163 @@
       },
       "Media": {
         "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Warp%20Drive.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-impulse-drive",
+      "Name": "Impulse drive",
+      "SystemID": "propulsion",
+      "Type": "System",
+      "Summary": "Impulse drive is the standard sublight propulsion mode used by starships for routine travel within a star system, close‑range navigation, docking approaches, formation flight, and tactical maneuvering. In practice, it’s the ship’s everyday “under normal space” engine: the setting you hear most often on the bridge—one‑quarter impulse, half impulse, or full impulse—when warp is unnecessary, unsafe, or simply the wrong tool.\n\nOn screen, impulse is consistently framed as a power‑regulated propulsion system integrated into the ship’s overall energy management. Captains call for changes in *impulse power* as readily as they call for shields or phasers, and engineering treats impulse as something that can be surged, rerouted, repaired, shut down, or pushed beyond safe limits in emergencies.",
+      "Sections": {
+        "What impulse drive is": "Impulse drive (often referred to as the ship’s impulse engines) provides sustained sublight thrust. It is used whenever a ship needs precise, controllable acceleration without engaging warp—leaving drydock, maneuvering in orbit, holding station, closing to transport range, or fighting at close quarters.\n\nImpulse is also an operational concept: bridge orders like “impulse power at your discretion,” “reduce impulse power,” or “full impulse” are treated as standardized shorthand for how hard the ship should push its sublight engines under current conditions.",
+        "Impulse power and shipwide energy management": "Impulse is presented as a major consumer of a ship’s power budget. Dialogue frequently treats impulse output as something that can be raised, lowered, restored, or lost—sometimes independently of other systems. When a ship is damaged, crews may fight to get *impulse power* back online, reroute conduits, or manually restore the engine feed so the ship can maneuver or escape.\n\nThat framing matters for your database: impulse isn’t just “go fast.” In many stories, it’s the difference between being able to change position, hold orbit, break a tractor lock, or avoid impact—especially when warp is unavailable.",
+        "Command language and operating modes": "Impulse is commonly expressed as a fraction of maximum (“one‑quarter impulse,” “half impulse,” “full impulse”). The shows don’t lock this to a single universal velocity; instead, it behaves like a bridge‑level throttle setting that accounts for ship class, mass, power availability, and safety constraints.\n\nTwo related concepts show up repeatedly:\n• **Reverse impulse** — the ship applies impulse thrust in reverse for braking, backing off, or holding position.\n• **Impulse at discretion** — the pilot or helmsman selects a safe output appropriate to the situation without needing a specific number.",
+        "Use cases across the franchise": "Impulse drive dominates day‑to‑day operations. It’s the mode for in‑system travel and close‑range work: leaving spacedock, approaching a planet, rendezvousing with another vessel, or executing delicate maneuvers where warp fields would be hazardous.\n\nIt also shows up in “time pressure” situations: ships run at impulse inside systems to intercept threats or reach a destination quickly while still obeying whatever limits apply to warp travel in that environment.",
+        "Tactical significance": "Most starship engagements are depicted at sublight scales: ships circle, exchange fire, line up torpedo shots, and reposition to protect a damaged area of shields. In that context, impulse performance is effectively the ship’s tactical mobility—how quickly it can bring weapons to bear, evade an attack run, or hold a defensive formation.\n\nDamage to impulse is therefore a serious tactical blow. When impulse drops offline, a ship can become a drifting target, unable to maintain distance or change heading effectively.",
+        "Failure modes, stress, and emergency behavior": "Impulse engines are often portrayed as temperamental under damage or extreme demand: they can surge, cut out, overheat, or require emergency handling. Stories treat “pushing impulse” as something that can be risky—either because the engines are already compromised or because the ship is operating at the edge of what its structure and systems can safely support.\n\nIn the most extreme cases, impulse operation is linked to catastrophic outcomes: a damaged ship may risk blowing its impulse engines, or an engineering team may attempt to overload the system as part of a desperate plan.",
+        "Visual identity and ship design cues": "Impulse drive is frequently represented visually by paired impulse engine ports or grilles on the aft portion of a ship’s main hull. These are distinct from warp nacelles and are treated as the visible “sublight engines.”\n\nEven when the exact geometry varies by era and class, the storytelling function is consistent: the impulse assembly signals sublight thrust and provides a recognizable cue for whether the ship is maneuvering under impulse rather than at warp.",
+        "Relationship to warp, thrusters, and inertial control": "Impulse sits in a family of ship handling systems. Thrusters handle fine translation and attitude changes; impulse provides sustained thrust for travel and combat maneuvers; warp handles interstellar transit. In practice, these systems interlock—particularly with inertial management—because the ship must remain habitable and controllable under acceleration.\n\nThis is why impulse is repeatedly treated as more than a toggle: it’s a major operational mode that affects navigation, tactics, and the ship’s ability to function when other propulsion options are restricted."
+      },
+      "RelatedTechIDs": [
+        "st-warp-drive"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: The Motion Picture",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Bridge orders treat impulse as the default mode within the solar system; the captain calls for impulse power and later risks engaging warp while still in-system."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek II: The Wrath of Khan",
+          "Season": null,
+          "Episode": null,
+          "Notes": "“Full impulse power” is used as an urgent command during the Mutara Nebula chase."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Emissary",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Impulse power is discussed as something that can be reduced or lost unexpectedly while approaching Deep Space 9."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "Impulse engine failure is a critical emergency; loss of impulse threatens the ship’s ability to avoid disaster."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Doomsday Machine",
+          "Season": 2,
+          "Episode": 6,
+          "Notes": "Impulse engines are treated as repairable but dangerous under stress; impulse failure is tied to imminent catastrophe."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Last Outpost",
+          "Season": 1,
+          "Episode": 5,
+          "Notes": "Impulse engines are shown surging and firing again after system disruptions, emphasizing their sensitivity under attack."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Starship Down",
+          "Season": 4,
+          "Episode": 7,
+          "Notes": "Impulse power going off-line creates immediate navigational danger, requiring manual rerouting and repairs."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Impulse power settings",
+          "Summary": "Operational shorthand—one‑quarter, half, full impulse—used as a throttle concept rather than a fixed universal speed."
+        },
+        {
+          "Name": "Reverse impulse",
+          "Summary": "Bridge-level command for braking, backing off, or holding position by applying impulse thrust in reverse."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Impulse drive",
+          "Definition": "Sublight propulsion mode for sustained thrust and ship handling under normal space."
+        },
+        {
+          "Term": "Impulse engines",
+          "Definition": "Common shipboard phrasing for the impulse drive system and its engine assemblies."
+        },
+        {
+          "Term": "Impulse power",
+          "Definition": "Power allocation/output level applied to the impulse drive, adjusted as conditions demand."
+        },
+        {
+          "Term": "Full impulse",
+          "Definition": "Maximum practical impulse output for the ship’s current condition and constraints."
+        },
+        {
+          "Term": "Reverse impulse",
+          "Definition": "Applying impulse thrust in reverse for braking, backing, or holding station."
+        },
+        {
+          "Term": "At your discretion",
+          "Definition": "A helm instruction indicating the pilot should select an appropriate impulse setting for the situation."
+        }
+      ],
+      "Operators": [
+        "Starfleet (Federation starships)",
+        "Multiple interstellar fleets (impulse-class sublight propulsion is widespread)"
+      ],
+      "Constraints": [
+        "Impulse output competes with other ship systems for power during combat, damage control, or emergency operations.",
+        "Sustained high-output impulse is often treated as stressful or risky, especially when engines or conduits are already damaged.",
+        "Impulse power loss can leave a ship effectively unable to maneuver, making it vulnerable to hazards and enemy action.",
+        "Environmental conditions and tactical constraints can make warp unsafe or undesirable, forcing reliance on impulse for critical maneuvers."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TAS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "ENT",
+          "FILM",
+          "PIC",
+          "SNW",
+          "LDS",
+          "PRO",
+          "DIS"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century",
+          "32nd century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Impulse%20Engines.png",
         "Gallery": []
       }
     }
