@@ -1,34 +1,34 @@
 {
   "Version": 12,
-  "GeneratedUTC": "2025-12-14T22:51:50Z",
+  "GeneratedUTC": "2025-12-14T09:54:15Z",
   "Systems": [
     {
       "ID": "propulsion",
       "Name": "Propulsion",
       "Description": "Warp, impulse, maneuvering thrusters, inertial management.",
       "SortOrder": 10,
-      "SidebarText": "Propulsion is shown as a layered control stack: thrusters for fine attitude/translation control, impulse for sustained sublight travel and tactical maneuvering, and warp for interstellar transit.\n\nBecause the accelerations involved are extreme, starships rely on inertial damping systems to counter rapid acceleration/deceleration and impacts, and structural integrity fields to reinforce the hull under stress.\n\nHigh‑warp operations are also portrayed as something Starfleet may restrict in response to subspace effects, with emergency exceptions when required."
+      "SidebarText": "Propulsion is the ship’s full movement stack: warp for FTL, impulse for sublight, and thrusters for fine maneuvering, all coordinated with inertial management so the crew and structure can tolerate acceleration and rapid course changes. propulsion performance is often limited by power availability, field stability, and system damage, with crews rerouting power or compensating for imbalances to keep the ship mobile.\n\nDifferent mission profiles emphasize different modes—cruise, pursuit, evasion, station-keeping—but the common theme is that speed and maneuverability come from integration: engines, control systems, and shipwide power distribution working as one."
     },
     {
       "ID": "shipboard-weapons",
       "Name": "Shipboard Weapons",
       "Description": "Phasers, torpedoes, and integrated tactical fire-control for starship combat.",
       "SortOrder": 20,
-      "SidebarText": "Shipboard weapons integrate emitters/launchers with targeting and fire‑control. In the 24th century, Starfleet commonly fields phaser arrays—linear arrangements of many emitters distributed along a hull for wide firing arcs—while earlier eras used smaller phaser banks.\n\nTorpedo systems provide guided, self‑propelled ordnance. Photon torpedoes are depicted as warp‑capable matter/antimatter weapons and remain a baseline starship munition across multiple eras, with later developments introducing higher‑yield variants such as quantum torpedoes."
+      "SidebarText": "Shipboard weapons are a shipwide integration of sensors, targeting, and power/munition delivery that turns phasers, cannons, and torpedoes into usable combat capability. performance depends on target lock quality, firing arcs, and available power, with combat often driving rapid reconfiguration of outputs and priorities.\n\nDifferent eras emphasize different baseline fits—early NX-era armament versus later phaser-and-torpedo loadouts—but the common theme is that weapons effectiveness is limited as much by fire-control and ship systems as by the emitter or warhead itself."
     },
     {
       "ID": "holography",
       "Name": "Holography",
       "Description": "Holographic projection systems: holodecks, holoemitters, photonic interfaces, and mobile holograms.",
       "SortOrder": 30,
-      "SidebarText": "Holographic systems create three‑dimensional projections by manipulating photons and force fields. On Starfleet holodecks, a holographic projection system combines holo‑emitters and the hologrid to build interactive environments for training, investigation, and recreation.\n\nHolodecks are also depicted producing \"holodeck matter\" (holomatter): a partially stable substance held together by force fields, allowing users to handle objects and encounter holographic characters within emitter range.\n\nThe 29th‑century mobile emitter is shown enabling a single holographic program to operate away from fixed emitters, effectively granting limited mobility outside a holodeck or sickbay."
+      "SidebarText": "Holographic technology is the ship’s projection-and-control infrastructure: emitters, projectors, and software that generate stable photonic images and interfaces, from simple displays to fully immersive holodeck environments. the practical constraint is emitter coverage—complex holograms are usually bound to spaces and systems designed to support them.\n\nA key capability jump is mobility: taking a sophisticated holographic program outside fixed emitter grids requires specialized solutions (most notably the mobile emitter), which is treated as exceptional rather than routine."
     },
     {
       "ID": "cloaking",
       "Name": "Cloaking",
       "Description": "Stealth systems that conceal ships and craft by reducing visibility to the eye and to sensors.",
       "SortOrder": 40,
-      "SidebarText": "Cloaking devices project a cloaking field that bends light and many sensor emissions around a vessel, making it difficult to detect. On screen, many cloaks are tied into a ship’s deflector shield grid, and most vessels cannot use weapons and deflector shields while cloaked.\n\nStarfleet countermeasures include tachyon detection grids that can expose cloaked ships when they pass through an active tachyon field.\n\nThe Federation’s deployment of cloaking technology is also portrayed as politically constrained—most notably by the Treaty of Algeron, which is described as an agreement not to develop or use cloaking devices."
+      "SidebarText": "Cloaking technology generates a ship-scale field that redirects light and many sensor energies around the hull, reducing visibility to both the eye and standard scans. Its tactical value is control: a cloaked vessel can approach, reposition, or disengage without presenting a reliable target solution.\n\nCloaking is a constrained operating mode. It draws significant power, is tightly coupled to ship systems, and often forces brief tactical exposure at key moments. Countermeasures evolve alongside it, with tachyon-based scans and multi-ship detection grids used to reveal cloaked ships under the right conditions."
     }
   ],
   "Technologies": [
@@ -1084,7 +1084,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Holo%20Projector.png",
         "Gallery": []
       }
     },
@@ -1194,7 +1194,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.webp",
         "Gallery": []
       }
     },
@@ -1334,7 +1334,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Mobile%20Emitter.png",
         "Gallery": []
       }
     },
@@ -1448,7 +1448,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Romulan%20Cloaking%20Device.png",
         "Gallery": []
       }
     },
@@ -1553,7 +1553,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Klingon%20Cloaking%20Device.webp",
         "Gallery": []
       }
     }
