@@ -1,6 +1,6 @@
 {
-  "Version": 9,
-  "GeneratedUTC": "2025-12-14T08:21:33Z",
+  "Version": 10,
+  "GeneratedUTC": "2025-12-14T08:55:22Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -15,6 +15,13 @@
       "Description": "Phasers, torpedoes, and integrated tactical fire-control for starship combat.",
       "SortOrder": 20,
       "SidebarText": "Shipboard weapons cover the standard tools of starship combat: directed‑energy emitters, projectile ordnance, and the targeting and firing systems that tie them together. In most eras, Starfleet’s baseline loadout is phasers plus torpedoes, with earlier NX‑era ships relying on phase cannons and spatial torpedoes before later upgrades."
+    },
+    {
+      "ID": "holography",
+      "Name": "Holography",
+      "Description": "Holographic projection systems: holodecks, holoemitters, photonic interfaces, and mobile holograms.",
+      "SortOrder": 30,
+      "SidebarText": "Holography covers projector and emitter systems that create hologram...s) that let photonic programs function in day‑to‑day ship operations."
     }
   ],
   "Technologies": [
@@ -924,6 +931,403 @@
       },
       "Media": {
         "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Spatial%20Torpedo.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-holographic-projectors",
+      "Name": "Holographic projectors",
+      "SystemID": "holography",
+      "Type": "Device",
+      "Summary": "Holographic projectors (also called holo‑emitters or holoprojectors) are the hardware that generates holograms by manipulating photons and force fields. In Federation practice they scale from small tabletop and integrated desktop units to room‑scale installations like holodecks and the fixed emitters used for the Emergency Medical Hologram. On ships with extensive emitter coverage, projectors can sustain photonic characters outside dedicated rooms, but doing so is treated as a significant demand on power and computer resources.",
+      "Sections": {
+        "What a holographic projector is": "A holographic projector is the emitting and control hardware that produces a three‑dimensional hologram: it projects photons to create the visible image while shaping force fields to provide structure and interaction.",
+        "Fixed installations: holodecks and hologrids": "On starships, the best‑known projector installations are holodecks—rooms built around a hologrid of omnidirectional holographic diodes. The grid provides dense emitter coverage so the computer can place holographic objects and characters anywhere within the volume while tracking the user’s position and maintaining the illusion of an expansive environment.",
+        "Medical and command use: shipboard holograms": "Projectors are also installed for operational holograms. Voyager’s sickbay projectors support the EMH, and later designs extend emitter coverage beyond a single compartment—most notably the Prometheus, which is depicted as having emitters on every deck so its EMH can move freely throughout the ship.",
+        "Portable and integrated projectors": "Holographic projectors are not limited to dedicated rooms. They are shown as compact desktop and tabletop devices capable of producing small, localized projections, and as portable units used for presentation, simulation, or specialized tasks.",
+        "Shipwide coverage and resource cost": "Expanding projector coverage turns more of a ship into a potential holodeck volume. Stories consistently treat that as expensive: running large simulations or enabling shipwide projections competes with other major loads and can be a strategic constraint during crises.",
+        "Interoperability and program portability": "Across the franchise, holograms are often portrayed as portable in principle—programs created on one platform can be made to run on another if the receiving system can reproduce the necessary photon/force‑field model and control interfaces.",
+        "Failure modes and countermeasures": "Because projectors are physical emitters tied into ship power and computing, holograms can fail or degrade when emitters are damaged, when power is interrupted, or when environmental interference disrupts field control. Operational responses include relocating a hologram to a supported volume, rerouting power to emitters, or reducing projection complexity."
+      },
+      "RelatedTechIDs": [
+        "st-holo-force-fields",
+        "st-mobile-emitter"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek III: The Search for Spock",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Holographic parlor games are depicted as part of a San Francisco bar’s atmosphere."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Encounter at Farpoint",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Early Enterprise-D holodeck/simulator use establishes shipboard holographic recreation infrastructure."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Measure of a Man",
+          "Season": 2,
+          "Episode": 9,
+          "Notes": "Data’s keepsake holoprojector displays a miniature holographic image of Natasha Yar."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Caretaker",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Voyager’s sickbay projectors support the Emergency Medical Hologram from the start of the journey."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "For the Uniform",
+          "Season": 5,
+          "Episode": 13,
+          "Notes": "Starfleet tests a holo-communicator device using holographic projection on DS9/Defiant-era sets."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Message in a Bottle",
+          "Season": 4,
+          "Episode": 14,
+          "Notes": "The USS Prometheus is depicted as having holoemitters on every deck to enable EMH free movement."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "The Killing Game",
+          "Season": 4,
+          "Episode": 18,
+          "Notes": "Additional holo-emitters are installed to extend holodeck simulations beyond dedicated holodeck rooms."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Holo-emitters (fixed)",
+          "Summary": "Permanent shipboard emitters integrated into rooms, corridors, or key compartments (holodeck, sickbay) to sustain holograms within a defined volume."
+        },
+        {
+          "Name": "Hologrid installations",
+          "Summary": "Dense emitter grids (holodeck-style) that allow complex scene construction and stable placement of holographic objects throughout a room."
+        },
+        {
+          "Name": "Desktop and tabletop projectors",
+          "Summary": "Small-scale units that generate localized projections for display, training, or personal use."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Holo-emitter",
+          "Definition": "A holographic projector element (often fixed) that outputs photons and controlled force fields to create a hologram."
+        },
+        {
+          "Term": "Holoprojector",
+          "Definition": "A general label for a holographic projector; used for both portable devices and integrated ship systems."
+        },
+        {
+          "Term": "Hologrid",
+          "Definition": "A dense field of omnidirectional holographic diodes in a holodeck, providing full-volume projection coverage."
+        },
+        {
+          "Term": "Photoemitters",
+          "Definition": "Emitter hardware that produces photonic projection; many shipboard holograms require permanent photoemitters unless a mobile emitter is used."
+        },
+        {
+          "Term": "Holo-communicator",
+          "Definition": "A Starfleet experimental communications device that uses holographic projection to render a remote participant as a full-body image."
+        }
+      ],
+      "Operators": [
+        "Starfleet (holodecks, sickbay holograms, training and simulation)",
+        "Commercial holosuites and entertainment venues (civilian use)",
+        "Other interstellar powers employing holography for training, deception, or facility automation"
+      ],
+      "Constraints": [
+        "Holograms require active projector coverage within the projection volume; moving beyond coverage typically collapses the image unless a mobile emitter is used.",
+        "Large-scale or shipwide projection is treated as a heavy load on power and computing, competing with other critical systems during emergencies.",
+        "Projection fidelity depends on stable control of both photonic output and associated force-field geometry; interference or damage can cause flicker, drift, or collapse.",
+        "Safety settings and operational limits often constrain force-field intensity and hazardous interactions in recreational environments."
+      ],
+      "Meta": {
+        "Series": [
+          "FILM",
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-holo-force-fields",
+      "Name": "Holo force fields",
+      "SystemID": "holography",
+      "Type": "System",
+      "Summary": "Star Trek holograms are repeatedly described as more than light: they are sustained by force fields that give projected objects and characters apparent solidity. On holodecks this allows users to sit, lift, and manipulate holographic props as if they were real; for operational holograms like the EMH it enables tool use, physical interaction, and believable presence. These fields are tightly governed by safety limits and by the boundaries of emitter coverage—when the underlying force-field control fails or is restricted, the hologram’s physicality can degrade or disappear.",
+      "Sections": {
+        "Photons plus force fields": "The franchise’s standard explanation for interactive holograms is a hybrid: photons provide the visible image, while force fields supply shape, resistance, and the ability to “push back” against a user’s hands, feet, or tools.",
+        "Holodeck interaction and safety": "Holodeck props feel solid because the system uses force fields to simulate texture and resistance. The same mechanism can be made dangerous if safety limits are disabled—stories treat force-field intensity as the difference between a safe recreation and a lethal environment.",
+        "Operational holograms and tool use": "The EMH and related Starfleet holograms are depicted as using force fields to manipulate instruments, interact with patients, and access consoles. This makes a medical hologram functionally useful rather than a purely visual advisor.",
+        "Boundaries and permeability": "Force fields on holodecks are portrayed as configurable: they can allow passage of real matter or present as solid barriers. However, holodeck-style fields are also treated as localized—outside the supported volume, the ‘substance’ they provide does not persist.",
+        "Emergency and containment behavior": "Force fields are shown being used for isolation and containment in sickbay and security contexts. In a holodeck emergency, a holographic force field can also be generated as part of a simulation’s control and safety response.",
+        "Failure modes and disruption": "Holographic physicality is vulnerable to the same problems that affect projection: power loss, damaged emitters, and environmental interference can reduce field stability, forcing a hologram to become intangible, distort, or shut down."
+      },
+      "RelatedTechIDs": [
+        "st-holographic-projectors",
+        "st-mobile-emitter"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Big Goodbye",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Holodeck interactions demonstrate holograms behaving as solid environments and objects."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Someone to Watch Over Me",
+          "Season": 5,
+          "Episode": 21,
+          "Notes": "The Doctor explicitly characterizes himself as ‘photons and force fields,’ underscoring the standard explanation for holographic physicality."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Twisted",
+          "Season": 2,
+          "Episode": 6,
+          "Notes": "A holographic force field is created during a holodeck emergency scenario."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Holodeck interaction fields",
+          "Summary": "Force fields used to provide tactile resistance and solidity for holodeck props, terrain, and characters."
+        },
+        {
+          "Name": "Hologram solidity fields",
+          "Summary": "Force fields that allow operational holograms (e.g., EMH) to handle tools, touch people, and manipulate controls."
+        },
+        {
+          "Name": "Safety-limited force fields",
+          "Summary": "Configured limits that cap intensity and hazardous interactions; disabling safety protocols raises risk of injury."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Solidity",
+          "Definition": "The apparent ‘physical’ resistance a hologram provides through force-field shaping rather than real mass."
+        },
+        {
+          "Term": "Safety protocols",
+          "Definition": "Holodeck control limits intended to prevent force fields and simulated hazards from causing real injury."
+        },
+        {
+          "Term": "Permeability",
+          "Definition": "A force-field setting that determines whether real matter can pass through a field or whether it behaves like a solid barrier."
+        },
+        {
+          "Term": "Holodeck matter",
+          "Definition": "A general label for holographic constructs that combine photons and force fields, sometimes augmented by replicated matter."
+        },
+        {
+          "Term": "Containment field",
+          "Definition": "A force-field configuration used to isolate people or hazards (medical quarantine, security holding, controlled environments)."
+        }
+      ],
+      "Operators": [
+        "Starfleet (holodecks, sickbay holograms, containment/isolation fields)",
+        "Commercial holosuites (recreational environments using holodeck-style interaction fields)"
+      ],
+      "Constraints": [
+        "Holodeck interaction fields are localized; their ‘substance’ does not persist outside supported projection volumes.",
+        "Force-field intensity and hazardous interactions are governed by safety settings; overriding safeties can make simulations physically dangerous.",
+        "Physicality depends on stable field control; damage, power loss, or interference can cause a hologram to lose solidity or collapse."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-mobile-emitter",
+      "Name": "Mobile emitter",
+      "SystemID": "holography",
+      "Type": "Device",
+      "Summary": "The mobile emitter is an autonomous, self‑sustaining holo‑emitter designed to power and project a single holographic instance away from permanent photoemitters. Introduced in Voyager’s time‑travel story, it allows the ship’s EMH to operate ‘in the field’—on away missions and throughout the ship—without being confined to sickbay or a holodeck. The device is portrayed as far beyond 24th‑century manufacturing, making it difficult or impossible to reproduce with contemporary Starfleet technology even after years of use.",
+      "Sections": {
+        "Purpose: mobility beyond permanent emitters": "Most shipboard holograms are tied to fixed emitter networks in sickbay or holodecks. The mobile emitter breaks that constraint by carrying its own projection and field hardware, allowing a hologram to remain active wherever the wearer goes.",
+        "Origins and acquisition": "Voyager encounters the emitter as part of 29th‑century technology connected to the timeship Aeon and Henry Starling’s exploitation of future devices in 1996. Starling uses the emitter to control the Doctor’s freedom by threatening to destroy it, since the device is integral to sustaining the displaced hologram.",
+        "Physical form and materials": "The 29th‑century emitter is depicted as roughly palm‑sized and constructed of a poly‑deutonic alloy unknown to 24th‑century science. It can be slipped on and off relatively easily for use as needed.",
+        "How it sustains a hologram": "The mobile emitter is portrayed as wholly self‑contained, generating the photons and force fields required for a hologram to appear and to physically interact with the environment. The emitter may remain visible as an external device or be concealed by the hologram’s projected form.",
+        "Compatibility and reverse-engineering limits": "Voyager retains the emitter despite its anachronistic nature, but dialogue and later references treat recreating it as beyond 2370s capabilities. The issue is not just fabrication—it is also a question of temporal law and whether reverse‑engineering 29th‑century technology would violate the Temporal Prime Directive.",
+        "Operational and security implications": "A mobile emitter makes a hologram a true mobile crew asset, but it also concentrates capability into a single, portable point of failure. If the device is damaged, stolen, or forcibly removed, the hologram can be effectively neutralized or taken hostage.",
+        "Later availability": "Later-era stories depict mobile emitters as becoming available to Starfleet in the early 25th century, implying the technology eventually enters mainstream Federation use—though it is still treated as specialized equipment rather than ubiquitous ship hardware."
+      },
+      "RelatedTechIDs": [
+        "st-holographic-projectors",
+        "st-holo-force-fields"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Future's End, Part II",
+          "Season": 3,
+          "Episode": 9,
+          "Notes": "The Doctor is equipped with an autonomous mobile holo-emitter, granting him independent mobility."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Message in a Bottle",
+          "Season": 4,
+          "Episode": 14,
+          "Notes": "The Doctor’s mobile emitter is part of his portability and role beyond sickbay/holodeck constraints."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Drone",
+          "Season": 5,
+          "Episode": 2,
+          "Notes": "The Doctor continues operating as a mobile hologram during high-stakes shipboard emergencies."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Timeless",
+          "Season": 5,
+          "Episode": 6,
+          "Notes": "Later discussion treats 29th-century technology as difficult to reproduce and entangled with temporal constraints."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Renaissance Man",
+          "Season": 7,
+          "Episode": 24,
+          "Notes": "The mobile emitter is described as self-contained and may be concealed by a hologram’s projected form."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Endgame",
+          "Season": 7,
+          "Episode": 25,
+          "Notes": "Temporal considerations around future technology are foregrounded; reverse-engineering is treated cautiously."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "PIC",
+          "Title": "Imposters",
+          "Season": 3,
+          "Episode": 5,
+          "Notes": "A later-era mobile emitter is used by Starfleet operatives in the early 25th century."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "29th-century mobile emitter",
+          "Summary": "Time-travel-era device enabling a single holographic instance to function away from fixed photoemitters; treated as beyond 24th-century replication."
+        },
+        {
+          "Name": "25th-century mobile emitter",
+          "Summary": "Later Federation-era mobile emitter equipment used for field operations, implying broader availability by the early 25th century."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Autonomous self-sustaining",
+          "Definition": "The emitter provides its own projection and field support rather than relying on a room’s fixed emitter network."
+        },
+        {
+          "Term": "Single holographic instance",
+          "Definition": "The device is designed to sustain one active hologram at a time, concentrating capability into a single portable unit."
+        },
+        {
+          "Term": "Poly-deutonic alloy",
+          "Definition": "A material cited in connection with the 29th-century mobile emitter, described as unknown to 24th-century science."
+        },
+        {
+          "Term": "Temporal Prime Directive",
+          "Definition": "A temporal-law concept invoked as a reason to avoid exploiting or reverse-engineering advanced future technology."
+        },
+        {
+          "Term": "Photoemitters",
+          "Definition": "Fixed emitter installations that most shipboard holograms normally require (sickbay, holodecks, emitter grids)."
+        }
+      ],
+      "Operators": [
+        "USS Voyager (EMH field mobility in the Delta Quadrant)",
+        "Starfleet Intelligence / Starfleet special operations (later-era field use)"
+      ],
+      "Constraints": [
+        "A mobile emitter concentrates the hologram’s existence into a single device; damage, removal, or destruction can deactivate the hologram.",
+        "The device is portrayed as beyond 24th-century replication and potentially protected by temporal-law constraints on reverse-engineering.",
+        "Designed to sustain a single holographic instance, limiting simultaneous mobile hologram deployment without additional emitters."
+      ],
+      "Meta": {
+        "Series": [
+          "VOY",
+          "PIC"
+        ],
+        "Era": [
+          "24th century",
+          "25th century",
+          "29th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
         "Gallery": []
       }
     }
