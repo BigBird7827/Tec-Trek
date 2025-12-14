@@ -679,7 +679,8 @@
           grid.appendChild(c);
         });
 
-        if(list.length % 2 === 1){
+        
+if(list.length){
           const featured = list[0];
 
           const c2 = document.createElement("div");
@@ -731,13 +732,16 @@
           c2.appendChild(meta2);
           c2.appendChild(d2);
 
-          const btn = document.createElement("button");
-          btn.className = "miniBtn";
-          btn.textContent = featured && featured.Name ? ("Open " + featured.Name) : "Open";
-          btn.disabled = true;
-          c2.appendChild(btn);
-
           grid.appendChild(c2);
+
+          if(list.length % 2 === 0){
+            const spacer = document.createElement("div");
+            spacer.className = "card";
+            spacer.style.visibility = "hidden";
+            spacer.style.cursor = "default";
+            spacer.setAttribute("aria-hidden", "true");
+            grid.appendChild(spacer);
+          }
         }
 
         right.appendChild(grid);
