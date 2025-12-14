@@ -206,9 +206,39 @@
     }
     .btn:hover{ transform: translateY(-1px); border-color: rgba(178,148,51,.6); }
 
+    .sysHero{ display:grid; grid-template-columns: 1fr 340px; gap:14px; align-items:start; }
+    .sysImage{ padding:14px; }
+    .sysImage img{ width:100%; height:auto; display:block; border-radius:14px; border:1px solid rgba(178,148,51,.22); box-shadow: 0 12px 24px rgba(0,0,0,.22); }
+    .sysImage .cap{ margin-top:10px; font-size:12px; color:var(--muted); line-height:1.4; }
+
+    .miniBtn{
+      border:none; cursor:pointer;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      background: rgba(9,13,20,.35);
+      border:1px solid rgba(178,148,51,.25);
+      color: rgba(246,227,168,.95);
+      margin-top:10px;
+    }
+    .miniBtn:hover{ border-color: rgba(178,148,51,.55); }
+    .miniBtn:disabled{ opacity:.6; cursor:default; }
+    .miniBtn:disabled:hover{ border-color: rgba(178,148,51,.25); }
+    .imgCard img{ width:100%; height:auto; display:block; border-radius:14px; border:1px solid rgba(178,148,51,.22); box-shadow: 0 12px 24px rgba(0,0,0,.22); }
+    .imgCard .cap{ margin-top:10px; font-size:12px; color:var(--muted); line-height:1.4; }
+
+    .chipRow{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .pillLink{ cursor:pointer; }
+    .pillLink:hover{ border-color: rgba(178,148,51,.55); color: var(--text); }
+
+
     @media (max-width: 1100px){
       .grid{ grid-template-columns: 1fr; }
       .split{ grid-template-columns: 1fr; }
+      .sysHero{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -259,37 +289,7 @@
   </div>
 
   <script>
-    const SYSTEMS_URL = "";
-    const TECH_URL = "";
-
-    const FALLBACK_SYSTEMS = [
-      { ID: "propulsion", Name: "Propulsion", Description: "Warp, impulse, flight control, inertial management." }
-    ];
-
-    const FALLBACK_TECH = [
-      {
-        ID: "st-warp-drive",
-        Name: "Warp drive",
-        SystemID: "propulsion",
-        Type: "Device",
-        Summary: "A faster-than-light propulsion system that generates a controlled warp field (often described as a subspace bubble) around a vessel, enabling interstellar travel at warp factors.",
-        Sections: {
-        "Overview": 'Warp drive is the standard faster‑than‑light propulsion concept used across Star Trek. At a high level, you generate a shaped “warp field” around a vessel—often described as a subspace bubble—that lets the ship traverse interstellar distances at effective velocities beyond light speed without simply “pointing the nose faster.”\n\nOn screen, warp travel is treated as both a practical engineering system and a narrative hinge: it’s the reason Starfleet can patrol, respond, explore, and remain meaningfully connected across sectors. When characters say “Warp six,” they’re usually describing the intensity and configuration of the warp field rather than a simple linear speedometer reading.',
-        "The Warp Field": 'A warp field is the ship‑surrounding distortion that makes warp travel possible. The language varies by era and series, but it consistently points to these ideas:\n• The ship is enveloped in a field structure (often called a warp bubble or subspace bubble).\n• The field is shaped and stabilized so the ship can move at warp and still maneuver, navigate hazards, and drop to impulse without tearing itself apart.\n• The field is not a single “on/off” shell—ships talk about field geometry, field strength, and occasionally the need to adjust field harmonics or balance the field between nacelles.\n\nPractically, the warp field is what your engineering team is always fighting to maintain: stable enough to keep you moving, efficient enough not to burn out systems, and controllable enough to do more than run in a straight line.',
-        "Major Components": 'When Star Trek depicts a “classic” Federation warp system, a handful of components show up repeatedly in dialogue and visuals:\n\n1) Warp core (reactor): the central power‑reaction assembly that produces the energy feed for warp operations.\n2) Warp nacelles: external housings that contain warp field coils (warp coils) and help project the warp field in a controlled shape.\n3) Warp field coils: coil assemblies mounted within the nacelles that use the energy feed (often described as plasma) to generate the warp field.\n4) Plasma conduits / power distribution: routes the warp energy from the core to the nacelles, with shipwide distribution systems (often referred to as EPS) branching power to other systems.\n5) Control interfaces and safeties: the operational layer—interlocks, reaction controls, field regulators, and emergency procedures—that keep the whole arrangement from becoming a catastrophic physics experiment.\n\nDifferent ship classes and eras rearrange details (and some use different reactor terminology), but the “core + nacelles + coils + control” pattern holds up as the recognizable warp architecture.',
-        "Power & Reaction": 'Federation ships are commonly portrayed as using a matter/antimatter reaction moderated by dilithium in the warp core’s reaction chamber. In practice, the show treats this as a controlled annihilation process that produces enormous energy in a form that can be routed into the warp drive system.\n\nKey takeaways that appear again and again:\n• The reaction is powerful enough that containment and control are treated as existential: engineering lives and dies by keeping the core stable.\n• Dilithium is repeatedly described as regulating or moderating the reaction—crystals are aligned, replaced, or repaired when stressed or damaged.\n• Core stability, injector balance, and emergency shutdown procedures are normal operational concerns rather than rare edge cases.\n\nEven when a ship is not “at warp,” the warp core is frequently framed as the heart of the vessel’s power generation, supporting shipwide systems and creating the strategic “energy budget” that determines what the ship can do at any moment.',
-        "Warp Plasma & Field Coils": 'Star Trek regularly describes the warp core’s output as plasma that is routed to the nacelles. The warp coils—mounted inside the nacelles—are then described as producing the actual warp field (or subspace displacement field).\n\nIn story terms, this pipeline gives writers very “Starfleet” knobs to turn:\n• Power routing: “reroute plasma,” “dump the plasma,” “isolate the conduit,” “reduce output,” “balance the flow between nacelles.”\n• Coil health: coils can be damaged, swapped, overdriven, or taken offline; maintenance implies physical hardware that can be repaired or replaced.\n• Field stability: the ship doesn’t just need raw power—it needs field geometry and stability. That’s why you get diagnostics like field asymmetry, coil imbalance, and regulator drift.\n\nThis is also why nacelles matter: they are not decorative fins. They are the field‑generation housing, and they’re treated as critical hardware—especially when you’re pushing the envelope at high warp.',
-        "Navigation & Control": 'Warp travel is usually portrayed as tightly coupled to navigation, sensors, and structural control. The implication is that you’re not “teleporting” between stars—you’re riding a field configuration through interstellar space with real hazards and real constraints.\n\nOperational control themes that show up often:\n• Course corrections at warp: ships adjust heading, compensate for drift, and avoid hazards (sometimes in ways that stress the drive).\n• Warp field tuning: engineers and helm officers talk about tuning the field, adjusting harmonics, or compensating for turbulence or interference.\n• Coordination with other systems: shields, deflectors, and power distribution are frequently linked to warp operations, especially in emergencies.\n• Emergency drops: characters often need to drop to impulse or shut down warp quickly—suggesting procedures, interlocks, and a “safe sequence” for collapsing the field.\n\nThe result is that warp feels like a real operating mode: a complex balance between the ship’s engines, its structural integrity, and the space it’s traveling through.',
-        "Warp Factors & Performance": 'Warp speed is commonly expressed as a warp factor (“warp six,” “warp 9.2,” etc.). The franchise is not perfectly consistent about mapping warp factor to a single number of multiples of light speed, but the on‑screen intent is clear:\n• Warp 1 is the “light speed threshold” (the beginning of warp travel).\n• Higher warp factors represent dramatically higher effective velocities, and the relationship is treated as non‑linear rather than “warp 2 is twice warp 1.”\n• High‑warp operation is portrayed as punishing—both to the ship and sometimes to the surrounding space—so ships rarely cruise indefinitely at their absolute maximum.\n\nYou can think of warp factor as a control dial for field intensity and geometry rather than a speedometer. It’s the number the crew uses to communicate operational intent while the computer and engineering systems manage the hidden complexity underneath.',
-        "Operational Limits & Hazards": 'Warp drive is portrayed as powerful, reliable, and still risky. The hazards depicted on screen aren’t only “the engine explodes”—they include a whole ecosystem of operating limits and failure modes:\n\n• Containment failures: the core’s reaction must remain controlled; loss of containment is treated as catastrophic.\n• Field instabilities: field asymmetry or coil imbalance can force a shutdown, cause dangerous turbulence, or prevent a stable warp bubble.\n• Power tradeoffs: pushing warp output can starve other systems, especially shields and weapons, or require critical rerouting.\n• Environmental constraints: certain regions (anomalies, subspace distortions, dense fields) can make warp unsafe or impossible, forcing impulse travel.\n• Strategic constraints: occasionally, broader consequences of sustained warp use are raised, implying that “warp everywhere, all the time” may have costs beyond your own hull.\n\nThe consistent theme is that warp is not magic. It’s engineered physics that works—until it doesn’t—and every crew knows the difference between routine warp and a hard push.',
-        "Variants & Historical Notes": 'Across eras, warp drive is treated as an evolving technology:\n• Early Starfleet warp systems are portrayed as more limited and temperamental.\n• By the 23rd and 24th centuries, warp travel is routine, but high‑warp performance remains a meaningful advantage.\n• Different civilizations field different design philosophies—some emphasize raw speed, others stealth, durability, or unique field mechanics.\n\nEven within Federation designs, ships differ: some are optimized for long‑range exploration, some for tactical response, and some for specialized missions that demand unique warp profiles. The franchise rarely freezes warp technology into a single “final” blueprint; instead it keeps it flexible enough to support new stories, new ship classes, and new constraints.',
-        "Notable On‑Screen References": 'This entry is designed to support a future “Appearances” database. For now, these are common places where warp drive concepts are foregrounded in dialogue and plot:\n• Stories centered on warp core stability, emergency shutdowns, dilithium damage, or catastrophic containment risk.\n• Episodes and films where warp travel is limited by anomalies, subspace distortion, or engineered interference.\n• Plots that push ships to extreme warp performance, with consequences for the vessel or the space around it.\n\nIf you later want this to behave like your episode/guest projects, we can add an Appearances array with specific titles and then render those as clickable links.',
-        "Terminology": 'Warp drive terminology you’ll see repeatedly in Star Trek:\n• Warp core: the main reactor assembly powering warp operations.\n• Dilithium: the material commonly referenced as moderating the matter/antimatter reaction.\n• Warp nacelles: external housings associated with field generation.\n• Warp coils / field coils: coil assemblies within the nacelles that generate the warp field.\n• Warp factor: the primary way warp velocity is expressed operationally.\n• Subspace: the domain frequently referenced in relation to faster‑than‑light effects.'
-      },
-        RelatedTechIDs: []
-      }
-    ];
-
+    const DATA_URL = "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Technology.json";
     const state = {
       systems: [],
       tech: [],
@@ -338,17 +338,28 @@
     }
 
     async function init(){
+      let payload = null;
+
+      try{
+        if(DATA_URL) payload = await loadJson(DATA_URL);
+      }catch(e){
+        payload = null;
+      }
+
       let systems = null;
       let tech = null;
 
-      try{ if(SYSTEMS_URL) systems = await loadJson(SYSTEMS_URL); }catch(e){ systems = null; }
-      try{ if(TECH_URL) tech = await loadJson(TECH_URL); }catch(e){ tech = null; }
+      if(payload && typeof payload === "object"){
+        systems = payload.Systems;
+        tech = payload.Technologies;
+      }
 
-      if(!Array.isArray(systems)) systems = FALLBACK_SYSTEMS;
-      if(!Array.isArray(tech)) tech = FALLBACK_TECH;
+      if(!Array.isArray(systems)) systems = [];
+      if(!Array.isArray(tech)) tech = [];
+      state.systems = systems.map(s => ({ ID: s.ID, Name: s.Name, Description: s.Description || "", SidebarText: s.SidebarText || "", SortOrder: typeof s.SortOrder === "number" ? s.SortOrder : 9999 }));
+      state.tech = tech.map(t => ({ ID: t.ID, Name: t.Name, SystemID: t.SystemID, Type: t.Type || "Entry", Summary: t.Summary || "", Sections: t.Sections || {}, RelatedTechIDs: Array.isArray(t.RelatedTechIDs) ? t.RelatedTechIDs : [], Media: t.Media || {}, Operators: Array.isArray(t.Operators) ? t.Operators : [], Constraints: Array.isArray(t.Constraints) ? t.Constraints : [], KeyTerms: Array.isArray(t.KeyTerms) ? t.KeyTerms : [], Appearances: Array.isArray(t.Appearances) ? t.Appearances : [], Meta: t.Meta || {} }));
 
-      state.systems = systems.map(s => ({ ID: s.ID, Name: s.Name, Description: s.Description || "" }));
-      state.tech = tech.map(t => ({ ID: t.ID, Name: t.Name, SystemID: t.SystemID, Type: t.Type || "Entry", Summary: t.Summary || "", Sections: t.Sections || {}, RelatedTechIDs: Array.isArray(t.RelatedTechIDs) ? t.RelatedTechIDs : [] }));
+      state.systems.sort((a,b) => (a.SortOrder - b.SortOrder) || a.Name.localeCompare(b.Name));
 
       state.systemsById = new Map(state.systems.map(s => [s.ID, s]));
       state.techById = new Map(state.tech.map(t => [t.ID, t]));
@@ -450,7 +461,7 @@
       state.tech.forEach(t => techCount.set(t.SystemID, (techCount.get(t.SystemID) || 0) + 1));
 
       const list = state.systems
-        .filter(s => inViewSearch(s.Name + " " + s.Description))
+        .filter(s => inViewSearch(s.Name + " " + s.Description + " " + (s.SidebarText || "")))
         .map(s => ({ ...s, Count: techCount.get(s.ID) || 0 }))
         .sort((a,b) => a.Name.localeCompare(b.Name));
 
@@ -520,7 +531,65 @@
 
       sysCard.appendChild(st);
       sysCard.appendChild(sp);
-      left.appendChild(sysCard);
+
+      const hero = document.createElement("div");
+      hero.className = "sysHero";
+
+      const heroLeft = document.createElement("div");
+      heroLeft.appendChild(sysCard);
+
+      const heroRight = document.createElement("div");
+      heroRight.className = "section sysImage";
+
+      const imgTech = state.tech
+        .filter(t => t.SystemID === systemId && t.Media && t.Media.Image)
+        .sort((a,b)=>a.Name.localeCompare(b.Name));
+
+      const fixedSystemImage = systemId === "propulsion" ? "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Enterprise%20NCC-1701.png" : "";
+
+      if(fixedSystemImage || imgTech.length){
+        const im = document.createElement("img");
+        im.src = fixedSystemImage || imgTech[0].Media.Image;
+        im.alt = fixedSystemImage ? "Enterprise NCC-1701" : imgTech[0].Name;
+
+        const cap = document.createElement("div");
+        cap.className = "cap";
+        cap.textContent = fixedSystemImage ? "Enterprise NCC-1701" : imgTech[0].Name;
+
+        heroRight.appendChild(im);
+        heroRight.appendChild(cap);
+      }else{
+        heroRight.innerHTML = '<div class="empty">No image has been added for this system yet.</div>';
+      }
+
+      const inSystem = state.tech
+        .filter(t => t.SystemID === systemId)
+        .sort((a,b)=>a.Name.localeCompare(b.Name));
+
+      const facts = document.createElement("div");
+      facts.className = "cap";
+      facts.style.marginTop = "12px";
+      facts.textContent = (inSystem.length ? (inSystem.length + " technologies in this system.") : "No technologies in this system yet.");
+      heroRight.appendChild(facts);
+
+      if(inSystem.length){
+        const chips = document.createElement("div");
+        chips.className = "chipRow";
+
+        inSystem.slice(0, 10).forEach(t => {
+          const p = document.createElement("span");
+          p.className = "pill pillLink";
+          p.textContent = t.Name;
+          p.addEventListener("click", () => setRoute({ view: "tech", systemId: systemId, techId: t.ID }));
+          chips.appendChild(p);
+        });
+
+        heroRight.appendChild(chips);
+      }
+
+      hero.appendChild(heroLeft);
+      hero.appendChild(heroRight);
+      left.appendChild(hero);
 
       const list = state.tech
         .filter(t => t.SystemID === systemId)
@@ -571,6 +640,67 @@
 
           grid.appendChild(c);
         });
+
+        if(list.length % 2 === 1){
+          const featured = list[0];
+
+          const c2 = document.createElement("div");
+          c2.className = "card";
+          c2.style.cursor = "default";
+
+          const h2 = document.createElement("h3");
+          h2.textContent = "System Snapshot";
+
+          const meta2 = document.createElement("div");
+          meta2.className = "meta";
+
+          const q1 = document.createElement("span");
+          q1.className = "pill teal";
+          q1.textContent = "Overview";
+
+          const q2 = document.createElement("span");
+          q2.className = "pill";
+          q2.textContent = list.length + " tech";
+
+          meta2.appendChild(q1);
+          meta2.appendChild(q2);
+
+          const d2 = document.createElement("div");
+          d2.className = "desc";
+
+          const lines = [];
+          const sidebar = (sys && sys.SidebarText) ? String(sys.SidebarText).trim() : "";
+
+          if(sidebar){
+            d2.textContent = sidebar;
+          }else{
+            if(sys && sys.Description) lines.push(sys.Description);
+            if(featured && featured.Name) lines.push("");
+            if(featured && featured.Name) lines.push("Featured: " + featured.Name);
+
+            if(featured && Array.isArray(featured.Constraints) && featured.Constraints.length){
+              lines.push("");
+              lines.push("Notes:");
+              featured.Constraints.slice(0, 3).forEach(x => lines.push("• " + x));
+            }else if(featured && featured.Summary){
+              lines.push("");
+              lines.push(featured.Summary);
+            }
+
+            d2.textContent = lines.join("\n");
+          }
+          c2.appendChild(h2);
+          c2.appendChild(meta2);
+          c2.appendChild(d2);
+
+          const btn = document.createElement("button");
+          btn.className = "miniBtn";
+          btn.textContent = featured && featured.Name ? ("Open " + featured.Name) : "Open";
+          btn.disabled = true;
+          c2.appendChild(btn);
+
+          grid.appendChild(c2);
+        }
 
         right.appendChild(grid);
       }
@@ -657,7 +787,108 @@
       navCard.appendChild(np);
       right.appendChild(navCard);
 
+      if(t.Media && t.Media.Image){
+        const imgCard = document.createElement("div");
+        imgCard.className = "section imgCard";
+        const ih = document.createElement("h4");
+        ih.textContent = "Image";
+        const im = document.createElement("img");
+        im.src = t.Media.Image;
+        im.alt = t.Name;
+        const cap = document.createElement("div");
+        cap.className = "cap";
+        cap.textContent = t.Name;
+        imgCard.appendChild(ih);
+        imgCard.appendChild(im);
+        imgCard.appendChild(cap);
+        right.appendChild(imgCard);
+      }
+
+      const facts = document.createElement("div");
+      facts.className = "section";
+      const fh = document.createElement("h4");
+      fh.textContent = "At a glance";
+      const fp = document.createElement("p");
+
+      const lines = [];
+      if(sys) lines.push("System: " + sys.Name);
+      lines.push("Type: " + (t.Type || "Entry"));
+      if(Array.isArray(t.Operators) && t.Operators.length) lines.push("Operators: " + t.Operators.join(", "));
+      if(Array.isArray(t.Meta?.Era) && t.Meta.Era.length) lines.push("Eras: " + t.Meta.Era.join(", "));
+      if(Array.isArray(t.Meta?.Affiliations) && t.Meta.Affiliations.length) lines.push("Affiliations: " + t.Meta.Affiliations.join(", "));
+      fp.textContent = lines.join("\n");
+      facts.appendChild(fh);
+      facts.appendChild(fp);
+
+      if(Array.isArray(t.Constraints) && t.Constraints.length){
+        const ch = document.createElement("h4");
+        ch.style.marginTop = "14px";
+        ch.textContent = "Constraints";
+        const cp = document.createElement("p");
+        cp.textContent = "• " + t.Constraints.slice(0, 4).join("\n• ") + (t.Constraints.length > 4 ? "\n• …" : "");
+        facts.appendChild(ch);
+        facts.appendChild(cp);
+      }
+
+      if(Array.isArray(t.KeyTerms) && t.KeyTerms.length){
+        const kh = document.createElement("h4");
+        kh.style.marginTop = "14px";
+        kh.textContent = "Key terms";
+        const kp = document.createElement("p");
+        const kt = t.KeyTerms.slice(0, 4).map(x => (x.Term ? (x.Term + ": " + (x.Definition || "")) : "")).filter(Boolean);
+        kp.textContent = kt.join("\n\n") + (t.KeyTerms.length > 4 ? "\n\n…" : "");
+        facts.appendChild(kh);
+        facts.appendChild(kp);
+      }
+
+      right.appendChild(facts);
+
+      if(Array.isArray(t.Appearances) && t.Appearances.length){
+        const app = document.createElement("div");
+        app.className = "section";
+        const ah = document.createElement("h4");
+        ah.textContent = "Appearances";
+        const ap = document.createElement("p");
+
+        const maxShow = 7;
+        const first = t.Appearances.slice(0, maxShow);
+        ap.textContent = first.map(a => {
+          const label = [a.Series, a.Title].filter(Boolean).join(" • ");
+          if(a.Season != null && a.Episode != null && a.Series && a.Series !== "Film") return a.Series + " S" + a.Season + "E" + a.Episode + " • " + a.Title;
+          return label || "";
+        }).filter(Boolean).join("\n") + (t.Appearances.length > maxShow ? "\n…(" + (t.Appearances.length - maxShow) + " more)" : "");
+        app.appendChild(ah);
+        app.appendChild(ap);
+
+        if(t.Appearances.length > maxShow){
+          const hidden = document.createElement("div");
+          hidden.style.display = "none";
+          const hp = document.createElement("p");
+          hp.textContent = t.Appearances.slice(maxShow).map(a => {
+            const label = [a.Series, a.Title].filter(Boolean).join(" • ");
+            if(a.Season != null && a.Episode != null && a.Series && a.Series !== "Film") return a.Series + " S" + a.Season + "E" + a.Episode + " • " + a.Title;
+            return label || "";
+          }).filter(Boolean).join("\n");
+          hidden.appendChild(hp);
+
+          const btn = document.createElement("button");
+          btn.className = "miniBtn";
+          btn.textContent = "Show all";
+          btn.addEventListener("click", () => {
+            const open = hidden.style.display !== "none";
+            hidden.style.display = open ? "none" : "block";
+            btn.textContent = open ? "Show all" : "Show less";
+          });
+
+          app.appendChild(btn);
+          app.appendChild(hidden);
+        }
+
+        right.appendChild(app);
+      }
+
       const row = document.createElement("div");
+
       row.style.display = "flex";
       row.style.gap = "10px";
       row.style.flexWrap = "wrap";
