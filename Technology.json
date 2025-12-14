@@ -1,6 +1,6 @@
 {
-  "Version": 5,
-  "GeneratedUTC": "2025-12-14T05:37:08Z",
+  "Version": 6,
+  "GeneratedUTC": "2025-12-14T05:59:22Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -334,6 +334,152 @@
       },
       "Media": {
         "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Impulse%20Engines.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-maneuvering-thrusters",
+      "Name": "Thrusters",
+      "SystemID": "propulsion",
+      "Type": "Subsystem",
+      "Summary": "Thrusters are the ship’s low‑power reaction control devices: small engine outlets distributed around the hull that provide precise attitude and translation control. They’re used when impulse is too blunt or too risky—docking, station‑keeping, slow backing maneuvers, close formation work, and careful alignment in tight spaces.\n\nStar Trek treats thrusters as a separate layer of propulsion that sits underneath impulse and warp. They don’t make a ship “fast” on their own, but they make it controllable—especially at low velocity, in confined areas, or when the main engines are unavailable.",
+      "Sections": {
+        "What thrusters do": "Thrusters (often referred to as maneuvering thrusters, maneuvering jets, or reaction control thrusters) provide fine control over a ship’s motion: tiny changes in heading, gentle translational movement, controlled rotation about an axis, and the ability to hold position relative to another object.\n\nThey’re most often invoked when a ship needs to move carefully—leaving spacedock, lining up with a docking port, holding station near a platform or debris field, or creeping away from danger without the shove of impulse.",
+        "Reaction control and station‑keeping": "The franchise frequently frames thrusters as the tool for station‑keeping—maintaining a fixed position relative to another object by continuously making small corrections. This is the practical difference between thrusters and impulse: impulse is great for sustained travel and larger acceleration, but station‑keeping is about micro‑maneuvers repeated constantly.\n\nThrusters also provide the slow, deliberate motion you see during docking, undocking, and careful alignment maneuvers, where even small errors can be dangerous.",
+        "Maneuvering thrusters vs. acceleration thrusters": "On screen and in technical labeling, thrusters show up in more than one role. The most common are maneuvering thrusters—built for control, not speed. Some references also distinguish acceleration thrusters, which can add speed but still live below impulse in both power and purpose.\n\nFor Tec‑Trek, it’s useful to treat Thrusters as the umbrella entry, with maneuvering thrusters as the primary subtype you’ll actually see in day‑to‑day ship handling.",
+        "How crews interact with them": "Thrusters are usually run through flight control systems, but the franchise also acknowledges manual thruster control—where a control mode or panel can be used to command thrusters directly. That matters for storytelling: if main power is compromised, if automation is unreliable, or if the ship needs an unusually delicate or deliberate move, thruster control becomes a named action.\n\nThruster control is also treated as something that can be lost when power fails—reinforcing that thrusters are part of the ship’s broader power and control infrastructure.",
+        "Failure modes and why they matter": "Because thrusters are the precision layer, losing them often turns a manageable situation into a crisis. When a ship can’t back off slowly, can’t rotate away from danger, or can’t hold a stable attitude, even having impulse available may not solve the immediate problem—especially in a confined environment or near a hazard.\n\nStories use thruster failures to raise the stakes in slow-motion scenarios: creeping too close to an object, losing control during delicate docking, or being unable to maintain safe alignment.",
+        "Where they fit in the propulsion stack": "A useful way to think about propulsion in Star Trek is as a stack of operating layers:\n\n• Thrusters: precision control and low‑velocity motion (attitude, translation, station‑keeping)\n• Impulse: standard sublight travel and combat maneuvering at scale\n• Warp: field‑based interstellar travel\n\nThrusters therefore belong in Propulsion even though they aren’t the main engines. They’re the ship’s fine-handling muscles—the part you miss immediately when it’s gone."
+      },
+      "RelatedTechIDs": [
+        "st-impulse-drive",
+        "st-warp-drive"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: The Motion Picture",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Dock departure procedures call out maneuvering thrusters and station‑keeping."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Booby Trap",
+          "Season": 3,
+          "Episode": 6,
+          "Notes": "Maneuvering thrusters referenced during ship operations."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Cause and Effect",
+          "Season": 5,
+          "Episode": 18,
+          "Notes": "Maneuvering thrusters fail to respond during a critical slow maneuver."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "Restoring partial maneuvering thruster power is key to survival in a stellar hazard."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Emissary",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Thruster damage/limitations are discussed during DS9’s early crisis."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek Beyond",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Reaction control system/thrusters are referenced as standard low‑velocity control hardware."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Maneuvering thrusters",
+          "Summary": "Low‑power jets used for fine attitude and translation control, especially docking and station‑keeping."
+        },
+        {
+          "Name": "Reaction control thrusters",
+          "Summary": "A common label for the Federation’s low‑velocity control thrusters used for station‑keeping and maneuvering."
+        },
+        {
+          "Name": "Acceleration thrusters",
+          "Summary": "Thrusters described as increasing a ship’s speed while remaining distinct from impulse‑scale propulsion."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Station‑keeping",
+          "Definition": "Maintaining a constant position relative to another object through continuous small corrections."
+        },
+        {
+          "Term": "Reaction control",
+          "Definition": "Attitude and translation control using distributed thrusters rather than primary engines."
+        },
+        {
+          "Term": "Attitude control",
+          "Definition": "Control of a ship’s orientation (pitch, yaw, roll)."
+        },
+        {
+          "Term": "Translation",
+          "Definition": "Motion along an axis without necessarily changing orientation (e.g., lateral drift, backing away)."
+        },
+        {
+          "Term": "Thruster control",
+          "Definition": "A control mode/panel that allows manual command of thrusters when needed."
+        }
+      ],
+      "Operators": [
+        "Starfleet (Federation starships)",
+        "Other spacefaring powers (common spacecraft control technology)"
+      ],
+      "Constraints": [
+        "Thrusters provide precision, not speed; they’re for low‑velocity handling and fine control.",
+        "Loss of power can remove thruster control; emergency thrusters may remain available on auxiliary power in some situations.",
+        "Thruster failures can prevent slow backing/rotation even if impulse remains nominal.",
+        "Thrusters are most critical in confined spaces: docking bays, debris fields, close formation work, and station‑keeping."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "ENT",
+          "FILM",
+          "PIC",
+          "SNW",
+          "LDS",
+          "PRO",
+          "DIS"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "Film: Star Trek: The Motion Picture (maneuvering thrusters procedures)",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Thrusters.png",
         "Gallery": []
       }
     }
