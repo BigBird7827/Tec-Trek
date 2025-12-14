@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tec-Trek • Science & Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg0:#0b0f16;
+      --bg1:#0f1622;
+      --text:#e7eefc;
+      --muted:#a9b7d4;
+      --gold:#B29433;
+      --teal:#76a5af;
+      --shadow:0 14px 35px rgba(0,0,0,.45);
+      --r18:18px;
+      --r22:22px;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 700px at 25% 10%, rgba(118,165,175,.18), transparent 55%),
+        radial-gradient(900px 600px at 80% 20%, rgba(178,148,51,.16), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      color:var(--text);
+      font-family:Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    }
+    a{ color:inherit; text-decoration:none; }
+    button, input{ font-family:inherit; }
+    .wrap{ max-width:1400px; margin:0 auto; padding:18px 18px 28px; }
+
+    .topbar{
+      position:sticky; top:0; z-index:60;
+      padding:14px 0 12px;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(11,15,22,.86), rgba(11,15,22,.55));
+      border-bottom:1px solid rgba(178,148,51,.22);
+    }
+    .titleRow{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+    .brand h1{
+      margin:0;
+      font-family:Orbitron, sans-serif;
+      font-weight:800;
+      letter-spacing:.12em;
+      font-size:30px;
+      line-height:1.1;
+      background: linear-gradient(180deg, #f6e3a8, #caa23f 55%, #8a6e1f);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-shadow: 0 1px 0 rgba(0,0,0,.6);
+    }
+    .brand .sub{ margin-top:6px; font-size:13px; color:var(--muted); letter-spacing:.03em; }
+
+    .badgeRow{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; margin-top:2px; }
+    .badge{
+      display:flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px;
+      background: linear-gradient(180deg, rgba(18,27,42,.9), rgba(12,18,30,.9));
+      border:1px solid rgba(178,148,51,.35);
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+      font-size:12px; color:var(--muted); white-space:nowrap;
+    }
+    .badge b{ color:var(--text); font-weight:700; }
+
+    .controls{
+      margin-top:12px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .crumbs{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      flex: 1 1 320px;
+    }
+    .crumb{
+      cursor:pointer;
+      border:none;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      background: linear-gradient(180deg, rgba(18,27,42,.92), rgba(12,18,30,.92));
+      border:1px solid rgba(178,148,51,.22);
+      box-shadow: 0 10px 20px rgba(0,0,0,.2);
+      transition: transform .08s ease, border-color .2s ease, color .2s ease;
+    }
+    .crumb:hover{ transform: translateY(-1px); border-color: rgba(178,148,51,.46); color: var(--text); }
+    .crumb.active{
+      color:#0b0f16;
+      background: linear-gradient(180deg, #f7e8b6, #caa23f 60%, #8a6e1f);
+      border-color: rgba(0,0,0,.35);
+    }
+    .searchBox{
+      flex: 1 1 340px; display:flex; gap:10px; align-items:center;
+      padding:10px 12px; border-radius:999px;
+      background: linear-gradient(180deg, rgba(18,27,42,.92), rgba(12,18,30,.92));
+      border:1px solid rgba(178,148,51,.32);
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+    }
+    .searchBox input{ width:100%; border:none; outline:none; background:transparent; color:var(--text); font-size:14px; }
+    .chipBtn{
+      border:none; cursor:pointer; padding:10px 14px; border-radius:999px;
+      font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+      background: linear-gradient(180deg, rgba(18,27,42,.92), rgba(12,18,30,.92));
+      border:2px solid rgba(178,148,51,.32);
+      color: rgba(246,227,168,.95);
+      box-shadow: var(--shadow);
+      transition: transform .08s ease, border-color .2s ease;
+    }
+    .chipBtn:hover{ transform: translateY(-1px); border-color: rgba(178,148,51,.6); }
+
+    .content{ margin-top:14px; display:grid; grid-template-columns: 1fr; gap:14px; }
+    .panel{
+      border-radius: var(--r22);
+      background: linear-gradient(180deg, rgba(18,27,42,.92), rgba(12,18,30,.92));
+      border: 2px solid rgba(178,148,51,.35);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panelHeader{
+      padding:14px 16px;
+      border-bottom:1px solid rgba(178,148,51,.22);
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      background: linear-gradient(180deg, rgba(27,35,52,.7), rgba(10,15,24,.6));
+    }
+    .panelHeader h2{
+      margin:0;
+      font-family: Orbitron, sans-serif;
+      font-size:14px;
+      letter-spacing:.1em;
+      color: rgba(246,227,168,.95);
+      text-transform:uppercase;
+    }
+    .small{ font-size:12px; color:var(--muted); }
+    .body{ padding:16px; }
+
+    .grid{ display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px; }
+    .card{
+      border-radius: 18px;
+      padding:14px 14px 12px;
+      background: linear-gradient(180deg, rgba(20,30,48,.92), rgba(10,16,28,.92));
+      border:2px solid rgba(178,148,51,.28);
+      box-shadow: 0 12px 24px rgba(0,0,0,.28);
+      cursor:pointer;
+      transition: transform .10s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .card:hover{ transform: translateY(-2px); border-color: rgba(178,148,51,.52); box-shadow: 0 18px 36px rgba(0,0,0,.35); }
+    .card h3{ margin:0; font-size:15px; font-weight:800; letter-spacing:.02em; }
+    .meta{ margin-top:8px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; font-size:12px; color:var(--muted); }
+    .pill{ display:inline-flex; align-items:center; padding:4px 10px; border-radius:999px; border:1px solid rgba(178,148,51,.25); background: rgba(9,13,20,.35); color: var(--muted); font-size:11px; white-space:nowrap; }
+    .pill.teal{ border-color: rgba(118,165,175,.35); }
+    .desc{ margin-top:10px; font-size:12.8px; color:var(--muted); line-height:1.35; }
+
+    .split{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:start; }
+
+    .detailTitle{
+      margin:0;
+      font-family: Orbitron, sans-serif;
+      letter-spacing:.07em;
+      font-size:22px;
+      color: rgba(246,227,168,.95);
+    }
+    .detailSummary{ margin:10px 0 0; color: var(--text); line-height:1.55; font-size:14px; }
+    .section{
+      margin-top:12px;
+      padding:14px 14px 12px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(20,30,48,.88), rgba(10,16,28,.88));
+      border:1px solid rgba(178,148,51,.22);
+    }
+    .section h4{
+      margin:0;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color: rgba(118,165,175,.95);
+      font-family: Orbitron, sans-serif;
+    }
+    .section p{ margin:10px 0 0; color: var(--text); line-height:1.6; font-size:13.5px; white-space:pre-wrap; }
+
+    .empty{ padding:20px 14px; color: var(--muted); font-size:13px; line-height:1.4; }
+
+    .footer{ margin-top:14px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
+    .btn{
+      cursor:pointer;
+      border:none;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:800;
+      letter-spacing:.06em;
+      background: linear-gradient(180deg, rgba(18,27,42,.95), rgba(12,18,30,.95));
+      border:2px solid rgba(178,148,51,.35);
+      color: rgba(246,227,168,.95);
+      box-shadow: var(--shadow);
+      transition: transform .08s ease, border-color .2s ease;
+      text-transform:uppercase;
+      font-size:12px;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(178,148,51,.6); }
+
+    @media (max-width: 1100px){
+      .grid{ grid-template-columns: 1fr; }
+      .split{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="titleRow">
+        <div class="brand">
+          <h1>TEC‑TREK</h1>
+          <div class="sub">Science & Technology Database</div>
+        </div>
+        <div class="badgeRow">
+          <div class="badge"><span>Total Tech</span> <b id="totalTech">0</b></div>
+          <div class="badge"><span>Systems</span> <b id="totalSystems">0</b></div>
+          <div class="badge"><span>View</span> <b id="viewBadge">Systems</b></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="crumbs" id="crumbs"></div>
+
+        <div class="searchBox" title="Search within the current view">
+          <span style="color:var(--muted);font-weight:800;letter-spacing:.08em;">SEARCH</span>
+          <input id="searchInput" type="text" placeholder="Search..." />
+        </div>
+
+        <button class="chipBtn" id="clearBtn">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="content">
+      <section class="panel">
+        <div class="panelHeader">
+          <h2 id="panelTitle">Systems</h2>
+          <div class="small" id="panelNote">Select a system to view technologies</div>
+        </div>
+        <div class="body" id="panelBody">
+          <div class="empty">Loading...</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">
+      <button class="btn" id="topBtn">Back to Top</button>
+    </div>
+  </div>
+
+  <script>
+    const SYSTEMS_URL = "";
+    const TECH_URL = "";
+
+    const FALLBACK_SYSTEMS = [
+      { ID: "propulsion", Name: "Propulsion", Description: "Warp, impulse, flight control, inertial management." }
+    ];
+
+    const FALLBACK_TECH = [
+      {
+        ID: "st-warp-drive",
+        Name: "Warp drive",
+        SystemID: "propulsion",
+        Type: "Device",
+        Summary: "A faster-than-light propulsion system that generates a controlled warp field (often described as a subspace bubble) around a vessel, enabling interstellar travel at warp factors.",
+        Sections: {
+        "Overview": 'Warp drive is the standard faster‑than‑light propulsion concept used across Star Trek. At a high level, you generate a shaped “warp field” around a vessel—often described as a subspace bubble—that lets the ship traverse interstellar distances at effective velocities beyond light speed without simply “pointing the nose faster.”\n\nOn screen, warp travel is treated as both a practical engineering system and a narrative hinge: it’s the reason Starfleet can patrol, respond, explore, and remain meaningfully connected across sectors. When characters say “Warp six,” they’re usually describing the intensity and configuration of the warp field rather than a simple linear speedometer reading.',
+        "The Warp Field": 'A warp field is the ship‑surrounding distortion that makes warp travel possible. The language varies by era and series, but it consistently points to these ideas:\n• The ship is enveloped in a field structure (often called a warp bubble or subspace bubble).\n• The field is shaped and stabilized so the ship can move at warp and still maneuver, navigate hazards, and drop to impulse without tearing itself apart.\n• The field is not a single “on/off” shell—ships talk about field geometry, field strength, and occasionally the need to adjust field harmonics or balance the field between nacelles.\n\nPractically, the warp field is what your engineering team is always fighting to maintain: stable enough to keep you moving, efficient enough not to burn out systems, and controllable enough to do more than run in a straight line.',
+        "Major Components": 'When Star Trek depicts a “classic” Federation warp system, a handful of components show up repeatedly in dialogue and visuals:\n\n1) Warp core (reactor): the central power‑reaction assembly that produces the energy feed for warp operations.\n2) Warp nacelles: external housings that contain warp field coils (warp coils) and help project the warp field in a controlled shape.\n3) Warp field coils: coil assemblies mounted within the nacelles that use the energy feed (often described as plasma) to generate the warp field.\n4) Plasma conduits / power distribution: routes the warp energy from the core to the nacelles, with shipwide distribution systems (often referred to as EPS) branching power to other systems.\n5) Control interfaces and safeties: the operational layer—interlocks, reaction controls, field regulators, and emergency procedures—that keep the whole arrangement from becoming a catastrophic physics experiment.\n\nDifferent ship classes and eras rearrange details (and some use different reactor terminology), but the “core + nacelles + coils + control” pattern holds up as the recognizable warp architecture.',
+        "Power & Reaction": 'Federation ships are commonly portrayed as using a matter/antimatter reaction moderated by dilithium in the warp core’s reaction chamber. In practice, the show treats this as a controlled annihilation process that produces enormous energy in a form that can be routed into the warp drive system.\n\nKey takeaways that appear again and again:\n• The reaction is powerful enough that containment and control are treated as existential: engineering lives and dies by keeping the core stable.\n• Dilithium is repeatedly described as regulating or moderating the reaction—crystals are aligned, replaced, or repaired when stressed or damaged.\n• Core stability, injector balance, and emergency shutdown procedures are normal operational concerns rather than rare edge cases.\n\nEven when a ship is not “at warp,” the warp core is frequently framed as the heart of the vessel’s power generation, supporting shipwide systems and creating the strategic “energy budget” that determines what the ship can do at any moment.',
+        "Warp Plasma & Field Coils": 'Star Trek regularly describes the warp core’s output as plasma that is routed to the nacelles. The warp coils—mounted inside the nacelles—are then described as producing the actual warp field (or subspace displacement field).\n\nIn story terms, this pipeline gives writers very “Starfleet” knobs to turn:\n• Power routing: “reroute plasma,” “dump the plasma,” “isolate the conduit,” “reduce output,” “balance the flow between nacelles.”\n• Coil health: coils can be damaged, swapped, overdriven, or taken offline; maintenance implies physical hardware that can be repaired or replaced.\n• Field stability: the ship doesn’t just need raw power—it needs field geometry and stability. That’s why you get diagnostics like field asymmetry, coil imbalance, and regulator drift.\n\nThis is also why nacelles matter: they are not decorative fins. They are the field‑generation housing, and they’re treated as critical hardware—especially when you’re pushing the envelope at high warp.',
+        "Navigation & Control": 'Warp travel is usually portrayed as tightly coupled to navigation, sensors, and structural control. The implication is that you’re not “teleporting” between stars—you’re riding a field configuration through interstellar space with real hazards and real constraints.\n\nOperational control themes that show up often:\n• Course corrections at warp: ships adjust heading, compensate for drift, and avoid hazards (sometimes in ways that stress the drive).\n• Warp field tuning: engineers and helm officers talk about tuning the field, adjusting harmonics, or compensating for turbulence or interference.\n• Coordination with other systems: shields, deflectors, and power distribution are frequently linked to warp operations, especially in emergencies.\n• Emergency drops: characters often need to drop to impulse or shut down warp quickly—suggesting procedures, interlocks, and a “safe sequence” for collapsing the field.\n\nThe result is that warp feels like a real operating mode: a complex balance between the ship’s engines, its structural integrity, and the space it’s traveling through.',
+        "Warp Factors & Performance": 'Warp speed is commonly expressed as a warp factor (“warp six,” “warp 9.2,” etc.). The franchise is not perfectly consistent about mapping warp factor to a single number of multiples of light speed, but the on‑screen intent is clear:\n• Warp 1 is the “light speed threshold” (the beginning of warp travel).\n• Higher warp factors represent dramatically higher effective velocities, and the relationship is treated as non‑linear rather than “warp 2 is twice warp 1.”\n• High‑warp operation is portrayed as punishing—both to the ship and sometimes to the surrounding space—so ships rarely cruise indefinitely at their absolute maximum.\n\nYou can think of warp factor as a control dial for field intensity and geometry rather than a speedometer. It’s the number the crew uses to communicate operational intent while the computer and engineering systems manage the hidden complexity underneath.',
+        "Operational Limits & Hazards": 'Warp drive is portrayed as powerful, reliable, and still risky. The hazards depicted on screen aren’t only “the engine explodes”—they include a whole ecosystem of operating limits and failure modes:\n\n• Containment failures: the core’s reaction must remain controlled; loss of containment is treated as catastrophic.\n• Field instabilities: field asymmetry or coil imbalance can force a shutdown, cause dangerous turbulence, or prevent a stable warp bubble.\n• Power tradeoffs: pushing warp output can starve other systems, especially shields and weapons, or require critical rerouting.\n• Environmental constraints: certain regions (anomalies, subspace distortions, dense fields) can make warp unsafe or impossible, forcing impulse travel.\n• Strategic constraints: occasionally, broader consequences of sustained warp use are raised, implying that “warp everywhere, all the time” may have costs beyond your own hull.\n\nThe consistent theme is that warp is not magic. It’s engineered physics that works—until it doesn’t—and every crew knows the difference between routine warp and a hard push.',
+        "Variants & Historical Notes": 'Across eras, warp drive is treated as an evolving technology:\n• Early Starfleet warp systems are portrayed as more limited and temperamental.\n• By the 23rd and 24th centuries, warp travel is routine, but high‑warp performance remains a meaningful advantage.\n• Different civilizations field different design philosophies—some emphasize raw speed, others stealth, durability, or unique field mechanics.\n\nEven within Federation designs, ships differ: some are optimized for long‑range exploration, some for tactical response, and some for specialized missions that demand unique warp profiles. The franchise rarely freezes warp technology into a single “final” blueprint; instead it keeps it flexible enough to support new stories, new ship classes, and new constraints.',
+        "Notable On‑Screen References": 'This entry is designed to support a future “Appearances” database. For now, these are common places where warp drive concepts are foregrounded in dialogue and plot:\n• Stories centered on warp core stability, emergency shutdowns, dilithium damage, or catastrophic containment risk.\n• Episodes and films where warp travel is limited by anomalies, subspace distortion, or engineered interference.\n• Plots that push ships to extreme warp performance, with consequences for the vessel or the space around it.\n\nIf you later want this to behave like your episode/guest projects, we can add an Appearances array with specific titles and then render those as clickable links.',
+        "Terminology": 'Warp drive terminology you’ll see repeatedly in Star Trek:\n• Warp core: the main reactor assembly powering warp operations.\n• Dilithium: the material commonly referenced as moderating the matter/antimatter reaction.\n• Warp nacelles: external housings associated with field generation.\n• Warp coils / field coils: coil assemblies within the nacelles that generate the warp field.\n• Warp factor: the primary way warp velocity is expressed operationally.\n• Subspace: the domain frequently referenced in relation to faster‑than‑light effects.'
+      },
+        RelatedTechIDs: []
+      }
+    ];
+
+    const state = {
+      systems: [],
+      tech: [],
+      systemsById: new Map(),
+      techById: new Map(),
+      query: "",
+      view: "systems",
+      systemId: null,
+      techId: null
+    };
+
+    const el = (id) => document.getElementById(id);
+    const norm = (s) => String(s || "").toLowerCase().trim();
+
+    function qp(){
+      const u = new URL(window.location.href);
+      return u.searchParams;
+    }
+
+    function setRoute(next){
+      const u = new URL(window.location.href);
+      u.searchParams.set("view", next.view);
+      if(next.systemId) u.searchParams.set("system", next.systemId); else u.searchParams.delete("system");
+      if(next.techId) u.searchParams.set("tech", next.techId); else u.searchParams.delete("tech");
+      window.history.pushState({}, "", u.toString());
+      readRoute();
+      render();
+    }
+
+    function readRoute(){
+      const p = qp();
+      const v = p.get("view") || "systems";
+      const system = p.get("system");
+      const tech = p.get("tech");
+      state.view = v;
+      state.systemId = system;
+      state.techId = tech;
+      if(state.view === "system" && !state.systemId) state.view = "systems";
+      if(state.view === "tech" && !state.techId) state.view = "systems";
+    }
+
+    async function loadJson(url){
+      const res = await fetch(url, { cache: "no-cache" });
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      return await res.json();
+    }
+
+    async function init(){
+      let systems = null;
+      let tech = null;
+
+      try{ if(SYSTEMS_URL) systems = await loadJson(SYSTEMS_URL); }catch(e){ systems = null; }
+      try{ if(TECH_URL) tech = await loadJson(TECH_URL); }catch(e){ tech = null; }
+
+      if(!Array.isArray(systems)) systems = FALLBACK_SYSTEMS;
+      if(!Array.isArray(tech)) tech = FALLBACK_TECH;
+
+      state.systems = systems.map(s => ({ ID: s.ID, Name: s.Name, Description: s.Description || "" }));
+      state.tech = tech.map(t => ({ ID: t.ID, Name: t.Name, SystemID: t.SystemID, Type: t.Type || "Entry", Summary: t.Summary || "", Sections: t.Sections || {}, RelatedTechIDs: Array.isArray(t.RelatedTechIDs) ? t.RelatedTechIDs : [] }));
+
+      state.systemsById = new Map(state.systems.map(s => [s.ID, s]));
+      state.techById = new Map(state.tech.map(t => [t.ID, t]));
+
+      el("totalTech").textContent = state.tech.length;
+      el("totalSystems").textContent = state.systems.length;
+
+      wireUI();
+      readRoute();
+      render();
+    }
+
+    function wireUI(){
+      el("searchInput").addEventListener("input", (ev) => { state.query = ev.target.value || ""; render(); });
+      el("clearBtn").addEventListener("click", () => { state.query = ""; el("searchInput").value = ""; render(); });
+      el("topBtn").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      window.addEventListener("popstate", () => { readRoute(); render(); });
+    }
+
+    function buildCrumbs(){
+      const wrap = el("crumbs");
+      wrap.innerHTML = "";
+
+      const bSystems = document.createElement("button");
+      bSystems.className = "crumb" + (state.view === "systems" ? " active" : "");
+      bSystems.textContent = "Systems";
+      bSystems.addEventListener("click", () => setRoute({ view: "systems" }));
+      wrap.appendChild(bSystems);
+
+      if(state.view === "system" || state.view === "tech"){
+        const s = state.systemsById.get(state.systemId);
+        if(s){
+          const bSystem = document.createElement("button");
+          bSystem.className = "crumb" + (state.view === "system" ? " active" : "");
+          bSystem.textContent = s.Name;
+          bSystem.addEventListener("click", () => setRoute({ view: "system", systemId: s.ID }));
+          wrap.appendChild(bSystem);
+        }
+      }
+
+      if(state.view === "tech"){
+        const t = state.techById.get(state.techId);
+        if(t){
+          const bTech = document.createElement("button");
+          bTech.className = "crumb active";
+          bTech.textContent = t.Name;
+          bTech.addEventListener("click", () => setRoute({ view: "tech", systemId: t.SystemID, techId: t.ID }));
+          wrap.appendChild(bTech);
+        }
+      }
+    }
+
+    function inViewSearch(itemText){
+      const q = norm(state.query);
+      if(!q) return true;
+      return norm(itemText).includes(q);
+    }
+
+    function render(){
+      buildCrumbs();
+
+      if(state.view === "systems"){
+        el("viewBadge").textContent = "Systems";
+        el("panelTitle").textContent = "Systems";
+        el("panelNote").textContent = "Select a system to view technologies";
+        renderSystems();
+        return;
+      }
+
+      if(state.view === "system"){
+        const s = state.systemsById.get(state.systemId);
+        if(!s){ setRoute({ view: "systems" }); return; }
+        el("viewBadge").textContent = "System";
+        el("panelTitle").textContent = s.Name;
+        el("panelNote").textContent = "Select a technology to view details";
+        renderSystemTech(s.ID);
+        return;
+      }
+
+      if(state.view === "tech"){
+        const t = state.techById.get(state.techId);
+        if(!t){ setRoute({ view: "systems" }); return; }
+        el("viewBadge").textContent = "Tech";
+        el("panelTitle").textContent = t.Name;
+        el("panelNote").textContent = t.Type + " • " + (state.systemsById.get(t.SystemID)?.Name || t.SystemID);
+        renderTech(t.ID);
+        return;
+      }
+    }
+
+    function renderSystems(){
+      const body = el("panelBody");
+      body.innerHTML = "";
+
+      const grid = document.createElement("div");
+      grid.className = "grid";
+
+      const techCount = new Map();
+      state.tech.forEach(t => techCount.set(t.SystemID, (techCount.get(t.SystemID) || 0) + 1));
+
+      const list = state.systems
+        .filter(s => inViewSearch(s.Name + " " + s.Description))
+        .map(s => ({ ...s, Count: techCount.get(s.ID) || 0 }))
+        .sort((a,b) => a.Name.localeCompare(b.Name));
+
+      if(!list.length){ body.innerHTML = '<div class="empty">No systems match your search.</div>'; return; }
+
+      list.forEach(s => {
+        const c = document.createElement("div");
+        c.className = "card";
+        c.setAttribute("role", "button");
+        c.setAttribute("tabindex", "0");
+
+        const h = document.createElement("h3");
+        h.textContent = s.Name;
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+
+        const p1 = document.createElement("span");
+        p1.className = "pill teal";
+        p1.textContent = "System";
+
+        const p2 = document.createElement("span");
+        p2.className = "pill";
+        p2.textContent = s.Count + " tech";
+
+        meta.appendChild(p1);
+        meta.appendChild(p2);
+
+        const d = document.createElement("div");
+        d.className = "desc";
+        d.textContent = s.Description || "";
+
+        const go = () => setRoute({ view: "system", systemId: s.ID });
+
+        c.addEventListener("click", go);
+        c.addEventListener("keydown", (ev) => { if(ev.key === "Enter" || ev.key === " ") go(); });
+
+        c.appendChild(h);
+        c.appendChild(meta);
+        c.appendChild(d);
+        grid.appendChild(c);
+      });
+
+      body.appendChild(grid);
+    }
+
+    function renderSystemTech(systemId){
+      const body = el("panelBody");
+      body.innerHTML = "";
+
+      const sys = state.systemsById.get(systemId);
+
+      const split = document.createElement("div");
+      split.className = "split";
+
+      const left = document.createElement("div");
+      const right = document.createElement("div");
+
+      const sysCard = document.createElement("div");
+      sysCard.className = "section";
+
+      const st = document.createElement("h4");
+      st.textContent = "System Overview";
+
+      const sp = document.createElement("p");
+      sp.textContent = sys.Description || "";
+
+      sysCard.appendChild(st);
+      sysCard.appendChild(sp);
+      left.appendChild(sysCard);
+
+      const list = state.tech
+        .filter(t => t.SystemID === systemId)
+        .filter(t => inViewSearch(t.Name + " " + t.Summary + " " + t.Type))
+        .sort((a,b)=>a.Name.localeCompare(b.Name));
+
+      if(!list.length){
+        right.innerHTML = '<div class="empty">No technologies match your search in this system.</div>';
+      }else{
+        const grid = document.createElement("div");
+        grid.className = "grid";
+
+        list.forEach(t => {
+          const c = document.createElement("div");
+          c.className = "card";
+          c.setAttribute("role", "button");
+          c.setAttribute("tabindex", "0");
+
+          const h = document.createElement("h3");
+          h.textContent = t.Name;
+
+          const meta = document.createElement("div");
+          meta.className = "meta";
+
+          const p1 = document.createElement("span");
+          p1.className = "pill teal";
+          p1.textContent = t.Type;
+
+          const p2 = document.createElement("span");
+          p2.className = "pill";
+          p2.textContent = "Tech";
+
+          meta.appendChild(p1);
+          meta.appendChild(p2);
+
+          const d = document.createElement("div");
+          d.className = "desc";
+          d.textContent = t.Summary || "";
+
+          const go = () => setRoute({ view: "tech", systemId: systemId, techId: t.ID });
+
+          c.addEventListener("click", go);
+          c.addEventListener("keydown", (ev) => { if(ev.key === "Enter" || ev.key === " ") go(); });
+
+          c.appendChild(h);
+          c.appendChild(meta);
+          c.appendChild(d);
+
+          grid.appendChild(c);
+        });
+
+        right.appendChild(grid);
+      }
+
+      split.appendChild(left);
+      split.appendChild(right);
+      body.appendChild(split);
+    }
+
+    function renderTech(techId){
+      const body = el("panelBody");
+      body.innerHTML = "";
+
+      const t = state.techById.get(techId);
+      const sys = state.systemsById.get(t.SystemID);
+
+      const split = document.createElement("div");
+      split.className = "split";
+
+      const left = document.createElement("div");
+      const right = document.createElement("div");
+
+      const header = document.createElement("div");
+      header.className = "section";
+
+      const title = document.createElement("h3");
+      title.className = "detailTitle";
+      title.textContent = t.Name;
+
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      meta.style.marginTop = "10px";
+
+      const p1 = document.createElement("span");
+      p1.className = "pill teal";
+      p1.textContent = t.Type;
+
+      const p2 = document.createElement("span");
+      p2.className = "pill";
+      p2.textContent = sys ? sys.Name : t.SystemID;
+
+      meta.appendChild(p1);
+      meta.appendChild(p2);
+
+      const summary = document.createElement("p");
+      summary.className = "detailSummary";
+      summary.textContent = t.Summary || "";
+
+      header.appendChild(title);
+      header.appendChild(meta);
+      header.appendChild(summary);
+      left.appendChild(header);
+
+      const sections = t.Sections || {};
+      const keys = Object.keys(sections);
+      if(keys.length){
+        keys.forEach(k => {
+          const text = sections[k];
+          if(!text) return;
+          const sec = document.createElement("div");
+          sec.className = "section";
+          const h = document.createElement("h4");
+          h.textContent = k;
+          const p = document.createElement("p");
+          p.textContent = text;
+          sec.appendChild(h);
+          sec.appendChild(p);
+          left.appendChild(sec);
+        });
+      }else{
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = "No sections have been added for this entry yet.";
+        left.appendChild(empty);
+      }
+
+      const navCard = document.createElement("div");
+      navCard.className = "section";
+      const nh = document.createElement("h4");
+      nh.textContent = "Navigation";
+      const np = document.createElement("p");
+      np.textContent = "Use the breadcrumb buttons above, or jump back to the system list from here.";
+      navCard.appendChild(nh);
+      navCard.appendChild(np);
+      right.appendChild(navCard);
+
+      const row = document.createElement("div");
+      row.style.display = "flex";
+      row.style.gap = "10px";
+      row.style.flexWrap = "wrap";
+      row.style.marginTop = "12px";
+
+      const back1 = document.createElement("button");
+      back1.className = "btn";
+      back1.textContent = "Back to System";
+      back1.addEventListener("click", () => setRoute({ view: "system", systemId: t.SystemID }));
+
+      const back2 = document.createElement("button");
+      back2.className = "btn";
+      back2.textContent = "Back to Systems";
+      back2.addEventListener("click", () => setRoute({ view: "systems" }));
+
+      row.appendChild(back1);
+      row.appendChild(back2);
+      right.appendChild(row);
+
+      split.appendChild(left);
+      split.appendChild(right);
+      body.appendChild(split);
+    }
+
+    init();
+  </script>
+</body>
+</html>
