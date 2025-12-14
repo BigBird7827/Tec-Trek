@@ -1,0 +1,183 @@
+{
+  "Version": 2,
+  "GeneratedUTC": "2025-12-14T04:35:31Z",
+  "Systems": [
+    {
+      "ID": "propulsion",
+      "Name": "Propulsion",
+      "Description": "Warp, impulse, maneuvering thrusters, inertial management.",
+      "SortOrder": 10
+    }
+  ],
+  "Technologies": [
+    {
+      "ID": "st-warp-drive",
+      "Name": "Warp drive",
+      "SystemID": "propulsion",
+      "Type": "Device",
+      "Summary": "Warp drive is the core faster‑than‑light propulsion technology used by most interstellar powers in Star Trek. Rather than treating speed as simple acceleration through normal space, warp travel is framed as controlled field generation: a ship produces a shaped warp field—often described as a subspace bubble—that allows sustained superluminal transit between stars.\n\nBecause warp is an operating mode rather than a single component, a complete “warp drive” entry naturally spans the ship’s power reactor (the warp core and its matter/antimatter reaction system), distribution hardware (plasma/EPS pathways), and the field projectors (warp coils in the nacelles) that form and stabilize the warp field.",
+      "Sections": {
+        "What warp drive is": "Warp drive (sometimes called a warp engine) enables faster‑than‑light travel by generating warp fields around a vessel. The field is described as a subspace‑related effect that envelops the ship, allowing interstellar distances to be crossed in practical time. On the bridge, warp performance is communicated using warp factors (“warp six,” “warp 9.2”), which function as an operational shorthand for the field settings required to achieve a given effective velocity.\n\nAcross eras, the franchise keeps the same recognizable idea—warp fields, warp factors, nacelles, and a warp core—while letting specific details vary by ship class and period.",
+        "Warp field and the subspace bubble": "On-screen dialogue repeatedly treats the warp field as a shaped structure that must remain stable: crews diagnose field asymmetry, harmonics, and other stability problems rather than simply “losing speed.” The common implication is that the ship is riding inside a controlled field configuration (often called a warp bubble or subspace bubble) that permits superluminal transit.\n\nThis framing is useful for storytelling because it makes warp travel adjustable and fallible. A ship can be forced out of warp by field instability, interference, or damage to the hardware that generates and regulates the field—without requiring that the entire ship be physically destroyed.",
+        "The warp core and the matter/antimatter reaction": "Federation starships are most often portrayed as powering warp operations with a controlled matter/antimatter reaction in the warp core’s reaction assembly. Matter and antimatter are injected into a central reaction region in a regulated intermix ratio, releasing enormous energy. Dilithium is consistently referenced as a key element in moderating and regulating that reaction so energy can be safely drawn for ship systems.\n\nThe warp core is therefore both propulsion-critical and ship-critical: it’s treated as the heart of the vessel’s energy budget, with stability, containment, and shutdown procedures forming a constant part of engineering life.",
+        "Nacelles, warp coils, and field generation": "While the core produces the power and reaction control, the ship’s warp nacelles are repeatedly framed as the field‑generation hardware. Warp coils (field coils) housed in the nacelles are fed by the core’s output—commonly described as plasma routed through conduits—and then used to project and shape the warp field.\n\nThis is why nacelles are treated as essential systems: damage to a nacelle, coil assembly, or the plasma feed can produce immediate warp‑field problems even if the core remains intact.",
+        "Warp factors and performance": "Warp speed is expressed as a warp factor. Warp one marks the light‑speed threshold for warp travel, and higher factors represent increasingly greater effective velocities. The franchise is not perfectly consistent about mapping warp factor to a single numeric “times light speed” value, but it is consistently portrayed as non‑linear—small changes near the top end are treated as major jumps in performance and stress.\n\nIn practical terms, warp factor is the language the crew uses to communicate intent (“make best speed,” “maximum warp,” “warp nine”) while the computer and engineering systems handle the underlying field geometry, power routing, and safety margins.",
+        "Operations, safeties, and failure modes": "Warp operation is depicted as a balance between power, stability, and structural limits. Common operational themes include rerouting power, balancing flow between nacelles, tuning field harmonics, isolating damaged conduits, and executing emergency shutdowns.\n\nCommonly referenced failure risks include containment loss or a core breach, field collapse due to coil damage or imbalance, and cascading power tradeoffs where maintaining warp conflicts with shields, weapons, or critical life support. These risks keep warp drive grounded as an engineered system with real procedures rather than a purely magical travel button.",
+        "Environmental impact and speed limits": "A notable 24th‑century concern raised on screen is cumulative subspace damage linked to sustained high‑warp travel in certain regions. In response, Starfleet institutes a warp speed restriction (a “speed limit”) with emergency exceptions, emphasizing that warp operation can have systemic consequences beyond an individual ship’s maintenance.\n\nLater stories treat the restriction as temporary or unevenly applied, but the episode establishes an enduring idea: warp drive is powerful enough to create environmental side effects under the right conditions.",
+        "History and development": "Human warp history is anchored by Zefram Cochrane’s first successful warp flight, which becomes a turning point leading directly to first contact with the Vulcans. From there, Starfleet warp systems advance from early, more limited reactors to the mature 23rd‑ and 24th‑century architectures built around high‑output warp cores, nacelle coil systems, and increasingly refined control and safety layers.\n\nDifferent cultures field different design approaches—some emphasizing stealth, speed, or alternative superluminal methods—so “warp drive” also sits inside a larger family of faster‑than‑light technologies that include transwarp concepts and other specialized propulsion modes."
+      },
+      "RelatedTechIDs": [],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Cage",
+          "Season": 1,
+          "Episode": 0,
+          "Notes": "Early on-screen use of warp factor terminology."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Booby Trap",
+          "Season": 3,
+          "Episode": 6,
+          "Notes": "Warp core/propulsion referenced in engineering context."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "Engineering focus; dilithium chamber imagery and warp power concerns feature prominently."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Force of Nature",
+          "Season": 7,
+          "Episode": 9,
+          "Notes": "Introduces subspace damage concern and a warp speed restriction policy."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Cochrane’s warp flight is central to the setting and first contact."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "First Flight",
+          "Season": 2,
+          "Episode": 24,
+          "Notes": "Revisits early Human warp development and Cochrane’s legacy."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Threshold",
+          "Season": 2,
+          "Episode": 15,
+          "Notes": "Explores an extreme warp performance edge case in-story."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Transwarp (umbrella term)",
+          "Summary": "A label applied to multiple faster‑than‑warp approaches intended to exceed traditional warp drive limits; depicted differently by different species."
+        },
+        {
+          "Name": "Variable‑geometry nacelles (selected Starfleet designs)",
+          "Summary": "A starship design feature depicted as altering nacelle configuration during warp operations, tied in dialogue to managing field effects."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Warp field",
+          "Definition": "The shaped field generated for warp travel; stability and geometry are recurring operational concerns."
+        },
+        {
+          "Term": "Subspace bubble",
+          "Definition": "Common description of the field structure that envelops a ship during warp transit."
+        },
+        {
+          "Term": "Warp factor",
+          "Definition": "The operational scale used to communicate warp performance settings (e.g., “warp six”)."
+        },
+        {
+          "Term": "Warp core",
+          "Definition": "Primary ship reactor associated with warp propulsion; commonly a matter/antimatter reaction system in Federation designs."
+        },
+        {
+          "Term": "M/ARA",
+          "Definition": "Matter/Antimatter Reaction Assembly; the reactor arrangement that injects matter and antimatter into a controlled reaction element."
+        },
+        {
+          "Term": "Dilithium chamber",
+          "Definition": "Core component housing dilithium crystals used in regulating the matter/antimatter reaction."
+        },
+        {
+          "Term": "Warp nacelle",
+          "Definition": "External housing containing warp coils used to generate and shape the warp field."
+        },
+        {
+          "Term": "Warp coil",
+          "Definition": "Field coil assemblies within nacelles that project the warp field when energized."
+        },
+        {
+          "Term": "Core breach",
+          "Definition": "Catastrophic failure mode involving loss of containment/control of the warp core reaction."
+        }
+      ],
+      "Operators": [
+        "Starfleet (Federation starships)",
+        "Major interstellar powers with warp-capable vessels"
+      ],
+      "Constraints": [
+        "Warp operation depends on stable warp field geometry; asymmetry or coil imbalance can force a shutdown.",
+        "High warp output competes with other ship systems for power; emergency routing is common during combat or damage control.",
+        "Warp travel can be unsafe or impossible in certain spatial anomalies, dense fields, or subspace‑distorted regions.",
+        "Matter/antimatter containment is existential; loss of containment is treated as catastrophic.",
+        "Sustained high‑warp activity is depicted as having potential environmental side effects in sensitive regions."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TAS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC",
+          "SNW",
+          "LDS",
+          "PRO",
+          "DIS"
+        ],
+        "Era": [
+          "21st century",
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century",
+          "32nd century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "TOS: \"The Cage\" (warp factor terminology)",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Warp%20Drive.png",
+        "Gallery": []
+      }
+    }
+  ]
+}
