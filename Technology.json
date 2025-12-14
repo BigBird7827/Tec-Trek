@@ -1,6 +1,6 @@
 {
-  "Version": 6,
-  "GeneratedUTC": "2025-12-14T05:59:22Z",
+  "Version": 7,
+  "GeneratedUTC": "2025-12-14T06:57:36Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -8,178 +8,16 @@
       "Description": "Warp, impulse, maneuvering thrusters, inertial management.",
       "SortOrder": 10,
       "SidebarText": "Warp, impulse, maneuvering thrusters, inertial management.\n\nFeatured: Warp drive\n\nNotes:\n• Warp operation depends on stable warp field geometry; asymmetry or coil imbalance can force a shutdown.\n• High warp output competes with other ship systems for power; emergency routing is common during combat or damage control.\n• Warp travel can be unsafe or impossible in certain spatial anomalies, dense fields, or subspace‑distorted regions."
+    },
+    {
+      "ID": "shipboard-weapons",
+      "Name": "Shipboard Weapons",
+      "Description": "Phasers, torpedoes, and integrated tactical fire-control for starship combat.",
+      "SortOrder": 20,
+      "SidebarText": "Shipboard weapons cover the standard tools of starship combat: directed‑energy emitters, projectile ordnance, and the targeting and firing systems that tie them together. In most eras, Starfleet’s baseline loadout is phasers plus torpedoes, with earlier NX‑era ships relying on phase cannons and spatial torpedoes before later upgrades."
     }
   ],
   "Technologies": [
-    {
-      "ID": "st-warp-drive",
-      "Name": "Warp drive",
-      "SystemID": "propulsion",
-      "Type": "Device",
-      "Summary": "Warp drive is the core faster‑than‑light propulsion technology used by most interstellar powers in Star Trek. Rather than treating speed as simple acceleration through normal space, warp travel is framed as controlled field generation: a ship produces a shaped warp field—often described as a subspace bubble—that allows sustained superluminal transit between stars.\n\nBecause warp is an operating mode rather than a single component, a complete “warp drive” entry naturally spans the ship’s power reactor (the warp core and its matter/antimatter reaction system), distribution hardware (plasma/EPS pathways), and the field projectors (warp coils in the nacelles) that form and stabilize the warp field.",
-      "Sections": {
-        "What warp drive is": "Warp drive (sometimes called a warp engine) enables faster‑than‑light travel by generating warp fields around a vessel. The field is described as a subspace‑related effect that envelops the ship, allowing interstellar distances to be crossed in practical time. On the bridge, warp performance is communicated using warp factors (“warp six,” “warp 9.2”), which function as an operational shorthand for the field settings required to achieve a given effective velocity.\n\nAcross eras, the franchise keeps the same recognizable idea—warp fields, warp factors, nacelles, and a warp core—while letting specific details vary by ship class and period.",
-        "Warp field and the subspace bubble": "On-screen dialogue repeatedly treats the warp field as a shaped structure that must remain stable: crews diagnose field asymmetry, harmonics, and other stability problems rather than simply “losing speed.” The common implication is that the ship is riding inside a controlled field configuration (often called a warp bubble or subspace bubble) that permits superluminal transit.\n\nThis framing is useful for storytelling because it makes warp travel adjustable and fallible. A ship can be forced out of warp by field instability, interference, or damage to the hardware that generates and regulates the field—without requiring that the entire ship be physically destroyed.",
-        "The warp core and the matter/antimatter reaction": "Federation starships are most often portrayed as powering warp operations with a controlled matter/antimatter reaction in the warp core’s reaction assembly. Matter and antimatter are injected into a central reaction region in a regulated intermix ratio, releasing enormous energy. Dilithium is consistently referenced as a key element in moderating and regulating that reaction so energy can be safely drawn for ship systems.\n\nThe warp core is therefore both propulsion-critical and ship-critical: it’s treated as the heart of the vessel’s energy budget, with stability, containment, and shutdown procedures forming a constant part of engineering life.",
-        "Nacelles, warp coils, and field generation": "While the core produces the power and reaction control, the ship’s warp nacelles are repeatedly framed as the field‑generation hardware. Warp coils (field coils) housed in the nacelles are fed by the core’s output—commonly described as plasma routed through conduits—and then used to project and shape the warp field.\n\nThis is why nacelles are treated as essential systems: damage to a nacelle, coil assembly, or the plasma feed can produce immediate warp‑field problems even if the core remains intact.",
-        "Warp factors and performance": "Warp speed is expressed as a warp factor. Warp one marks the light‑speed threshold for warp travel, and higher factors represent increasingly greater effective velocities. The franchise is not perfectly consistent about mapping warp factor to a single numeric “times light speed” value, but it is consistently portrayed as non‑linear—small changes near the top end are treated as major jumps in performance and stress.\n\nIn practical terms, warp factor is the language the crew uses to communicate intent (“make best speed,” “maximum warp,” “warp nine”) while the computer and engineering systems handle the underlying field geometry, power routing, and safety margins.",
-        "Operations, safeties, and failure modes": "Warp operation is depicted as a balance between power, stability, and structural limits. Common operational themes include rerouting power, balancing flow between nacelles, tuning field harmonics, isolating damaged conduits, and executing emergency shutdowns.\n\nCommonly referenced failure risks include containment loss or a core breach, field collapse due to coil damage or imbalance, and cascading power tradeoffs where maintaining warp conflicts with shields, weapons, or critical life support. These risks keep warp drive grounded as an engineered system with real procedures rather than a purely magical travel button.",
-        "Environmental impact and speed limits": "A notable 24th‑century concern raised on screen is cumulative subspace damage linked to sustained high‑warp travel in certain regions. In response, Starfleet institutes a warp speed restriction (a “speed limit”) with emergency exceptions, emphasizing that warp operation can have systemic consequences beyond an individual ship’s maintenance.\n\nLater stories treat the restriction as temporary or unevenly applied, but the episode establishes an enduring idea: warp drive is powerful enough to create environmental side effects under the right conditions.",
-        "History and development": "Human warp history is anchored by Zefram Cochrane’s first successful warp flight, which becomes a turning point leading directly to first contact with the Vulcans. From there, Starfleet warp systems advance from early, more limited reactors to the mature 23rd‑ and 24th‑century architectures built around high‑output warp cores, nacelle coil systems, and increasingly refined control and safety layers.\n\nDifferent cultures field different design approaches—some emphasizing stealth, speed, or alternative superluminal methods—so “warp drive” also sits inside a larger family of faster‑than‑light technologies that include transwarp concepts and other specialized propulsion modes."
-      },
-      "RelatedTechIDs": [],
-      "Appearances": [
-        {
-          "RefType": "Episode",
-          "Series": "TOS",
-          "Title": "The Cage",
-          "Season": 1,
-          "Episode": 0,
-          "Notes": "Early on-screen use of warp factor terminology."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "TNG",
-          "Title": "Booby Trap",
-          "Season": 3,
-          "Episode": 6,
-          "Notes": "Warp core/propulsion referenced in engineering context."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "TNG",
-          "Title": "Relics",
-          "Season": 6,
-          "Episode": 4,
-          "Notes": "Engineering focus; dilithium chamber imagery and warp power concerns feature prominently."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "TNG",
-          "Title": "Force of Nature",
-          "Season": 7,
-          "Episode": 9,
-          "Notes": "Introduces subspace damage concern and a warp speed restriction policy."
-        },
-        {
-          "RefType": "Film",
-          "Series": "Film",
-          "Title": "Star Trek: First Contact",
-          "Season": null,
-          "Episode": null,
-          "Notes": "Cochrane’s warp flight is central to the setting and first contact."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "ENT",
-          "Title": "First Flight",
-          "Season": 2,
-          "Episode": 24,
-          "Notes": "Revisits early Human warp development and Cochrane’s legacy."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "VOY",
-          "Title": "Threshold",
-          "Season": 2,
-          "Episode": 15,
-          "Notes": "Explores an extreme warp performance edge case in-story."
-        }
-      ],
-      "Variants": [
-        {
-          "Name": "Transwarp (umbrella term)",
-          "Summary": "A label applied to multiple faster‑than‑warp approaches intended to exceed traditional warp drive limits; depicted differently by different species."
-        },
-        {
-          "Name": "Variable‑geometry nacelles (selected Starfleet designs)",
-          "Summary": "A starship design feature depicted as altering nacelle configuration during warp operations, tied in dialogue to managing field effects."
-        }
-      ],
-      "KeyTerms": [
-        {
-          "Term": "Warp field",
-          "Definition": "The shaped field generated for warp travel; stability and geometry are recurring operational concerns."
-        },
-        {
-          "Term": "Subspace bubble",
-          "Definition": "Common description of the field structure that envelops a ship during warp transit."
-        },
-        {
-          "Term": "Warp factor",
-          "Definition": "The operational scale used to communicate warp performance settings (e.g., “warp six”)."
-        },
-        {
-          "Term": "Warp core",
-          "Definition": "Primary ship reactor associated with warp propulsion; commonly a matter/antimatter reaction system in Federation designs."
-        },
-        {
-          "Term": "M/ARA",
-          "Definition": "Matter/Antimatter Reaction Assembly; the reactor arrangement that injects matter and antimatter into a controlled reaction element."
-        },
-        {
-          "Term": "Dilithium chamber",
-          "Definition": "Core component housing dilithium crystals used in regulating the matter/antimatter reaction."
-        },
-        {
-          "Term": "Warp nacelle",
-          "Definition": "External housing containing warp coils used to generate and shape the warp field."
-        },
-        {
-          "Term": "Warp coil",
-          "Definition": "Field coil assemblies within nacelles that project the warp field when energized."
-        },
-        {
-          "Term": "Core breach",
-          "Definition": "Catastrophic failure mode involving loss of containment/control of the warp core reaction."
-        }
-      ],
-      "Operators": [
-        "Starfleet (Federation starships)",
-        "Major interstellar powers with warp-capable vessels"
-      ],
-      "Constraints": [
-        "Warp operation depends on stable warp field geometry; asymmetry or coil imbalance can force a shutdown.",
-        "High warp output competes with other ship systems for power; emergency routing is common during combat or damage control.",
-        "Warp travel can be unsafe or impossible in certain spatial anomalies, dense fields, or subspace‑distorted regions.",
-        "Matter/antimatter containment is existential; loss of containment is treated as catastrophic.",
-        "Sustained high‑warp activity is depicted as having potential environmental side effects in sensitive regions."
-      ],
-      "Meta": {
-        "Series": [
-          "ENT",
-          "TOS",
-          "TAS",
-          "TNG",
-          "DS9",
-          "VOY",
-          "FILM",
-          "PIC",
-          "SNW",
-          "LDS",
-          "PRO",
-          "DIS"
-        ],
-        "Era": [
-          "21st century",
-          "22nd century",
-          "23rd century",
-          "24th century",
-          "25th century",
-          "32nd century"
-        ],
-        "Affiliations": [
-          "United Federation of Planets",
-          "Starfleet"
-        ],
-        "FirstSeen": "TOS: \"The Cage\" (warp factor terminology)",
-        "LastSeen": ""
-      },
-      "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Warp%20Drive.png",
-        "Gallery": []
-      }
-    },
     {
       "ID": "st-impulse-drive",
       "Name": "Impulse drive",
@@ -479,7 +317,613 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Thrusters.png",
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-warp-drive",
+      "Name": "Warp drive",
+      "SystemID": "propulsion",
+      "Type": "Device",
+      "Summary": "Warp drive is the core faster‑than‑light propulsion technology used by most interstellar powers in Star Trek. Rather than treating speed as simple acceleration through normal space, warp travel is framed as controlled field generation: a ship produces a shaped warp field—often described as a subspace bubble—that allows sustained superluminal transit between stars.\n\nBecause warp is an operating mode rather than a single component, a complete “warp drive” entry naturally spans the ship’s power reactor (the warp core and its matter/antimatter reaction system), distribution hardware (plasma/EPS pathways), and the field projectors (warp coils in the nacelles) that form and stabilize the warp field.",
+      "Sections": {
+        "What warp drive is": "Warp drive (sometimes called a warp engine) enables faster‑than‑light travel by generating warp fields around a vessel. The field is described as a subspace‑related effect that envelops the ship, allowing interstellar distances to be crossed in practical time. On the bridge, warp performance is communicated using warp factors (“warp six,” “warp 9.2”), which function as an operational shorthand for the field settings required to achieve a given effective velocity.\n\nAcross eras, the franchise keeps the same recognizable idea—warp fields, warp factors, nacelles, and a warp core—while letting specific details vary by ship class and period.",
+        "Warp field and the subspace bubble": "On-screen dialogue repeatedly treats the warp field as a shaped structure that must remain stable: crews diagnose field asymmetry, harmonics, and other stability problems rather than simply “losing speed.” The common implication is that the ship is riding inside a controlled field configuration (often called a warp bubble or subspace bubble) that permits superluminal transit.\n\nThis framing is useful for storytelling because it makes warp travel adjustable and fallible. A ship can be forced out of warp by field instability, interference, or damage to the hardware that generates and regulates the field—without requiring that the entire ship be physically destroyed.",
+        "The warp core and the matter/antimatter reaction": "Federation starships are most often portrayed as powering warp operations with a controlled matter/antimatter reaction in the warp core’s reaction assembly. Matter and antimatter are injected into a central reaction region in a regulated intermix ratio, releasing enormous energy. Dilithium is consistently referenced as a key element in moderating and regulating that reaction so energy can be safely drawn for ship systems.\n\nThe warp core is therefore both propulsion-critical and ship-critical: it’s treated as the heart of the vessel’s energy budget, with stability, containment, and shutdown procedures forming a constant part of engineering life.",
+        "Nacelles, warp coils, and field generation": "While the core produces the power and reaction control, the ship’s warp nacelles are repeatedly framed as the field‑generation hardware. Warp coils (field coils) housed in the nacelles are fed by the core’s output—commonly described as plasma routed through conduits—and then used to project and shape the warp field.\n\nThis is why nacelles are treated as essential systems: damage to a nacelle, coil assembly, or the plasma feed can produce immediate warp‑field problems even if the core remains intact.",
+        "Warp factors and performance": "Warp speed is expressed as a warp factor. Warp one marks the light‑speed threshold for warp travel, and higher factors represent increasingly greater effective velocities. The franchise is not perfectly consistent about mapping warp factor to a single numeric “times light speed” value, but it is consistently portrayed as non‑linear—small changes near the top end are treated as major jumps in performance and stress.\n\nIn practical terms, warp factor is the language the crew uses to communicate intent (“make best speed,” “maximum warp,” “warp nine”) while the computer and engineering systems handle the underlying field geometry, power routing, and safety margins.",
+        "Operations, safeties, and failure modes": "Warp operation is depicted as a balance between power, stability, and structural limits. Common operational themes include rerouting power, balancing flow between nacelles, tuning field harmonics, isolating damaged conduits, and executing emergency shutdowns.\n\nCommonly referenced failure risks include containment loss or a core breach, field collapse due to coil damage or imbalance, and cascading power tradeoffs where maintaining warp conflicts with shields, weapons, or critical life support. These risks keep warp drive grounded as an engineered system with real procedures rather than a purely magical travel button.",
+        "Environmental impact and speed limits": "A notable 24th‑century concern raised on screen is cumulative subspace damage linked to sustained high‑warp travel in certain regions. In response, Starfleet institutes a warp speed restriction (a “speed limit”) with emergency exceptions, emphasizing that warp operation can have systemic consequences beyond an individual ship’s maintenance.\n\nLater stories treat the restriction as temporary or unevenly applied, but the episode establishes an enduring idea: warp drive is powerful enough to create environmental side effects under the right conditions.",
+        "History and development": "Human warp history is anchored by Zefram Cochrane’s first successful warp flight, which becomes a turning point leading directly to first contact with the Vulcans. From there, Starfleet warp systems advance from early, more limited reactors to the mature 23rd‑ and 24th‑century architectures built around high‑output warp cores, nacelle coil systems, and increasingly refined control and safety layers.\n\nDifferent cultures field different design approaches—some emphasizing stealth, speed, or alternative superluminal methods—so “warp drive” also sits inside a larger family of faster‑than‑light technologies that include transwarp concepts and other specialized propulsion modes."
+      },
+      "RelatedTechIDs": [],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Cage",
+          "Season": 1,
+          "Episode": 0,
+          "Notes": "Early on-screen use of warp factor terminology."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Booby Trap",
+          "Season": 3,
+          "Episode": 6,
+          "Notes": "Warp core/propulsion referenced in engineering context."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "Engineering focus; dilithium chamber imagery and warp power concerns feature prominently."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Force of Nature",
+          "Season": 7,
+          "Episode": 9,
+          "Notes": "Introduces subspace damage concern and a warp speed restriction policy."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Cochrane’s warp flight is central to the setting and first contact."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "First Flight",
+          "Season": 2,
+          "Episode": 24,
+          "Notes": "Revisits early Human warp development and Cochrane’s legacy."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Threshold",
+          "Season": 2,
+          "Episode": 15,
+          "Notes": "Explores an extreme warp performance edge case in-story."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Transwarp (umbrella term)",
+          "Summary": "A label applied to multiple faster‑than‑warp approaches intended to exceed traditional warp drive limits; depicted differently by different species."
+        },
+        {
+          "Name": "Variable‑geometry nacelles (selected Starfleet designs)",
+          "Summary": "A starship design feature depicted as altering nacelle configuration during warp operations, tied in dialogue to managing field effects."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Warp field",
+          "Definition": "The shaped field generated for warp travel; stability and geometry are recurring operational concerns."
+        },
+        {
+          "Term": "Subspace bubble",
+          "Definition": "Common description of the field structure that envelops a ship during warp transit."
+        },
+        {
+          "Term": "Warp factor",
+          "Definition": "The operational scale used to communicate warp performance settings (e.g., “warp six”)."
+        },
+        {
+          "Term": "Warp core",
+          "Definition": "Primary ship reactor associated with warp propulsion; commonly a matter/antimatter reaction system in Federation designs."
+        },
+        {
+          "Term": "M/ARA",
+          "Definition": "Matter/Antimatter Reaction Assembly; the reactor arrangement that injects matter and antimatter into a controlled reaction element."
+        },
+        {
+          "Term": "Dilithium chamber",
+          "Definition": "Core component housing dilithium crystals used in regulating the matter/antimatter reaction."
+        },
+        {
+          "Term": "Warp nacelle",
+          "Definition": "External housing containing warp coils used to generate and shape the warp field."
+        },
+        {
+          "Term": "Warp coil",
+          "Definition": "Field coil assemblies within nacelles that project the warp field when energized."
+        },
+        {
+          "Term": "Core breach",
+          "Definition": "Catastrophic failure mode involving loss of containment/control of the warp core reaction."
+        }
+      ],
+      "Operators": [
+        "Starfleet (Federation starships)",
+        "Major interstellar powers with warp-capable vessels"
+      ],
+      "Constraints": [
+        "Warp operation depends on stable warp field geometry; asymmetry or coil imbalance can force a shutdown.",
+        "High warp output competes with other ship systems for power; emergency routing is common during combat or damage control.",
+        "Warp travel can be unsafe or impossible in certain spatial anomalies, dense fields, or subspace‑distorted regions.",
+        "Matter/antimatter containment is existential; loss of containment is treated as catastrophic.",
+        "Sustained high‑warp activity is depicted as having potential environmental side effects in sensitive regions."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TAS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC",
+          "SNW",
+          "LDS",
+          "PRO",
+          "DIS"
+        ],
+        "Era": [
+          "21st century",
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century",
+          "32nd century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "TOS: \"The Cage\" (warp factor terminology)",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Warp%20Drive.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-phase-cannon",
+      "Name": "Phase Cannons",
+      "SystemID": "shipboard-weapons",
+      "Type": "Primary",
+      "Summary": "Phase cannons are ship-mounted phase‑modulated directed‑energy cannon weapons used by Starfleet in the mid‑22nd century, most famously as the primary energy weapon of NX‑class ships. They’re positioned as a direct precursor to later phaser technology.\n\nOn NX-class ships, phase cannons deploy from retractable turrets and can be set at different yields, making them the NX‑era answer to the flexible beam weapons later ships take for granted.",
+      "Sections": {
+        "What they are": "A phase cannon is a phase‑modulated directed‑energy cannon weapon—part of the phase-weapon family that bridges earlier plasma weapons and later phasers. They serve as the ship‑mounted analogue to handheld phase pistols.",
+        "NX‑class implementation": "On NX‑class ships, phase cannons are mounted on retractable turrets that extend from the hull and rotate to target. This gives NX‑era ships a visually and mechanically distinct weapons profile compared with later flush-mounted arrays.",
+        "Yield and tactical role": "Phase cannons are rated for a maximum output cited in technical descriptions and are shown as configurable in yield. They’re introduced as a primary defensive armament, supplementing early torpedo limitations and providing repeatable directed fire.",
+        "Technology lineage": "Phase cannons are explicitly framed as precursors to later phasers. That makes them a natural ‘bridge entry’ in the database: you can connect NX-era weapon development directly into the standard phaser family used later."
+      },
+      "RelatedTechIDs": [
+        "st-phasers",
+        "st-spatial-torpedo"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Silent Enemy",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Phase cannons tested and used; yield and turret deployment emphasized."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Ship-mounted phase cannons (NX‑class)",
+          "Summary": "Retractable turret‑mounted phase cannons used as the NX-class primary directed‑energy weapon."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Phase-modulated",
+          "Definition": "The modulation concept that defines phase weapons and links them to later phaser technology."
+        },
+        {
+          "Term": "Retractable turret",
+          "Definition": "NX-class mounting approach where cannons extend from the hull to aim and fire."
+        }
+      ],
+      "Operators": [
+        "United Earth / Starfleet (NX-era)"
+      ],
+      "Constraints": [
+        "Era-limited as a fleet standard; later ships transition to true phasers and phaser arrays.",
+        "Turret deployment and associated mechanisms can be damaged or jammed, limiting fire control."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT"
+        ],
+        "Era": [
+          "22nd century"
+        ],
+        "Affiliations": [
+          "United Earth",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-phasers",
+      "Name": "Phasers",
+      "SystemID": "shipboard-weapons",
+      "Type": "Primary",
+      "Summary": "Phasers are Starfleet’s standard directed‑energy weapon system, used from handheld sidearms up through starship emitters. On ships, phasers are valued for precision, rapid re‑targeting, and controllable output—ranging from warning shots and disabling strikes to sustained fire for hull damage.\n\nPhaser technology grew out of earlier phase‑modulated particle weapons; by later centuries, phaser arrays and banks became the default ship‑to‑ship energy armament.",
+      "Sections": {
+        "What a starship phaser is": "A starship phaser is a ship‑mounted directed‑energy emitter that can deliver focused energy on target as a beam or pulse, depending on the installation and era. Ships commonly distribute emitters across the hull to widen firing arcs and reduce blind spots.\n\nCompared with torpedoes, phasers are the ‘immediate response’ weapon: they’re fast, can be walked across a target, and can be used repeatedly without loading a new round.",
+        "Phaser arrays, banks, and cannons": "Star Trek uses several labels for ship phasers. Phaser banks are grouped emitter installations common in earlier eras, while phaser arrays are long, distributed emitter strips that can fire along their length to provide broad coverage. Some ships mount phaser cannons—heavier forward‑firing systems optimized for punch rather than coverage.\n\nFor the database, it’s useful to treat these as variants under one core technology entry, because they share the same basic role: ship‑to‑ship directed‑energy fire.",
+        "Output control and tactical use": "Phasers are routinely portrayed as adjustable in effect and intensity. That flexibility supports ‘damage for purpose’: disabling a subsystem, cutting into a specific area of the hull, or applying sustained pressure against shields.\n\nPhasers are also used as utility tools in some scenarios—cutting, heating, or controlled ablation—though shipboard use is most often framed through tactical fire and target selection.",
+        "Power, firing limits, and heat": "Ship phasers draw from the vessel’s power systems through tactical distribution. Because they can fire repeatedly, the limiting factor tends to be power availability, heat management, and the ship’s ability to keep emitters and control hardware within safe operating limits.\n\nIn story terms, this is why battles often include lines about diverting power to phasers, taking emitters offline, or losing phaser control after system damage.",
+        "Relationship to earlier phase technology": "Phaser technology is described as being preceded by phase‑modulated particle weapons used in the mid‑22nd century, including ship‑mounted phase cannons. That lineage matters for Tec‑Trek because it ties NX‑era armaments to later Federation standards: phase cannons are a recognizable ancestor rather than an unrelated one‑off."
+      },
+      "RelatedTechIDs": [
+        "st-photon-torpedoes",
+        "st-quantum-torpedoes",
+        "st-phase-cannon"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Balance of Terror",
+          "Season": 1,
+          "Episode": 14,
+          "Notes": "Shipboard phaser fire repeatedly referenced as the primary directed‑energy weapon."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Phaser usage referenced in technical context; phasers are the standard directed‑energy weapon family."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Phaser banks",
+          "Summary": "Grouped ship emitters common in earlier eras, firing as discrete banks with defined arcs."
+        },
+        {
+          "Name": "Phaser arrays",
+          "Summary": "Distributed emitter strips that provide wide coverage and rapid targeting across broad arcs."
+        },
+        {
+          "Name": "Phaser cannons",
+          "Summary": "Heavier forward‑optimized phaser systems (often pulse‑style) emphasizing impact over coverage."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Directed‑energy weapon",
+          "Definition": "A weapon that delivers energy directly to a target (beam or pulse) rather than launching a physical projectile."
+        },
+        {
+          "Term": "Nadion particles",
+          "Definition": "The particle form frequently associated with phaser emissions in technical descriptions."
+        },
+        {
+          "Term": "Emitter",
+          "Definition": "A phaser firing point integrated into the hull or a turret/bank assembly."
+        },
+        {
+          "Term": "Fire control",
+          "Definition": "Targeting and firing systems that aim, time, and modulate phaser discharge."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet",
+        "Multiple other interstellar powers (phaser‑class directed‑energy weapons appear broadly)"
+      ],
+      "Constraints": [
+        "Phasers trade raw single‑shot yield for precision, repeatability, and controllable output.",
+        "Emitter damage or power limits can reduce arcs and force crews to reroute power or take emitters offline.",
+        "Effectiveness depends heavily on shield status, range, and target tracking."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "ENT",
+          "FILM",
+          "PIC",
+          "SNW",
+          "LDS",
+          "PRO",
+          "DIS"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-photon-torpedoes",
+      "Name": "Photon Torpedoes",
+      "SystemID": "shipboard-weapons",
+      "Type": "Primary",
+      "Summary": "Photon torpedoes are warp‑capable tactical matter/antimatter weapons commonly deployed on starships and starbases. They serve as the standard heavy projectile complement to phasers: slower than beams, but capable of delivering concentrated explosive force.\n\nThey debut on-screen in TOS and remain a franchise workhorse across eras, with frequent mission‑specific modifications (yield tuning, special payloads, sensor packages, and guidance profiles).",
+      "Sections": {
+        "What makes a photon torpedo different": "Photon torpedoes are physical projectiles with an energetic warhead. Unlike phasers, they deliver damage through a detonation rather than continuous energy application. They’re used when a single strike matters—breaking a target, forcing shields, or delivering a specialized payload.\n\nTorpedoes are also routinely shown as configurable before launch, which is why crews talk about arming, setting yields, and loading special warheads.",
+        "Warp capability and pursuit": "A key trait often emphasized is that photon torpedoes can be warp‑capable, allowing engagement across larger tactical envelopes than purely sublight munitions. This supports the classic Star Trek ‘chase and fire’ rhythm—torpedoes remain relevant even when ships are maneuvering fast.",
+        "Launchers, tubes, and firing arcs": "Ships mount torpedo launchers (often forward and aft) that define arcs of fire. Some designs integrate other functions into the launcher structure, and the launcher itself becomes a tactical focal point—damaged tubes, jammed doors, or destroyed launchers change what a ship can do in a fight.\n\nFor Tec‑Trek, the launcher hardware is part of the weapons ecosystem, but the torpedo entry focuses on the munition and how it’s used.",
+        "Modification culture": "Photon torpedoes are among the franchise’s most frequently modified tools: tracking modifications, alternate warheads, and mission‑specific payloads show up repeatedly. That flexibility is part of why they remain in service even as newer torpedo types arrive.",
+        "Relationship to earlier torpedoes": "In the 22nd century, Earth Starfleet relied on spatial torpedoes and later upgraded to photonic torpedoes, which are described as precursors to photon torpedoes. That makes the ‘photon’ family a through‑line from NX‑era development to later standard fleet armament."
+      },
+      "RelatedTechIDs": [
+        "st-phasers",
+        "st-quantum-torpedoes",
+        "st-spatial-torpedo"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Arena",
+          "Season": 1,
+          "Episode": 19,
+          "Notes": "On-screen debut of photon torpedoes."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek II: The Wrath of Khan",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Iconic depiction of torpedo launch and detonation as ship-to-ship ordnance."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Standard photon torpedo",
+          "Summary": "Baseline fleet munition used for general tactical engagements."
+        },
+        {
+          "Name": "Special payload torpedoes",
+          "Summary": "Mission-configured variants: altered yields, guidance, sensor packages, or specialized warheads."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Matter/antimatter warhead",
+          "Definition": "A warhead class associated with photon torpedoes, delivering explosive energy on detonation."
+        },
+        {
+          "Term": "Yield setting",
+          "Definition": "Pre-launch configuration that can alter destructive output for tactical need."
+        },
+        {
+          "Term": "Warp-capable",
+          "Definition": "Able to sustain warp flight as a projectile under some configurations."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet",
+        "Multiple other interstellar powers (photon torpedoes appear widely)"
+      ],
+      "Constraints": [
+        "Torpedoes are finite ammunition; crews track inventory and sometimes ration shots.",
+        "Launch arcs are limited by tube placement; a ship may need to maneuver to bring tubes to bear.",
+        "Guidance and lock quality can be degraded by jamming, countermeasures, or subspace interference."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "ENT",
+          "FILM",
+          "PIC",
+          "SNW",
+          "LDS",
+          "PRO",
+          "DIS"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "TOS: Arena",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-quantum-torpedoes",
+      "Name": "Quantum Torpedoes",
+      "SystemID": "shipboard-weapons",
+      "Type": "Primary",
+      "Summary": "Quantum torpedoes are an advanced torpedo type used as a high-yield complement or successor to photons on certain late‑24th/25th‑century platforms. They’re framed as premium ordnance—more expensive, but worth it when you need a heavier punch.\n\nOn-screen, they appear as a recognizable ‘next step’ in Federation torpedo development, with a distinct visual language and recurring tactical reputation.",
+      "Sections": {
+        "What they are": "Quantum torpedoes are presented as a distinct class of tactical torpedo, used alongside or in place of photons. They use casings similar to photon-family torpedoes, but are differentiated by warhead type and performance.",
+        "Warhead and performance framing": "Dialogue and technical references treat quantum torpedoes as higher-end ordnance—deployed when the target or situation demands more than standard photons. They’re often associated with newer ships and high-threat missions.",
+        "Deployment and platforms": "Quantum torpedoes show up as part of the armament for specific Federation ships and installations during the late 24th century, with the Defiant frequently associated with their introduction. That context matters for Tec‑Trek: quantum torpedoes don’t replace photons everywhere; they’re a selective upgrade.",
+        "Operational similarities to photons": "Despite the differences, quantum torpedoes are still torpedoes: finite ammunition, launch tubes, arming sequences, yield considerations, and guidance/lock issues. From a UI standpoint, you can reuse many of the same supporting concepts (launcher hardware, loading, arming, and countermeasures) while keeping the entry focused on what makes them distinct."
+      },
+      "RelatedTechIDs": [
+        "st-photon-torpedoes",
+        "st-phasers"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Defiant",
+          "Season": 3,
+          "Episode": 9,
+          "Notes": "Quantum torpedoes associated with the Defiant’s early armament mentions/depiction."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Prominent use of quantum torpedoes on a flagship-scale platform."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Standard quantum torpedo",
+          "Summary": "Baseline quantum-class ordnance used as a high-yield torpedo option."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Plasma warhead",
+          "Definition": "A warhead type associated with quantum torpedoes in technical references."
+        },
+        {
+          "Term": "Premium ordnance",
+          "Definition": "Framing used in dialogue: more expensive shots reserved for when they matter."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet",
+        "Cardassian Union (some references)"
+      ],
+      "Constraints": [
+        "Not a universal fleet standard; carried by select ships and missions.",
+        "Still constrained by ammunition, launch arc, and guidance/countermeasure conditions."
+      ],
+      "Meta": {
+        "Series": [
+          "DS9",
+          "FILM",
+          "VOY",
+          "ENT"
+        ],
+        "Era": [
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "DS9: Defiant",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-spatial-torpedo",
+      "Name": "Spatial Torpedoes",
+      "SystemID": "shipboard-weapons",
+      "Type": "Primary",
+      "Summary": "Spatial torpedoes are 22nd‑century torpedo weapons carried aboard early Starfleet ships, including Enterprise NX‑01. Before NX‑era upgrades (phase cannons and later photonic torpedoes), spatial torpedoes were the most powerful weapons in the standard NX inventory.\n\nThey’re depicted as slower, shorter‑ranged, and less effective against deflector shields than later torpedo families—important context for why NX ships lean hard on careful tactics.",
+      "Sections": {
+        "How they behave": "Spatial torpedoes are portrayed more like early guided missiles than the later ‘energy-bright’ torpedo family: sublight launch, slower approach, and a higher chance of being intercepted or deflected. Against shields they can sometimes bounce and detonate without delivering decisive damage.",
+        "Range, speed, and shield interaction": "Technical descriptions highlight a much shorter effective range compared with later photonic torpedoes, and show that point-defense fire can sometimes destroy them before impact. These weaknesses shape early NX-era combat scenes: closing distance is risky, and misses are expensive.",
+        "Loading and handling": "Spatial torpedoes are shown as stored and handled as physical rounds, with loading involving manual steps—pulling a torpedo from storage racks and feeding it to a launching rail and tube. This reinforces that NX‑era weapons are closer to ‘early space navy’ hardware than later century automation.",
+        "NX‑01 layout": "Enterprise NX‑01 is described as being able to launch spatial torpedoes from multiple points on the ship, including forward and aft tubes. Even after NX‑01 receives newer torpedoes, it keeps its spatial torpedo complement, which makes them a persistent part of NX operational capability."
+      },
+      "RelatedTechIDs": [
+        "st-phase-cannon",
+        "st-photon-torpedoes"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Fight or Flight",
+          "Season": 1,
+          "Episode": 3,
+          "Notes": "Spatial torpedoes described as the most powerful weapons prior to later upgrades."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "The Expanse",
+          "Season": 2,
+          "Episode": 26,
+          "Notes": "Range and limitations referenced; transition toward newer torpedo technology context."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Standard spatial torpedo",
+          "Summary": "Baseline NX-era torpedo with fixed yield and sublight missile-like behavior."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Sublight projectile",
+          "Definition": "A munition that travels at high sublight speeds rather than sustaining warp flight."
+        },
+        {
+          "Term": "Point-defense",
+          "Definition": "Defensive fire capable of intercepting incoming torpedoes before impact."
+        }
+      ],
+      "Operators": [
+        "United Earth / Starfleet (22nd century)"
+      ],
+      "Constraints": [
+        "Shorter range and slower speed than later torpedo families.",
+        "Reduced effectiveness against strong deflector shields; can be intercepted by point-defense fire.",
+        "Fixed yield (not easily tuned) in the NX-era depictions."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "FILM",
+          "PRO"
+        ],
+        "Era": [
+          "22nd century"
+        ],
+        "Affiliations": [
+          "United Earth",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "",
         "Gallery": []
       }
     }
