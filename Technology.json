@@ -1,6 +1,6 @@
 {
-  "Version": 8,
-  "GeneratedUTC": "2025-12-14T08:02:39Z",
+  "Version": 9,
+  "GeneratedUTC": "2025-12-14T08:21:33Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -317,7 +317,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Thrusters.png",
         "Gallery": []
       }
     },
