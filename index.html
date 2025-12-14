@@ -19,7 +19,20 @@
       --r18:18px;
       --r22:22px;
     }
-    *{ box-sizing:border-box; }
+    
+
+    .section h2, .section h3, .section h4{
+      color: var(--gold);
+    }
+    .card h3{
+      color: var(--gold);
+    }
+
+    h1, .title, .pageTitle{
+      font-size: 72pt;
+    }
+
+*{ box-sizing:border-box; }
     html,body{ height:100%; }
     body{
       margin:0;
@@ -47,7 +60,7 @@
       font-family:Orbitron, sans-serif;
       font-weight:800;
       letter-spacing:.12em;
-      font-size:30px;
+      font-size:32pt;
       line-height:1.1;
       background: linear-gradient(180deg, #f6e3a8, #caa23f 55%, #8a6e1f);
       -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -514,6 +527,9 @@
 
       const sys = state.systemsById.get(systemId);
 
+      let setHeroPreview = null;
+      let resetHeroPreview = null;
+
       const split = document.createElement("div");
       split.className = "split";
 
@@ -558,6 +574,19 @@
 
         heroRight.appendChild(im);
         heroRight.appendChild(cap);
+
+        const heroDefault = { src: im.src, alt: im.alt, cap: cap.textContent };
+        setHeroPreview = (tech) => {
+          if(!tech || !tech.Media || !tech.Media.Image) return;
+          im.src = tech.Media.Image;
+          im.alt = tech.Name || "";
+          cap.textContent = tech.Name || "";
+        };
+        resetHeroPreview = () => {
+          im.src = heroDefault.src;
+          im.alt = heroDefault.alt;
+          cap.textContent = heroDefault.cap;
+        };
       }else{
         heroRight.innerHTML = '<div class="empty">No image has been added for this system yet.</div>';
       }
@@ -581,6 +610,10 @@
           p.className = "pill pillLink";
           p.textContent = t.Name;
           p.addEventListener("click", () => setRoute({ view: "tech", systemId: systemId, techId: t.ID }));
+          p.addEventListener("mouseenter", () => { if(setHeroPreview) setHeroPreview(t); });
+          p.addEventListener("mouseleave", () => { if(resetHeroPreview) resetHeroPreview(); });
+          p.addEventListener("focus", () => { if(setHeroPreview) setHeroPreview(t); });
+          p.addEventListener("blur", () => { if(resetHeroPreview) resetHeroPreview(); });
           chips.appendChild(p);
         });
 
@@ -630,6 +663,11 @@
           d.textContent = t.Summary || "";
 
           const go = () => setRoute({ view: "tech", systemId: systemId, techId: t.ID });
+
+          c.addEventListener("mouseenter", () => { if(setHeroPreview) setHeroPreview(t); });
+          c.addEventListener("mouseleave", () => { if(resetHeroPreview) resetHeroPreview(); });
+          c.addEventListener("focus", () => { if(setHeroPreview) setHeroPreview(t); });
+          c.addEventListener("blur", () => { if(resetHeroPreview) resetHeroPreview(); });
 
           c.addEventListener("click", go);
           c.addEventListener("keydown", (ev) => { if(ev.key === "Enter" || ev.key === " ") go(); });
