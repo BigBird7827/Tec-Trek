@@ -2937,7 +2937,7 @@
         "Notes": "Communication arrays are treated as antenna networks that manage channels/frequencies and may depend on relays or deployed subspace amplifiers for range extension."
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/ain/Images/Communications%20Array.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Communications%20Array.png",
         "Gallery": []
       }
     },
