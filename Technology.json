@@ -1,6 +1,6 @@
 {
-  "Version": 12,
-  "GeneratedUTC": "2025-12-14T09:54:15Z",
+  "Version": 13,
+  "GeneratedUTC": "2025-12-14T23:54:25Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -29,6 +29,13 @@
       "Description": "Stealth systems that conceal ships and craft by reducing visibility to the eye and to sensors.",
       "SortOrder": 40,
       "SidebarText": "Cloaking technology generates a ship-scale field that redirects light and many sensor energies around the hull, reducing visibility to both the eye and standard scans. Its tactical value is control: a cloaked vessel can approach, reposition, or disengage without presenting a reliable target solution.\n\nCloaking is a constrained operating mode. It draws significant power, is tightly coupled to ship systems, and often forces brief tactical exposure at key moments. Countermeasures evolve alongside it, with tachyon-based scans and multi-ship detection grids used to reveal cloaked ships under the right conditions."
+    },
+    {
+      "ID": "defensive-systems",
+      "Name": "Defensive Systems",
+      "Description": "Shields, structural integrity fields, armor, and force fields used to protect the hull, crew, and critical systems.",
+      "SortOrder": 50,
+      "SidebarText": "Defensive systems are a layered stack: ship-scale shielding for incoming energy and debris, structural integrity fields that reinforce the frame under stress, and armor solutions that trade mass and coverage for survivability.\n\nLocal force fields add a second line of protection—sealing compartments, containing hazards, and isolating damage—so crews can keep a ship fighting and maneuvering while repairs restore the larger defensive picture."
     }
   ],
   "Technologies": [
@@ -1554,6 +1561,345 @@
       },
       "Media": {
         "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Klingon%20Cloaking%20Device.webp",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-deflector-shields",
+      "Name": "Deflector Shields",
+      "SystemID": "defensive-systems",
+      "Type": "System",
+      "Summary": "Deflector shields (often called simply “shields”) are ship-scale protective fields projected around a vessel or facility to reduce damage from weapons fire and environmental hazards. They are treated as a managed defensive resource: crews raise shields, redistribute strength, and adjust settings to keep critical areas covered as threat conditions change.\n\nShields are frequently shown being stressed, depleted, or bypassed, which drives tactical decisions—whether to hold position, withdraw to recover, or take risks with reduced coverage to preserve power for weapons, propulsion, or life support.",
+      "Sections": {
+        "What they do": "Shields form a defensive envelope that can absorb or deflect energy impacts and intercept physical debris. In practice they buy time—reducing immediate hull damage so a ship can maneuver, return fire, and repair other systems.",
+        "How crews manage them": "Shield performance is closely tied to power and control. Tactical teams commonly balance overall strength versus specific coverage, shifting emphasis as firing arcs and threats change.",
+        "Common interactions": "Shields are often depicted interacting with sensors and weapons: combatants scan for weaknesses, attempt to overload sections, or use specialized techniques to penetrate or circumvent coverage."
+      },
+      "RelatedTechIDs": [
+        "st-force-fields"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Balance of Terror",
+          "Season": 1,
+          "Episode": 14,
+          "Notes": "Combat framing includes shield use and shield failure as a turning point."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Best of Both Worlds",
+          "Season": 3,
+          "Episode": 26,
+          "Notes": "Shield strength, modulation, and depletion drive ship-to-ship survival decisions."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "A ship’s shield behavior under unusual conditions is central to the plot’s engineering problem."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Shield modulation / frequency changes",
+          "Summary": "Shields are sometimes adjusted in real time to resist a specific attack pattern, treated as a tactical counter rather than a permanent solution."
+        },
+        {
+          "Name": "Planetary and station shields",
+          "Summary": "The same defensive concept is applied at larger scale for fixed installations, emphasizing generator capacity and coverage geometry."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Shield grid",
+          "Definition": "The projected field envelope around a hull; sometimes discussed in terms of sections or facings that can be strengthened or weakened."
+        },
+        {
+          "Term": "Shield modulation",
+          "Definition": "Adjusting shield parameters during an engagement to counter a known attack method."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet",
+        "Romulan Star Empire",
+        "Klingon Empire"
+      ],
+      "Constraints": [
+        "Shield effectiveness depends heavily on available power and generator health.",
+        "Prolonged fire or sustained impacts can deplete shield strength, forcing tactical repositioning.",
+        "Certain threats and techniques can partially bypass or overwhelm shields."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "TOS: Balance of Terror",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Deflector%20Shields.jpg",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-structural-integrity-field",
+      "Name": "Structural Integrity Field",
+      "SystemID": "defensive-systems",
+      "Type": "Subsystem",
+      "Summary": "A structural integrity field (SIF) is a reinforcing force field used to supplement the physical strength of a ship’s frame and hull under load. It is treated as a continuous “keep-the-ship-together” system: when acceleration, combat damage, or other stresses exceed what structure alone can safely tolerate, the SIF provides additional reinforcement.\n\nBecause it draws on ship power and ties into internal support systems, SIF is managed like other critical resources—boosted when margins are thin, rerouted in emergencies, and vulnerable to degradation when field generators or control systems are damaged.",
+      "Sections": {
+        "Purpose": "SIF reinforces bulkheads, superstructure, and hull framing so the ship can survive high stress without catastrophic structural failure.",
+        "Operational use": "Engineers raise or reconfigure structural integrity fields when maneuvering aggressively, sustaining damage, or operating in hazardous conditions that strain the frame.",
+        "Power tradeoffs": "SIF is portrayed as part of the ship’s power budget. In emergencies, its allocation can be adjusted, sometimes at the cost of reduced safety margins elsewhere."
+      },
+      "RelatedTechIDs": [
+        "st-force-fields"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Defector",
+          "Season": 3,
+          "Episode": 10,
+          "Notes": "Structural integrity power is referenced as a resource that can be reallocated during combat."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Way of the Warrior",
+          "Season": 4,
+          "Episode": 1,
+          "Notes": "High-stress combat contexts highlight the need to maintain structural integrity under damage."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Localized reinforcement",
+          "Summary": "SIF can be implied as being redistributed to reinforce particular sections when a ship is taking concentrated damage or executing extreme maneuvers."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "SIF",
+          "Definition": "Acronym used for structural integrity field; a reinforcing force field supplementing physical structure."
+        },
+        {
+          "Term": "Structural integrity power",
+          "Definition": "Power allocation dedicated to maintaining structural reinforcement during operation."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet",
+        "Many spacefaring powers"
+      ],
+      "Constraints": [
+        "SIF draws power and can be compromised by damage to field generators or control systems.",
+        "Reducing SIF allocation increases risk during high-stress maneuvers or when the structure is weakened.",
+        "SIF is supportive rather than absolute—severe forces can still cause structural failure."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Structural%20Integrity.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-ablative-armor",
+      "Name": "Ablative Armor",
+      "SystemID": "defensive-systems",
+      "Type": "System",
+      "Summary": "Ablative armor is protective hull armor designed to reduce damage by sacrificing material or protective layers to dissipate energy impacts. It complements shields by adding a physical (or projected) layer of survivability when shield strength is low, overwhelmed, or bypassed.\n\nStarfleet is shown fielding ablative concepts in multiple forms, including advanced generator-based variants that project an ablative layer around the hull and are treated as a major defensive upgrade when available.",
+      "Sections": {
+        "Core idea": "Ablative protection reduces incoming damage by rapidly dissipating energy and/or shedding protective material so the underlying structure takes less direct stress.",
+        "Relationship to shields": "Ablative armor is a second line of defense. It does not replace shields; it helps a ship survive when shields are weakened or when impacts leak through.",
+        "Generator-based variant": "A notable advanced implementation uses emitters to generate an ablative layer around a ship, portrayed as providing unusually high protection for as long as the system remains active."
+      },
+      "RelatedTechIDs": [
+        "st-deflector-shields"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Past Tense, Part I",
+          "Season": 3,
+          "Episode": 11,
+          "Notes": "Early Starfleet reference to ablative armor technology."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Endgame",
+          "Season": 7,
+          "Episode": 25,
+          "Notes": "Voyager employs an ablative generator system providing a high-protection ablative layer."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Physical ablative plating",
+          "Summary": "Ablative concepts can be applied as hull materials or plating that absorb and shed energy, reducing structural damage."
+        },
+        {
+          "Name": "Ablative generator layer",
+          "Summary": "Emitter-driven ablative protection forms a hull-hugging defensive layer that degrades over sustained attack."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Ablation",
+          "Definition": "A damage-mitigation approach where material or protective layers are consumed to carry away energy."
+        },
+        {
+          "Term": "Ablative generator",
+          "Definition": "A system that projects an ablative protective layer around a ship’s hull."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet"
+      ],
+      "Constraints": [
+        "Armor adds mass/complexity and cannot prevent all damage, especially under sustained fire.",
+        "Generator-based ablative protection depends on emitters and power; it degrades over time under concentrated attack.",
+        "Armor effectiveness varies with attack type and hit concentration."
+      ],
+      "Meta": {
+        "Series": [
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "DS9: Past Tense, Part I",
+        "LastSeen": "VOY: Endgame"
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Ablative%20Armor.webp",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-force-fields",
+      "Name": "Force Fields",
+      "SystemID": "defensive-systems",
+      "Type": "Subsystem",
+      "Summary": "Force fields are controlled energy barriers used to block movement, contain hazards, and protect personnel and equipment. They appear across ship operations: brig cells and security barriers, shuttlebay and docking containment, transporter and quarantine enclosures, and emergency compartment sealing.\n\nAs defensive tools, force fields provide fast, localized control—buying time to isolate damage or prevent boarding—at the cost of power draw and vulnerability to control-system disruption.",
+      "Sections": {
+        "Applications": "Force fields are used for security confinement, containment of dangerous materials or lifeforms, environmental separation (such as open-bay containment), and rapid compartment isolation.",
+        "Containment vs. shielding": "Unlike ship-scale shields, force fields are typically localized barriers. They are optimized for controlling a space, doorway, or volume rather than defending an entire hull.",
+        "Failure and bypass": "Force fields depend on power and control. Many stories treat them as reliable until systems are damaged, overridden, or deliberately bypassed."
+      },
+      "RelatedTechIDs": [
+        "st-deflector-shields",
+        "st-structural-integrity-field"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Hunted",
+          "Season": 3,
+          "Episode": 11,
+          "Notes": "Force fields are used for confinement and containment in security contexts."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Realm of Fear",
+          "Season": 6,
+          "Episode": 2,
+          "Notes": "Transporter-area containment and field control are depicted as operational safety tools."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Dax",
+          "Season": 1,
+          "Episode": 8,
+          "Notes": "Specialized force fields are used to secure a spacecraft/airlock during an investigation."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Containment fields",
+          "Summary": "Specialized force fields used to hold atmosphere in open bays or to confine hazardous energy/matter within a defined volume."
+        },
+        {
+          "Name": "Brig and security fields",
+          "Summary": "Doorway and cell fields used to deny passage and confine detainees without physical bars."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Force field",
+          "Definition": "A projected energy barrier that blocks or controls passage through a boundary or region."
+        },
+        {
+          "Term": "Containment field",
+          "Definition": "A force field used to confine matter/energy or maintain environmental integrity across an opening."
+        }
+      ],
+      "Operators": [
+        "United Federation of Planets / Starfleet",
+        "Many spacefaring powers"
+      ],
+      "Constraints": [
+        "Fields require power; loss of power or control can drop barriers immediately.",
+        "Fields can be overridden or bypassed if access to control systems is obtained.",
+        "Sustained attack can weaken localized fields faster than ship-scale shields."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.png",
         "Gallery": []
       }
     }
