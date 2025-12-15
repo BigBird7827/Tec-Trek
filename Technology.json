@@ -1,6 +1,6 @@
 {
-  "Version": 13,
-  "GeneratedUTC": "2025-12-14T23:54:25Z",
+  "Version": 14,
+  "GeneratedUTC": "2025-12-15T01:00:10Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -36,6 +36,13 @@
       "Description": "Shields, structural integrity fields, armor, and force fields used to protect the hull, crew, and critical systems.",
       "SortOrder": 50,
       "SidebarText": "Defensive systems are a layered stack: ship-scale shielding for incoming energy and debris, structural integrity fields that reinforce the frame under stress, and armor solutions that trade mass and coverage for survivability.\n\nLocal force fields add a second line of protection—sealing compartments, containing hazards, and isolating damage—so crews can keep a ship fighting and maneuvering while repairs restore the larger defensive picture."
+    },
+    {
+      "ID": "transport-access",
+      "Name": "Transport & Access",
+      "Description": "Systems that move people, craft, and cargo between ships, stations, and destinations: transporters, shuttle operations, docking interfaces, and tractor handling.",
+      "SortOrder": 60,
+      "SidebarText": "Transport & access is the ship’s movement-and-connection toolkit: transporters for rapid personnel/cargo transfer, shuttle operations supported by bays and traffic control, docking interfaces that create sealed physical links, and tractor beams for controlled handling, station‑keeping, and towing.\n\nThese systems are constrained by targeting and environmental conditions, and they are tightly governed by safety interlocks. In practice, reliability comes from precision—stable locks, controlled approach geometry, and careful power/field management—as much as from raw capability."
     }
   ],
   "Technologies": [
@@ -1652,7 +1659,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Deflector%20Shields.jpg",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
         "Gallery": []
       }
     },
@@ -1729,7 +1736,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Structural%20Integrity.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
         "Gallery": []
       }
     },
@@ -1808,7 +1815,7 @@
         "LastSeen": "VOY: Endgame"
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Ablative%20Armor.webp",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
         "Gallery": []
       }
     },
@@ -1899,8 +1906,530 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.webp",
         "Gallery": []
+      }
+    },
+    {
+      "ID": "st-transporter",
+      "Name": "Transporter",
+      "SystemID": "transport-access",
+      "Type": "Personnel & Cargo Transport",
+      "Summary": "Transporters transfer people and material by converting matter to an energy pattern, transmitting it, and reconstructing it at the destination. They enable rapid ship‑to‑surface movement and emergency retrieval, but depend on stable targeting, clean environmental conditions, and high‑integrity pattern handling.",
+      "Sections": {
+        "Purpose & Use": "Transporters move people, cargo, and equipment between locations by converting matter to an energy pattern, transmitting it, and reassembling it at the destination. Starships use transporter rooms for routine transfers and also for rapid boarding, medical evacuation, and emergency retrieval when shuttles are impractical. Variants include personnel and cargo transporters, as well as point‑to‑point and site‑to‑site operations depending on the platform and situation.",
+        "Transport Cycle": "A typical transport begins with a target acquisition and a coordinate lock, followed by a controlled dematerialization. The subject is carried as a contained matter stream within a confinement beam, then reconstructed by the receiving system. Operators monitor pattern integrity and timing, and can pause, redirect, or abort the cycle when conditions degrade. Because transport is a tightly timed sequence, interruptions can produce partial or unstable materialization.",
+        "Pattern Storage": "Transporters can temporarily store a subject’s pattern in a buffer. This allows short holds during routing changes or recovery steps, and in exceptional circumstances a pattern can be sustained far longer than intended by deliberately keeping it in the buffer. Buffer management is one reason transporters are treated as controlled spaces: patterns are sensitive to corruption if storage, power stability, or timing falls out of tolerance.",
+        "Targeting & Locks": "Successful transport depends on resolving the destination volume and maintaining a stable lock on the subject. Ships use sensors and transporter targeting to compensate for motion, distance, and local interference. In complex environments, crews may employ enhancers or other aids to strengthen acquisition and improve pattern resolution. When the lock is weak, transport becomes slower, less precise, or impossible.",
+        "Safety Systems": "Transporters incorporate safeguards intended to prevent hazards from being carried aboard. Biofilters screen patterns during transfer, and systems can be configured for quarantine or containment procedures. Operators also watch for pattern anomalies and can rematerialize to a safe staging point or back to the origin when reconstruction is unsafe. Even with safeguards, transport can introduce risk when the subject’s pattern is altered or merged by unusual conditions.",
+        "Operational Constraints": "Transport is limited by environmental and tactical factors. Active shields, dense interference, and certain atmospheric or subspace conditions can block or distort a beam. Extreme relative motion and rapidly changing geometry can break a lock. Power loss or emitter damage can interrupt the cycle at the worst moment, forcing emergency procedures and rapid troubleshooting to restore pattern integrity."
+      },
+      "RelatedTechIDs": [
+        "st-shuttlebays-launch-bays",
+        "st-docking-systems",
+        "st-tractor-beam"
+      ],
+      "Appearances": [
+        {
+          "Series": "TOS",
+          "Title": "The Man Trap",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Early routine ship-to-surface transport."
+        },
+        {
+          "Series": "TOS",
+          "Title": "The Enemy Within",
+          "Season": 1,
+          "Episode": 4,
+          "Notes": "A malfunction splits one individual into two physical counterparts."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Realm of Fear",
+          "Season": 6,
+          "Episode": 2,
+          "Notes": "Transport anxiety and a dangerous pattern event during transit."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "A pattern is intentionally sustained in a transporter buffer."
+        },
+        {
+          "Series": "VOY",
+          "Title": "Tuvix",
+          "Season": 2,
+          "Episode": 24,
+          "Notes": "A malfunction merges two individuals into one being."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Daedalus",
+          "Season": 4,
+          "Episode": 10,
+          "Notes": "Early transporter research and risk during development."
+        }
+      ],
+      "Variants": [
+        "Personnel transporter",
+        "Cargo transporter",
+        "Site‑to‑site transport",
+        "Emergency transport",
+        "Pattern enhancer support"
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Pattern buffer",
+          "Definition": "A storage system that temporarily holds a transport pattern during routing, recovery, or controlled delay."
+        },
+        {
+          "Term": "Annular confinement beam",
+          "Definition": "A containment beam used to maintain a coherent matter stream during transport."
+        },
+        {
+          "Term": "Matter stream",
+          "Definition": "The subject carried in transit as an energy pattern within the confinement field."
+        },
+        {
+          "Term": "Heisenberg compensator",
+          "Definition": "A subsystem used to address measurement limits that would otherwise prevent precise pattern reconstruction."
+        },
+        {
+          "Term": "Biofilter",
+          "Definition": "A screening function intended to prevent biological contaminants or hazards from being transported."
+        },
+        {
+          "Term": "Site‑to‑site transport",
+          "Definition": "Transport where both origin and destination are away from a fixed transporter room."
+        }
+      ],
+      "Operators": [
+        "Transporter operator",
+        "Operations officer",
+        "Chief engineer (systems oversight)"
+      ],
+      "Constraints": [
+        "Blocked or degraded by shields and many forms of interference",
+        "Requires a stable target lock and sufficient pattern resolution",
+        "Sensitive to power instability and emitter damage",
+        "Pattern integrity can degrade if a buffer hold is extended or compromised"
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "TOS: \"The Man Trap\"",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Transporter.png"
+      }
+    },
+    {
+      "ID": "st-tractor-beam",
+      "Name": "Tractor Beam",
+      "SystemID": "transport-access",
+      "Type": "System",
+      "Summary": "Tractor beams project controlled force to hold, tow, or stabilize objects in space. They support rescue, capture, debris recovery, and precision handling during docking by damping motion and maintaining alignment without physical contact.",
+      "Sections": {
+        "Purpose & Use": "A tractor beam is a projected force used to hold, pull, push, or stabilize objects in space. Starships employ tractor beams for towing, rescue, capture, station‑keeping near hazards, and precision handling during docking and recovery operations. The beam gives a ship controlled influence over another object’s position and motion without physical contact.",
+        "Beam Control": "Tractor operations are tuned for the target’s mass, geometry, and relative motion. Crews can change power and focus to shift from a gentle stabilizing hold to a stronger pull, or to counter drift and rotation. Fine control is critical when handling fragile structures or when bringing a vessel to a docking interface where alignment tolerances are tight.",
+        "Towing & Retrieval": "Towing is typically performed by maintaining a steady lock and matching velocity while applying gradual acceleration. Tractor beams can also be used to retrieve debris, escape pods, and small craft, or to keep a distressed ship from tumbling. When used in combination with thrusters and navigation, the beam can act as a controlled “tow line” for complex maneuvers.",
+        "Docking Support": "Tractor beams often assist docking by stabilizing approach, reducing relative motion, and holding a ship in position while mechanical clamps or seals engage. In crowded bays or near large structures, the beam can compensate for limited maneuvering room. This role overlaps directly with docking collars and airlock systems that complete the physical and atmospheric connection.",
+        "Constraints & Countermeasures": "Tractor performance is limited by distance, line‑of‑sight geometry, power availability, and the target’s ability to resist or evade. Strong maneuvering thrust, structural stress limits, or defensive systems can break a hold. Overpowering a tractor on a large or accelerating target can risk damaging the emitter or imposing unsafe stresses on the tractored object."
+      },
+      "RelatedTechIDs": [
+        "st-docking-systems",
+        "st-shuttlebays-launch-bays",
+        "st-transporter",
+        "st-maneuvering-thrusters"
+      ],
+      "Appearances": [
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part I)",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part II)",
+          "Season": 1,
+          "Episode": 2,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "TOS",
+          "Title": "The Corbomite Maneuver",
+          "Season": 1,
+          "Episode": 10,
+          "Notes": "Holding and controlling an object at range."
+        },
+        {
+          "Series": "VOY",
+          "Title": "The 37s",
+          "Season": 2,
+          "Episode": 1,
+          "Notes": "Towing/retrieval behavior in deep space operations."
+        },
+        {
+          "Series": "FILM",
+          "Title": "Star Trek IV: The Voyage Home",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Ship handling and retrieval operations in cinematic depiction."
+        },
+        {
+          "Series": "TNG",
+          "Title": "The Best of Both Worlds (Part I)",
+          "Season": 3,
+          "Episode": 26,
+          "Notes": "Crisis towing/control operations."
+        },
+        {
+          "Series": "TNG",
+          "Title": "The Best of Both Worlds (Part II)",
+          "Season": 4,
+          "Episode": 1,
+          "Notes": "Continuation of crisis towing/control operations."
+        }
+      ],
+      "Variants": [
+        "Stabilizing beam",
+        "Repulsor mode (where available)"
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Tractor beam",
+          "Definition": "A projected force used to control the movement of external objects."
+        },
+        {
+          "Term": "Stabilizing beam",
+          "Definition": "A tractor‑beam mode optimized for holding position and damping motion."
+        },
+        {
+          "Term": "Emitter",
+          "Definition": "Hardware that projects the beam and determines its focus and strength."
+        },
+        {
+          "Term": "Lock",
+          "Definition": "A maintained beam contact and control solution on a specific target."
+        },
+        {
+          "Term": "Tow",
+          "Definition": "Sustained controlled movement of a target by matching velocity and applying gradual force."
+        }
+      ],
+      "Operators": [
+        "Helm",
+        "Operations officer",
+        "Tactical (when used as restraint)"
+      ],
+      "Constraints": [
+        "Limited by line‑of‑sight geometry and effective range",
+        "Power‑intensive on large or accelerating targets",
+        "Excessive force can impose unsafe structural stress",
+        "Targets can break a hold through thrust, maneuver, or countermeasures"
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "TOS: \"The Corbomite Maneuver\"",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Tractor%20Beam.png"
+      }
+    },
+    {
+      "ID": "st-shuttlebays-launch-bays",
+      "Name": "Shuttlebays & Launch Bays",
+      "SystemID": "transport-access",
+      "Type": "Facility",
+      "Summary": "Shuttlebays and launch bays are ship facilities for operating small craft—launch, recovery, storage, and maintenance. They provide an option when transporters cannot be used, and rely on doors, containment fields, and guidance procedures to manage safe movement between the ship’s interior and open space.",
+      "Sections": {
+        "Purpose & Use": "Shuttlebays and launch bays are facilities for launching, receiving, storing, and servicing small craft. They support away missions, logistics, medical evacuation, and contingency operations when transporters are unavailable or inappropriate. Bays include traffic control procedures, ground handling, and maintenance infrastructure tailored to the ship class and mission profile.",
+        "Access & Containment": "External access is controlled through bay doors, while internal pressure doors and field barriers manage atmosphere and safety. When operations require opening to space, force‑field containment can provide a working barrier so craft can enter or exit without venting the entire bay. Lighting, markings, and guidance systems aid approach and departure in limited visibility.",
+        "Launch & Recovery": "Launch sequences coordinate bay clearance, door or field status, and craft power‑up. Recovery emphasizes controlled approach, speed limits, and final alignment to landing pads or docking points within the bay. In tight bays, tractor assistance or guidance beacons may be used to steady a craft during the last meters of motion.",
+        "Maintenance & Support": "Bays serve as workshops and staging areas for refit, repair, and payload preparation. Equipment typically includes fueling and power interfaces, tooling, diagnostics, and storage for mission kits. Because shuttles are often exposed to hazards that the main ship avoids, bays must be able to contain damage, isolate contaminated craft, and support rapid turnaround.",
+        "Operational Constraints": "Bay operations depend on ship attitude control, local traffic conditions, and the integrity of doors and containment fields. Damage to bay doors or power interruptions can force a halt to flight operations. Under combat or high‑risk conditions, crews may restrict launches to avoid exposing the ship’s interior or compromising hull integrity around the bay aperture."
+      },
+      "RelatedTechIDs": [
+        "st-docking-systems",
+        "st-tractor-beam",
+        "st-transporter"
+      ],
+      "Appearances": [
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part I)",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part II)",
+          "Season": 1,
+          "Episode": 2,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "TNG",
+          "Title": "The Child",
+          "Season": 2,
+          "Episode": 1,
+          "Notes": "Shuttle operations from an internal bay."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Evolution",
+          "Season": 3,
+          "Episode": 1,
+          "Notes": "Shuttlebay logistics and staging of equipment."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Cause and Effect",
+          "Season": 5,
+          "Episode": 18,
+          "Notes": "Emergency decompression and bay hazards."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Broken Bow",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere (originally double-length; later split as 1x01/02 in some releases)."
+        }
+      ],
+      "Variants": [
+        "Main shuttlebay",
+        "Auxiliary shuttlebay",
+        "Launch bay",
+        "Docking bay (internal)"
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Shuttlebay",
+          "Definition": "A facility where shuttlecraft are launched, received, stored, and maintained."
+        },
+        {
+          "Term": "Hangar doors",
+          "Definition": "External bay doors that open to space for craft movement."
+        },
+        {
+          "Term": "Pressure doors",
+          "Definition": "Internal doors that isolate the bay from the ship’s pressurized interior."
+        },
+        {
+          "Term": "Containment field",
+          "Definition": "An energy barrier used to retain atmosphere when bay doors are open."
+        },
+        {
+          "Term": "Landing pad",
+          "Definition": "A marked area for shuttle touchdown and securing within the bay."
+        }
+      ],
+      "Operators": [
+        "Flight control",
+        "Hangar deck crew",
+        "Helm (traffic coordination)"
+      ],
+      "Constraints": [
+        "Bay operations can be restricted by damage, power limits, or combat conditions",
+        "Containment fields and doors must be carefully sequenced to protect atmosphere",
+        "Traffic control is required to manage relative motion and approach geometry",
+        "Large craft or high‑speed approaches increase collision risk inside the bay"
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Shuttle%20Launch%20Bay.webp"
+      }
+    },
+    {
+      "ID": "st-docking-systems",
+      "Name": "Docking Systems",
+      "SystemID": "transport-access",
+      "Type": "System",
+      "Summary": "Docking systems secure ships and craft to stations or other vessels for safe transfer of people, cargo, and services. They combine precision alignment, mechanical securing hardware, and pressure‑managed interfaces such as docking ports and airlocks.",
+      "Sections": {
+        "Purpose & Use": "Docking systems secure a ship or craft to another vessel, station, or facility to transfer personnel, cargo, and services. They provide a controlled physical interface—aligning structures, sealing an opening, and managing atmosphere—so movement between hulls is safe and routine. Docking can be external (port‑to‑port) or internal (into a docking bay) depending on the design.",
+        "Interfaces": "Common docking interfaces include hull docking ports and airlocks, as well as collars and ring structures sized for specific craft. Ports are designed for precise alignment so seals can engage without stressing the hull. An airlock or transfer tunnel provides a buffer zone for pressure equalization and prevents uncontrolled decompression during entry and exit.",
+        "Approach & Alignment": "Docking begins with a controlled approach, relative‑motion matching, and a final alignment solution. Ships may use thrusters for fine positioning and tractor assistance when available. Guidance lights, beacons, and automated docking controls can reduce risk, but crews still treat the final meters as a high‑precision maneuver because even a small misalignment can prevent seal engagement.",
+        "Securing & Seals": "Once aligned, docking clamps or latches secure the two structures so they can’t drift apart under thrust or station‑keeping loads. A pressure seal then engages to hold atmosphere across the interface. Systems monitor seal integrity and can isolate the connection if pressure drops or the structure is compromised, preventing a localized breach from propagating into the ship.",
+        "Transfer & Services": "With a secure seal, docking supports movement of people and cargo and can also provide service connections—power, data, life support, and refueling—depending on the facility. Internal bay docking adds another layer of safety by keeping operations within a controlled volume, while external docking prioritizes direct access and rapid turnaround.",
+        "Operational Constraints": "Docking depends on compatible geometry and a stable platform. High relative velocity, turbulence, or combat damage can prevent safe engagement. In emergencies, systems must support rapid separation, including manual releases or emergency clamp procedures. The interface is also a vulnerability: a compromised seal or structural failure can force immediate isolation and evacuation of the docked area."
+      },
+      "RelatedTechIDs": [
+        "st-tractor-beam",
+        "st-shuttlebays-launch-bays",
+        "st-transporter"
+      ],
+      "Appearances": [
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part I)",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part II)",
+          "Season": 1,
+          "Episode": 2,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "TNG",
+          "Title": "11001001",
+          "Season": 1,
+          "Episode": 15,
+          "Notes": "Starship docking at a starbase for maintenance."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Bounty",
+          "Season": 4,
+          "Episode": 17,
+          "Notes": "Use of emergency docking clamps in a critical situation."
+        },
+        {
+          "Series": "TOS",
+          "Title": "The Tholian Web",
+          "Season": 3,
+          "Episode": 9,
+          "Notes": "Transfer and docking-adjacent operations under hazardous conditions."
+        },
+        {
+          "Series": "FILM",
+          "Title": "Star Trek: The Motion Picture",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Large‑scale spacedock docking operations."
+        }
+      ],
+      "Variants": [
+        "Docking port / hatch",
+        "Docking collar",
+        "Internal docking bay"
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Docking port",
+          "Definition": "A hull interface that allows access between a ship and another vessel or station."
+        },
+        {
+          "Term": "Airlock",
+          "Definition": "A controlled entry point that provides a pressure buffer between two environments."
+        },
+        {
+          "Term": "Docking clamp",
+          "Definition": "A mechanical device that holds a ship in place while docked."
+        },
+        {
+          "Term": "Pressure seal",
+          "Definition": "A seal that maintains atmosphere across a docking interface."
+        },
+        {
+          "Term": "Docking bay",
+          "Definition": "A protected facility where ships can offload or receive cargo and personnel."
+        }
+      ],
+      "Operators": [
+        "Helm",
+        "Docking control (station or ship)",
+        "Operations officer"
+      ],
+      "Constraints": [
+        "Requires compatible docking geometry and a controlled approach",
+        "Seal integrity can be compromised by damage or misalignment",
+        "High relative velocity or unstable station‑keeping increases collision risk",
+        "Emergency separation procedures may be required under hazard or attack"
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Docking%20Ring.png"
       }
     }
   ]
