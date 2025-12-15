@@ -1,6 +1,6 @@
 {
-  "Version": 17,
-  "GeneratedUTC": "2025-12-15T06:50:33Z",
+  "Version": 18,
+  "GeneratedUTC": "2025-12-15T07:47:34Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -71,6 +71,13 @@
       "Description": "Shipboard computing and control integrates the main computer core, distributed processors, and user interfaces that coordinate sensors, propulsion, life support, weapons, and mission systems. It also includes the data formats and modular components—such as duotronic and isolinear technologies—that store programs, logs, and operational parameters and allow rapid replacement or isolation during failures.",
       "SortOrder": 80,
       "SidebarText": "Computing and control is the ship’s decision-and-display stack: the main computer core and distributed processors that run ship functions, plus the interfaces the crew uses to query, program, and command those functions.\n\nOperational limits are practical and immediate—power and cooling, software integrity, access control, and damage isolation—so crews often reroute control paths, isolate faulty segments, and swap modular components to keep essential systems online."
+    },
+    {
+      "ID": "communications",
+      "Name": "Communications",
+      "Description": "Ship, station, and personal systems for voice/data transmission, subspace messaging, and relay/beacon infrastructure.",
+      "SortOrder": 80,
+      "SidebarText": "Communications is the ship’s link to everything it isn’t physically connected to: internal voice circuits, intership channels, and subspace messaging across light‑years. A working comm chain depends on more than a transmitter—arrays have to be powered, correctly routed, and (when needed) precisely pointed to deliver a clean signal.\n\nIt is also a network problem. Relays, beacons, and buoys extend reach, leave persistent warnings or logs, and provide fallback contact when a ship cannot maintain a direct link. Communications performance is often limited by propagation conditions, interference, and competing traffic, with crews shifting channels, narrowing beams, or routing through deployed nodes to keep information moving."
     }
   ],
   "Technologies": [
@@ -4057,6 +4064,756 @@
       },
       "Media": {
         "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Mek'leth.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-communication-array",
+      "Name": "Communication array",
+      "SystemID": "communications",
+      "Type": "System",
+      "Summary": "A communication array is a network of transmitting and receiving antennas—often tied into sensors and subspace hardware—used to send and receive voice/data traffic over interstellar distances, including tight‑beam, broadcast, and relay‑assisted subspace links.",
+      "Sections": {
+        "What a communication array is": "A communication array (often described as a subspace comm array) is the ship or installation hardware that couples the communications chain to space: antenna elements, feed lines, power conditioning, and control electronics. The array provides selectable transmission modes for routine traffic, emergency broadcast, and high‑gain narrow‑beam work, while carrying multiple channels at once.\n\nArrays range from integrated hull features to distinct dish or plate structures. Regardless of geometry, the operational goal is the same: deliver a stable, intelligible signal to the intended receiver while rejecting interference and conserving power.",
+        "Subspace messaging and channel control": "Interstellar traffic is typically carried via subspace radio (also called hyperchannel). The array generates and modulates a carrier, then couples it into subspace while maintaining lock on the selected channel or frequency band.\n\nCrews treat this as tunable spectrum management: they open channels, switch frequencies, raise or lower gain, and adjust modulation to cut through noise or avoid congestion. When conditions degrade, the common corrective actions are frequency shifts, power increases, or routing the traffic through a relay node.",
+        "Gain, pointing, and tight‑beam operation": "A key performance variable is antenna gain. High‑gain operation concentrates energy into a narrower beam, extending useful range and improving resistance to interference, at the cost of needing accurate pointing and stable attitude control.\n\nTight‑beam modes are valuable for targeted calls, discreet messaging, and high‑volume data transfer. They also impose practical constraints: if a ship is maneuvering violently, tumbling, or running on auxiliary control, it may be unable to hold beam alignment long enough to sustain the link.",
+        "Integration with ship systems": "Communications does not run in isolation. Arrays draw from shipwide power distribution and are coordinated with navigation/attitude control (for pointing) and with sensors (for acquisition and tracking of a receiver). Many ships treat sensing and transmission as adjacent workloads because both require precise pointing, timing, and signal processing.\n\nBecause communications can be mission‑critical, arrays are commonly built with redundancy—multiple antenna elements, alternate feed paths, and the ability to fall back to lower‑power, lower‑bandwidth modes when damaged.",
+        "Relays and range extension": "When direct paths are weak or blocked, arrays work through relays and deployed nodes. A subspace relay receives traffic and retransmits it onward as part of a larger network. A subspace amplifier (often deployed as a buoy) extends range by acting as a high‑gain intermediate node.\n\nExploratory operations show ships deploying subspace buoys to keep contact with command while pushing beyond established infrastructure. Later‑era fleets also reference regional relay networks that can route traffic around failures—when those networks are intact.",
+        "Security, authentication, and traffic priority": "Operational communications includes more than a carrier: messages are addressed, authenticated, and (when required) encrypted. Priority handling is also essential—distress, command traffic, and tactical coordination must preempt routine messaging when bandwidth or power is limited.\n\nSecurity is layered: control who may transmit, control what receivers will accept, and control how traffic is routed. Even a powerful array is only as trustworthy as its authentication and routing discipline.",
+        "Interference, distortion, and jamming": "Subspace propagation is vulnerable to environmental effects: ionized regions, stellar phenomena, and subspace distortions can attenuate or scatter signals. “Interference” and “distortion” are recurring operational problems, typically met with compensations such as frequency changes, higher power, or alternate routing.\n\nDeliberate jamming and deception are also threats. Arrays can be overwhelmed by noise, spoofed by false traffic, or forced off a channel. Countermeasures include narrow‑beam transmission, encryption, and switching to less predictable frequencies or relay paths.",
+        "Maintenance and field repair": "Arrays are exposed structures (externally or internally) that can suffer degradation from damage, power surges, or misalignment. Field repair often focuses on restoring a usable subset of capability: bringing a single element online, bypassing damaged feeds, or using an auxiliary transmitter.\n\nWhen an array is deliberately modified to extend reach or sensitivity, limiting factors tend to be power, cooling, and the stability of the signal chain. Pushing performance too far risks overload, feedback, or instability that can collapse the link entirely."
+      },
+      "RelatedTechIDs": [
+        "st-subspace-beacons-buoys",
+        "st-handheld-communicator",
+        "st-combadge"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Nth Degree",
+          "Season": 4,
+          "Episode": 19,
+          "Notes": "Enterprise-D’s communications capability is pushed beyond normal parameters as Barclay reconfigures systems to establish contact over extreme range."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Fortunate Son",
+          "Season": 1,
+          "Episode": 10,
+          "Notes": "Enterprise NX-01’s long-range plan includes deploying subspace amplification nodes to maintain contact as it ranges outward."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Silent Enemy",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Subspace amplifiers/buoys are deployed and later destroyed, affecting long-range communication strategy."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Message in a Bottle",
+          "Season": 4,
+          "Episode": 14,
+          "Notes": "A long-range message depends on finding a viable relay path through a subspace communications network."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Search, Part I",
+          "Season": 3,
+          "Episode": 1,
+          "Notes": "Long-range contact and fleet coordination reference relay routing and channel management."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Integrated hull array",
+          "Summary": "Distributed antenna elements built into a hull or superstructure for broad coverage and redundancy."
+        },
+        {
+          "Name": "High‑gain directional array",
+          "Summary": "A more directional dish/plate installation used for narrow‑beam transmissions, deep‑space reception, or high‑bandwidth links."
+        },
+        {
+          "Name": "Fixed installation array",
+          "Summary": "A station or planetary array tied into regional infrastructure and long‑duration power and processing."
+        },
+        {
+          "Name": "Relay‑supported array",
+          "Summary": "An operational mode where the primary array relies on relays/amplifiers/buoys to extend reach or bypass propagation problems."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Subspace communication",
+          "Definition": "Faster‑than‑light messaging that couples radio‑like signals into subspace rather than normal space."
+        },
+        {
+          "Term": "Hyperchannel",
+          "Definition": "A subspace radio link/channel used for interstellar communications."
+        },
+        {
+          "Term": "Tight‑beam",
+          "Definition": "A directional high‑gain mode that concentrates energy into a narrow cone to extend range or reduce interception."
+        },
+        {
+          "Term": "Subspace relay",
+          "Definition": "A node that receives and retransmits subspace traffic as part of a broader network."
+        },
+        {
+          "Term": "Subspace amplifier/buoy",
+          "Definition": "A deployed high‑gain node designed to extend the effective range of subspace transmissions."
+        },
+        {
+          "Term": "Channel / frequency",
+          "Definition": "A selectable carrier or band used to separate traffic, avoid interference, and coordinate routing."
+        }
+      ],
+      "Operators": [
+        {
+          "Name": "Starfleet / United Earth Starfleet",
+          "Role": "Operates shipboard and fixed communication arrays, relays, and deployed buoy networks for exploration and fleet coordination."
+        },
+        {
+          "Name": "Federation infrastructure operators",
+          "Role": "Maintain regional relay coverage, channel policy, and interoperability across member worlds and fleets."
+        }
+      ],
+      "Constraints": [
+        "Requires adequate power and stable signal processing, especially at high gain.",
+        "Directional modes depend on accurate pointing and stable attitude control.",
+        "Propagation can degrade in ionized regions, nebulae, and subspace-disturbed environments.",
+        "Relay routes can be unavailable, damaged, or intentionally disrupted.",
+        "High-power transmissions may reveal position or be susceptible to interception or jamming."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "PIC",
+          "SNW"
+        ],
+        "Era": "22nd–25th century (with later variants)",
+        "Affiliations": [
+          "United Earth Starfleet",
+          "Starfleet",
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": "",
+        "Notes": "Communication arrays are treated as antenna networks that manage channels/frequencies and may depend on relays or deployed subspace amplifiers for range extension."
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-combadge",
+      "Name": "Combadge",
+      "SystemID": "communications",
+      "Type": "Device",
+      "Summary": "A combadge is a small wearable communications and universal translation device used for hands‑free voice traffic, addressing shipboard systems, and maintaining away‑team contact through nearby infrastructure and available relays.",
+      "Sections": {
+        "What a combadge is": "A combadge is a wearable personal transceiver that typically takes the form of an organization’s insignia. It provides voice communications without requiring a hand‑held unit and is common on Starfleet uniforms from the 24th century onward.\n\nIn use, it functions as the user’s front‑end to the wider communications stack: the badge handles the local transmission, while the ship or station routes, amplifies, and connects the call to its destination.",
+        "Activation and addressing": "Combadges are often activated by a tap gesture, then paired with a spoken addressee (a person, a department, or a ship function). That supports both point‑to‑point calls and routed paging through shipwide communications.\n\nBecause call setup is fast and largely hands‑free, combadges are routinely used during damage control, security responses, and away missions where carrying a dedicated handset would be impractical.",
+        "Universal translation integration": "A core capability associated with combadges is built‑in universal translation support. This allows personnel to communicate across language barriers when they are away from fixed shipboard translation resources.\n\nFunctionally, translation is treated as part of the communications path: the wearer’s speech and what the far end receives may be mediated by translation circuits and language databases, with the badge acting as the personal terminal.",
+        "Shipboard routing and privacy": "Inside a ship or station, a combadge call is commonly routed through internal comm circuits. That enables paging individuals, reaching departments, or pushing priority announcements.\n\nPrivacy is a policy and routing matter. A ship can provide private channels, encrypted links, or open speaker circuits depending on context and permissions. The badge itself is a terminal; the communications system decides how the audio is carried.",
+        "Range and relay support": "A combadge’s standalone transmitter power is limited compared to a ship’s array. Effective range therefore depends on nearby infrastructure—shipboard repeaters, station comm nodes, or nearby relays.\n\nWhen direct communication is blocked by terrain, structures, or environmental distortion, the common remedies are to move to regain line‑of‑sight, route through a ship in orbit, or use a deployed buoy to carry the traffic.",
+        "Identification and locating signal": "Combadges can function as identifiable transmission sources for ship systems. When a ship needs to locate or retrieve personnel, the badge signal can be tracked and can assist with establishing a transport or sensor lock.\n\nThis makes the badge both a convenience and a vulnerability. Losing a combadge can expose a bearer’s location, and a captured badge can enable impersonation unless authentication and access controls are enforced.",
+        "Security and misuse": "Wearable transceivers invite security problems: spoofed calls, unauthorized access to ship functions, and interception. Countermeasures include authentication protocols, encryption for sensitive traffic, and the ability to disable or restrict badge functions.\n\nIn hostile conditions, the safest communications pattern is disciplined: short transmissions, secure routing when available, and avoiding predictable call routines that can be exploited.",
+        "Design evolution and related badges": "Combadge designs vary by era and organization, but the functional pattern remains consistent: a small wearable device offering fast communications and translation support.\n\nLater developments push the badge form factor toward a multi‑function personal terminal, integrating more than voice traffic while still preserving the badge’s role as a quick, always‑available communications front‑end."
+      },
+      "RelatedTechIDs": [
+        "st-handheld-communicator",
+        "st-communication-array",
+        "st-subspace-beacons-buoys"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Encounter at Farpoint",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Starfleet personnel use combadges as their standard personal communicators."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Time's Arrow",
+          "Season": 5,
+          "Episode": 26,
+          "Notes": "Combadge metallurgy/composition is referenced while setting up a detection method."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Search, Part I",
+          "Season": 3,
+          "Episode": 1,
+          "Notes": "Starfleet personnel rely on combadges for ship and away-team communications."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Caretaker",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Voyager’s crew uses combadges as standard shipboard and away-team communicators."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "PIC",
+          "Title": "Remembrance",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Starfleet-era badge usage remains a standard personal communications pattern in the early 25th century."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "TNG-era Starfleet combadge",
+          "Summary": "Early 24th‑century Starfleet badge format introduced with the Galaxy‑class era."
+        },
+        {
+          "Name": "DS9/VOY-era Starfleet combadge",
+          "Summary": "Later Starfleet badge design used through the Dominion War era and Voyager’s service period."
+        },
+        {
+          "Name": "Non‑Starfleet combadges",
+          "Summary": "Badge-style communicators used by other organizations following similar functional principles."
+        },
+        {
+          "Name": "Multi‑function badge descendants",
+          "Summary": "Later wearable badges that integrate additional terminal functions beyond voice communications and translation."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Combadge",
+          "Definition": "A wearable communications terminal integrated into an insignia badge."
+        },
+        {
+          "Term": "Tap‑to‑talk activation",
+          "Definition": "A common control gesture used to open a channel before addressing the intended recipient."
+        },
+        {
+          "Term": "Universal translator",
+          "Definition": "Translation technology that mediates spoken language so users can understand each other."
+        },
+        {
+          "Term": "Internal comm circuit",
+          "Definition": "A ship or station’s intracommunications pathway used for paging, announcements, and routed calls."
+        },
+        {
+          "Term": "Authentication",
+          "Definition": "Procedures that confirm identity and permissions for channels or ship functions."
+        }
+      ],
+      "Operators": [
+        {
+          "Name": "Starfleet",
+          "Role": "Issues combadges as standard wearable personal communications/translation terminals."
+        },
+        {
+          "Name": "Bajoran Militia and other forces",
+          "Role": "Use badge-style communicators adapted to their uniforms and procedures."
+        }
+      ],
+      "Constraints": [
+        "Effective range depends on nearby infrastructure (ship/station arrays, relays, repeaters).",
+        "Wearable nature makes it vulnerable to loss, theft, or spoofing if authentication is weak.",
+        "Environmental conditions can degrade the local link even when long-range systems remain functional.",
+        "Continuous transmissions can be detected and used for tracking or targeting."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY",
+          "PIC"
+        ],
+        "Era": "24th–25th century (with later descendants)",
+        "Affiliations": [
+          "Starfleet",
+          "United Federation of Planets",
+          "Bajoran Militia"
+        ],
+        "FirstSeen": "",
+        "LastSeen": "",
+        "Notes": "Combadges are described as communications and universal translation devices that replace many hand-held communicator roles in later eras."
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-handheld-communicator",
+      "Name": "Handheld communicator",
+      "SystemID": "communications",
+      "Type": "Device",
+      "Summary": "A handheld communicator is a portable personal transceiver used for person‑to‑person and person‑to‑ship contact, typically operating on subspace frequencies and able to serve as a locator or emergency beacon when required.",
+      "Sections": {
+        "What a handheld communicator is": "A handheld communicator is a portable personal transceiver designed for use away from fixed infrastructure. It supports person‑to‑person and person‑to‑ship contact, and is commonly issued as part of mission equipment.\n\nAcross many eras, the handheld communicator is the default away‑team voice device. In later periods it is increasingly replaced by wearable badges, but the handheld format remains valuable as a dedicated emergency and field communications unit.",
+        "Signal path: personal unit to ship systems": "A handheld unit typically connects to a ship’s communications systems when within useful range. The ship’s array then provides long‑distance routing, amplification, and channel management, while the handheld provides the local uplink and downlink.\n\nWhen a ship is out of range or signals are blocked, handheld units may still support short‑range local traffic, but their utility depends on power and propagation conditions.",
+        "Subspace frequencies and channel usage": "Portable communicators are generally treated as tunable subspace transmitters for beyond‑horizon contact. Crews reference specific frequencies and channels, implying a radio‑like system coupled to subspace.\n\nChannel management matters operationally: it separates teams, reduces cross‑talk, and provides a way to shift away from interference or hostile monitoring when conditions demand it.",
+        "Emergency signaling and direction finding": "Handheld communicators can function as emergency signaling devices. They may be left behind as a beacon, configured to transmit a repeating call, or used to mark a rendezvous point for recovery.\n\nThey can also serve as direction‑finding targets. A ship or team can home in on the communicator’s signal, which is especially valuable when visibility is poor, terrain is complex, or conventional navigation markers are unavailable.",
+        "Audio/video links and external interfaces": "Handheld communicators often interface with shipboard audio/video systems for ship‑to‑surface conferencing. The portable unit acts as the local terminal while the ship provides the power, display routing, and amplification necessary to sustain the link.\n\nIn some mission profiles, the communicator is paired with sensors or other field equipment, but its core identity remains a dedicated communications terminal rather than a general‑purpose computer.",
+        "Security considerations": "A portable transmitter invites interception and triangulation. Security measures include code phrases, encryption where available, and disciplined transmission procedures.\n\nIn contested environments, good practice favors short transmissions, minimizing power when feasible, and relying on the ship’s directional array for outbound traffic rather than broadcasting broadly from the surface.",
+        "Power and endurance": "Handheld units are power‑limited. Endurance depends on battery/fuel cell capacity and duty cycle. Continuous transmission, high‑power beacon modes, or harsh environmental exposure can reduce operating time.\n\nBecause the device is portable, physical durability matters. Impact damage, moisture, radiation, or contamination can degrade performance or disable the unit at the worst time.",
+        "Transition to badge and integrated devices": "Over time, the handheld communicator is increasingly replaced by wearable badges that combine communications with translation and other personal terminal functions.\n\nEven in badge‑standard eras, handheld communicators persist as backups, specialized emergency devices, or mission‑kit items when a dedicated unit is preferred over an always‑on wearable terminal."
+      },
+      "RelatedTechIDs": [
+        "st-combadge",
+        "st-communication-array",
+        "st-subspace-beacons-buoys"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Man Trap",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Away-team coordination relies on handheld communicators for ship contact."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Journey to Babel",
+          "Season": 2,
+          "Episode": 10,
+          "Notes": "Personal communicators are used for shipboard and mission coordination under time pressure."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "This Side of Paradise",
+          "Season": 1,
+          "Episode": 24,
+          "Notes": "A communicator is used as a navigation/locating aid while personnel move through obstructed terrain."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Tomorrow Is Yesterday",
+          "Season": 1,
+          "Episode": 19,
+          "Notes": "A communicator is used as an emergency signaling device when separated from the ship."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: The Motion Picture",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Wrist/portable communicator patterns appear in the refit-era fleet, reflecting an evolution of personal comm terminals."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Flip‑open ‘clamshell’ communicator",
+          "Summary": "Classic 2260s Starfleet handheld form factor activated by opening the unit."
+        },
+        {
+          "Name": "Wrist communicator",
+          "Summary": "Wearable communicator used in some 23rd‑century contexts, emphasizing hands‑free access."
+        },
+        {
+          "Name": "Compact modern handhelds",
+          "Summary": "Later portable comm units with simplified profiles, often paired with other field equipment."
+        },
+        {
+          "Name": "Dedicated emergency beacon units",
+          "Summary": "Portable devices optimized for distress signaling and long‑duration beacon transmission."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Transceiver",
+          "Definition": "A combined transmitter/receiver used to send and receive communications."
+        },
+        {
+          "Term": "Subspace frequency",
+          "Definition": "A tunable carrier used for subspace messaging and channel selection."
+        },
+        {
+          "Term": "Direction finding",
+          "Definition": "Using a signal as a bearing/locator source to home in on a transmitter."
+        },
+        {
+          "Term": "Ship‑to‑surface link",
+          "Definition": "A communications path from a starship to personnel or equipment on a planet or within a structure."
+        }
+      ],
+      "Operators": [
+        {
+          "Name": "Starfleet and allied crews",
+          "Role": "Issue handheld communicators as away-team gear and as backups when wearable badges are not standard."
+        }
+      ],
+      "Constraints": [
+        "Shorter effective range and lower power than ship/station arrays.",
+        "Signals can be blocked by terrain, dense structures, or environmental effects.",
+        "Portable units are vulnerable to interception and direction finding.",
+        "Battery/endurance limits restrict continuous high‑power transmission."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TAS",
+          "Film",
+          "SNW"
+        ],
+        "Era": "23rd century (with earlier/later variants)",
+        "Affiliations": [
+          "Starfleet",
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": "",
+        "Notes": "Communicators are personal transmit/receive devices typically using subspace frequencies and later replaced by combadges for many roles."
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-subspace-beacons-buoys",
+      "Name": "Beacons and buoys",
+      "SystemID": "communications",
+      "Type": "Device",
+      "Summary": "Deployable automated devices that transmit repeating messages, distress signals, logs, or relay/amplify communications—providing persistent markers and fallback contact when a ship or crew cannot maintain a direct link.",
+      "Sections": {
+        "What beacons and buoys are": "A beacon or buoy is a small autonomous device placed in space, in orbit, or on a surface to transmit a continuing signal. The signal may be a warning, a distress call, a navigational marker, a log package, or a relay function that extends the range of subspace communications.\n\nUnlike a handheld communicator, buoys are designed to remain on station and keep transmitting for extended periods, using dedicated power sources and durable housings.",
+        "Distress beacons": "A distress beacon is used to alert other ships or stations that help is needed and to make it easier to locate the distressed vessel or crew. Distress beacons can be shipboard systems, shuttle systems, or portable devices carried in field kits.\n\nBecause distress traffic is time‑critical, beacons prioritize a clear repeating signal over bandwidth-heavy messaging. Their usefulness depends on being heard—either directly by nearby ships or indirectly via relay infrastructure.",
+        "Warning and marker buoys": "Warning buoys (also called warning beacons or marker beacons) transmit repeating messages about hazards, borders, quarantines, or restricted regions. They may also be used to mark a ship or region that should not be approached.\n\nMarker beacons can also be purely visual: bright strobes intended to help other vessels locate a target by sight when sensors or communications are unreliable.",
+        "Log buoys and recorder markers": "A log buoy (also called a recorder marker, space recorder, disaster recorder, or emergency buoy) preserves and transmits logs and mission data when destruction or capture is imminent. It may be launched as a last resort so that command authorities can recover the record even if the ship is lost.\n\nThese devices emphasize survivability and data integrity. They are treated as the communications equivalent of a “black box,” with the added step of attempting to transmit or deliver the record back to a safe receiver.",
+        "Subspace amplifiers and communication buoys": "A subspace amplifier (often deployed as a buoy) is a communication node intended to extend the effective range of subspace messaging. Exploratory missions have deployed series of these devices to maintain contact back to command over expanding distances.\n\nIn operation, the amplifier buoy acts as a high‑gain intermediate node: it receives traffic from the ship and rebroadcasts it onward, or provides a nearer target for the ship’s own transmissions when a direct link would be too weak.",
+        "Deployment and station‑keeping": "Buoys are typically deployed by launcher or ejection systems and then maintain position via station‑keeping capability. Once deployed, they broadcast continuously until power is exhausted, the device is recovered, or it is destroyed.\n\nPlacement is a tactical and operational decision. A buoy can extend coverage and leave a persistent warning, but it can also be found, monitored, captured, or used as a lure by adversaries who watch beacon traffic.",
+        "Encoding, identification, and interoperability": "Buoys carry identification patterns so receivers can classify the signal as distress, warning, log, or routine marker traffic. Message contents may be plain (to maximize the chance of being understood) or encoded/encrypted when security matters.\n\nInteroperability is critical in mixed regions. A warning beacon that cannot be understood by transiting traffic fails its primary purpose, so many deployments favor standardized phrasing and recognizable signal structures.",
+        "Failure modes and countermeasures": "Buoy signals can be blocked by propagation conditions, overwhelmed by interference, or defeated by jamming. Buoys can also be physically destroyed.\n\nCountermeasures include deploying multiple devices, switching frequencies/channels, using directional transmissions toward known relays, and pairing buoy deployments with sensor coverage to detect tampering or hostile monitoring."
+      },
+      "RelatedTechIDs": [
+        "st-communication-array",
+        "st-handheld-communicator",
+        "st-combadge"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Shuttlepod One",
+          "Season": 1,
+          "Episode": 16,
+          "Notes": "A portable distress beacon is part of standard emergency equipment when a crew is stranded."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Identity Crisis",
+          "Season": 4,
+          "Episode": 18,
+          "Notes": "A warning buoy is deployed to caution others away from a hazardous region."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Unnatural Selection",
+          "Season": 2,
+          "Episode": 7,
+          "Notes": "Marker beacons are used as part of a quarantine procedure."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Descent, Part II",
+          "Season": 7,
+          "Episode": 1,
+          "Notes": "An emergency buoy/log buoy is launched to transmit log entries back to Starfleet through a dangerous corridor."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Corbomite Maneuver",
+          "Season": 1,
+          "Episode": 10,
+          "Notes": "A recorder marker is launched with log entries when destruction seems imminent."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Silent Enemy",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Subspace amplifier buoys are deployed to extend communications back to Earth."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Distress beacon",
+          "Summary": "An emergency transmitter intended to summon help and provide a locator signal."
+        },
+        {
+          "Name": "Warning buoy / marker beacon",
+          "Summary": "A stationary device that broadcasts a repeating hazard, border, or quarantine message, sometimes paired with visual strobes."
+        },
+        {
+          "Name": "Log buoy / recorder marker",
+          "Summary": "A survivable data package launched to preserve and transmit logs when a ship is lost or captured."
+        },
+        {
+          "Name": "Subspace amplifier / subspace buoy",
+          "Summary": "A deployed high‑gain node used to extend the range of subspace messaging or provide a relay path."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Space buoy",
+          "Definition": "A deployable station‑keeping device used for communication, navigation marking, or monitoring."
+        },
+        {
+          "Term": "Distress beacon",
+          "Definition": "An emergency signal device used to summon aid and help locate a distressed vessel or crew."
+        },
+        {
+          "Term": "Warning buoy",
+          "Definition": "A repeating message device used to mark hazards, borders, quarantine zones, or restricted regions."
+        },
+        {
+          "Term": "Recorder marker",
+          "Definition": "A log‑carrying buoy launched so command can recover mission records after a ship is lost."
+        },
+        {
+          "Term": "Subspace amplifier",
+          "Definition": "A buoy/array that extends subspace communications range by acting as a relay or high‑gain node."
+        }
+      ],
+      "Operators": [
+        {
+          "Name": "Starfleet / United Earth Starfleet",
+          "Role": "Deploy beacons and buoy networks for exploration, safety marking, quarantine, and emergency reporting."
+        },
+        {
+          "Name": "Other governments and fleets",
+          "Role": "Use warning beacons and border buoys to mark restricted space and deter intrusions."
+        }
+      ],
+      "Constraints": [
+        "Fixed deployments can be detected, avoided, captured, or destroyed.",
+        "Propagation effects can prevent a beacon from being heard even when the transmitter is working.",
+        "Beacon traffic may reveal mission presence or create an interceptable point of interest.",
+        "Station‑keeping and long-duration transmission require robust power and durable housings."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "SNW"
+        ],
+        "Era": "22nd–25th century (with earlier roots)",
+        "Affiliations": [
+          "United Earth Starfleet",
+          "Starfleet",
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": "",
+        "Notes": "Deployable devices include distress beacons, warning buoys/marker beacons, recorder markers (log buoys), and subspace amplifiers used to extend communications range."
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-universal-translator",
+      "Name": "Universal Translator",
+      "SystemID": "communications",
+      "Type": "Subsystem",
+      "Summary": "A universal translator (UT) is the layered hardware/software capability that enables real‑time speech translation between species by building a translation matrix from live input and applying it to two‑way communications.",
+      "Sections": {
+        "Role in Communications": "Universal translation is treated as a standard layer of shipboard and personal communications: it sits between signal reception and voice output, converting meaning into the listener’s language while preserving the speaker’s voice characteristics where possible.",
+        "Translation Matrix": "When faced with an unfamiliar language, the UT can derive a working translation by collecting enough spoken samples to assemble a translation matrix. Early Starfleet implementations relied on live learning and could translate new languages in relatively short order once sufficient data was gathered.",
+        "Concept Matching": "The UT is described as leveraging shared universal concepts across intelligent species. One cited mechanism is comparison of brainwave pattern frequencies to identify recognizable identity concepts and supply grammar, allowing the system to choose an appropriate synthesized voice profile for the output.",
+        "Integration": "22nd‑century systems began as visible handheld or clip‑on devices that could attach to a communicator, with communicators capable of translating preprogrammed languages even without the full UT attachment. By later centuries, translator capability is routinely incorporated into communicators and combadges, and also exists as a built‑in ship and shuttlecraft communications function.",
+        "Operational Limits": "Universal translation is not uniformly instantaneous or perfect. It can require time to establish a matrix for some languages, may fail outright for certain structures, and can lag behind nuances like voice, grammar, or intent when the relevant patterns are subtle or the database is incomplete.",
+        "Meaning vs. Words": "Some languages can be translated literally but remain hard to understand. A noted case is metaphor‑dense communication where the UT renders the words but cannot automatically supply the cultural referents needed to interpret them.",
+        "Detection and Stealth": "Because translation can leave detectable signatures in communication, there are circumstances where users avoid the UT and instead translate manually to prevent others from recognizing that automated translation is being used."
+      },
+      "RelatedTechIDs": [
+        "st-combadge",
+        "st-handheld-communicator",
+        "st-communication-array",
+        "st-subspace-beacons-buoys",
+        "st-main-computer-core",
+        "st-lcars-ui"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Broken Bow",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Experimental UT aboard the NX‑01 era; early development context."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Civilization",
+          "Season": 1,
+          "Episode": 9,
+          "Notes": "Communicator translation of a preprogrammed language without full UT attachment."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "ENT",
+          "Title": "Demons",
+          "Season": 4,
+          "Episode": 21,
+          "Notes": "Small clip‑on translators enabling multi-party real‑time translation."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Metamorphosis",
+          "Season": 2,
+          "Episode": 9,
+          "Notes": "Shuttlecraft UT; discussion of concept matching/brainwave pattern comparison."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Darmok",
+          "Season": 5,
+          "Episode": 2,
+          "Notes": "Literal translation succeeds, but metaphor-based meaning remains unclear."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Sanctuary",
+          "Season": 2,
+          "Episode": 10,
+          "Notes": "Translation matrix establishment can take extended analysis time."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "The 37's",
+          "Season": 2,
+          "Episode": 1,
+          "Notes": "Combadge-era translation is treated as seamless to unaware listeners."
+        },
+        {
+          "RefType": "Film",
+          "Series": "FILM",
+          "Title": "Star Trek VI: The Undiscovered Country",
+          "Season": 0,
+          "Episode": 0,
+          "Notes": "Avoiding UT use to prevent detection in covert communications."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Handheld/attached translator (22nd century)",
+          "Summary": "Early Starfleet UT implementations could be a separate handheld device that attached to a communicator for on-the-fly language work."
+        },
+        {
+          "Name": "Clip-on conference translator",
+          "Summary": "Miniaturized translators clipped to clothing to support simultaneous multi-party translation."
+        },
+        {
+          "Name": "Integrated communicator translator",
+          "Summary": "Translator capability built directly into personal communicators, delivering translated audio while preserving the speaker’s voice qualities."
+        },
+        {
+          "Name": "Combadge translator",
+          "Summary": "Miniaturized UT embedded in combadges; treated as natural enough that listeners may assume they are hearing their own language."
+        },
+        {
+          "Name": "Shipboard/shuttlecraft translator",
+          "Summary": "UT integrated into the communications systems of starships and small craft for external channels and internal voice circuits."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Universal translator (UT)",
+          "Definition": "Automated translation layer that converts speech between languages in real time for two-way communications."
+        },
+        {
+          "Term": "Translation matrix",
+          "Definition": "A derived mapping that lets the UT interpret an unfamiliar language after collecting sufficient samples."
+        },
+        {
+          "Term": "Linguacode",
+          "Definition": "A Starfleet translation matrix approach associated with accelerating unknown-language translation in the 22nd century."
+        },
+        {
+          "Term": "Concept matching",
+          "Definition": "Mechanism described as identifying shared universal concepts (including identity cues) to supply grammar and output voice selection."
+        },
+        {
+          "Term": "Metaphor language",
+          "Definition": "A language style where meaning depends on shared stories and cultural referents; literal translation alone may be insufficient."
+        },
+        {
+          "Term": "Detection signature",
+          "Definition": "Operational constraint where translation use can be noticed in communications, driving manual translation in covert contexts."
+        }
+      ],
+      "Operators": [
+        "Starfleet",
+        "United Federation of Planets",
+        "Federation starships and installations",
+        "Shuttlecraft crews",
+        "Coalition of Planets (era of formation)"
+      ],
+      "Constraints": [
+        "Unfamiliar languages may require extended sampling/analysis before a usable translation matrix is established.",
+        "Literal translation can succeed while intended meaning remains unclear when communication relies on metaphor or cultural reference.",
+        "Some language structures or contexts can defeat the UT or produce gaps/mistranslations until databases and matrices are updated.",
+        "Translation use can be detectable in certain communications scenarios, making manual translation preferable for stealth.",
+        "Performance varies with speaker physiology and signal conditions; non-humanoid or atypical communication can limit effectiveness."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT",
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM"
+        ],
+        "Era": [
+          "22nd century",
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "ENT: \"Broken Bow\" (experimental UT aboard NX-01 era)",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
         "Gallery": []
       }
     }
