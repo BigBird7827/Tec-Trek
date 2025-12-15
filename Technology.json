@@ -1,6 +1,6 @@
 {
-  "Version": 16,
-  "GeneratedUTC": "2025-12-15T04:37:22Z",
+  "Version": 17,
+  "GeneratedUTC": "2025-12-15T05:45:37Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -50,6 +50,13 @@
       "Description": "Matter synthesis: food, tools, and large-scale fabrication via pattern-based replication.",
       "SortOrder": 70,
       "SidebarText": "Replicator systems convert stored energy and feedstock matter into finished items by applying stored patterns. Standard terminals handle meals, clothing, and routine equipment; the same approach scales up into dedicated replicating centers and large industrial units for construction tasks.\n\nCapabilities are bounded by pattern libraries, security controls, and the complexity of what’s being produced. Some materials or structures are difficult or impossible to replicate reliably, and power availability can make replication a managed resource rather than an always‑on convenience."
+    },
+    {
+      "ID": "handheld-weapons",
+      "Name": "Handheld Weapons",
+      "Description": "Portable personal weapons carried by individuals, including energy weapons and bladed weapons used for security, away missions, and close-quarters combat.",
+      "SortOrder": 80,
+      "SidebarText": "Handheld weapons are the crew’s personal defense and tactical toolkit: portable energy sidearms and rifles for controlled force, alongside traditional bladed weapons for close quarters and ceremonial use. Effectiveness depends on power supply, weapon condition, and the tactical environment—shielding, force fields, and dampening effects can sharply limit ranged performance.\n\nBecause these tools are carried into uncertain situations, they emphasize quick readiness and adjustable force, but they also impose constraints: finite power capacity, safety and discipline in yield selection, and the risk of loss, capture, or collateral damage in confined interiors."
     },
     {
       "ID": "medical-systems",
@@ -3239,6 +3246,541 @@
       },
       "Media": {
         "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Bio%20Bed.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-phaser-pistol",
+      "Name": "Phaser pistol",
+      "SystemID": "handheld-weapons",
+      "Type": "Weapon",
+      "Summary": "A handheld phaser sidearm used by Starfleet and other operators for personal defense and controlled-force security work. The weapon’s adjustable output supports everything from non-lethal incapacitation to lethal fire, making it a default choice for away teams when rules of engagement may change quickly.",
+      "Sections": {
+        "What a phaser pistol is": "A phaser pistol is a compact, single-operator directed-energy weapon designed for short- to mid-range engagements. Compared with rifle-format phasers, it prioritizes portability and rapid handling over sustained output or accessories, and is commonly carried as standard issue for shipboard security and landing parties.",
+        "How it’s used": "Phaser pistols are routinely configured for specific mission needs—such as stun for crowd control or capture, or higher yields for hostile threats. In practice, users rely on quick target acquisition and controlled bursts, and the weapon’s form factor supports one-handed use while interacting with consoles, tricorders, or environmental controls.",
+        "Output control and safety": "A defining feature is adjustable yield. Settings enable consistent, repeatable effects (e.g., non-lethal incapacitation) when discipline and restraint matter, while higher outputs are reserved for lethal force. Standard handling assumes safety interlocks and deliberate selection of yield to avoid unintended harm.",
+        "Operational limits and countermeasures": "As with other directed-energy weapons, effectiveness can be reduced by defensive fields, shielding, and environmental interference. Power availability and emitter condition also matter: extended use, damage, or hostile conditions can degrade performance and force a change in tactics.",
+        "Where it fits in the wider weapons stack": "Phaser pistols complement heavier personal weapons rather than replacing them. Teams often pair sidearms with rifles or specialized equipment so they can shift from close-quarters control to longer-range suppression without changing the mission loadout."
+      },
+      "RelatedTechIDs": [
+        "st-phasers",
+        "st-force-field"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Man Trap",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Phasers issued to the landing party for personal defense."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Arena",
+          "Season": 1,
+          "Episode": 18,
+          "Notes": "Hand phasers used in a survival/combat context."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Encounter at Farpoint",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Starfleet hand phasers used during an away-team investigation."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": 0,
+          "Episode": 0,
+          "Notes": "Starfleet hand phasers used during close-quarters boarding actions."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Type 1 phaser",
+          "Summary": "A very small, easily concealed hand phaser design used for personal defense and covert carry in multiple eras."
+        },
+        {
+          "Name": "Type 2 phaser",
+          "Summary": "A larger hand phaser commonly issued to Starfleet officers; often treated as the standard sidearm in the late 24th century."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Stun setting",
+          "Definition": "A non-lethal yield mode used to incapacitate targets without intended fatal injury."
+        },
+        {
+          "Term": "Kill setting",
+          "Definition": "A lethal yield mode used when a threat requires deadly force."
+        },
+        {
+          "Term": "Type designation",
+          "Definition": "A size/role convention used for handheld phasers, distinguishing compact sidearms from larger units."
+        }
+      ],
+      "Operators": [
+        "Starfleet",
+        "Federation security and away teams"
+      ],
+      "Constraints": [
+        "Handheld phasers rely on internal power capacity; extended engagements can require recharge, replacement, or weapon swaps.",
+        "Defensive fields and shields can reduce or block phaser effects, forcing teams to change approach or close distance.",
+        "Damage, contamination, or environmental interference can degrade beam coherence and reliability.",
+        "Capture risk is significant: portable weapons can be taken and turned against their operators in close quarters."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "Films"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Phaser.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-phaser-rifle",
+      "Name": "Phaser rifle",
+      "SystemID": "handheld-weapons",
+      "Type": "Weapon",
+      "Summary": "A shoulder-fired or two-handed phaser built for greater sustained output, stability, and engagement flexibility than a sidearm. Rifle-format phasers are commonly issued for security operations, boarding actions, and combat situations where range, accuracy, and endurance matter.",
+      "Sections": {
+        "What a phaser rifle is": "A phaser rifle is a larger personal phaser that trades compactness for improved handling and capacity. The longer body supports more stable aiming and typically accommodates larger power reserves and control surfaces suited to sustained engagements.",
+        "Tactical role": "Rifles are favored when a team expects resistance, needs suppressive fire, or must engage targets at longer standoff distances. In organized actions—such as perimeter defense or shipboard retaking operations—rifles help establish controlled lanes of fire and coordinated coverage.",
+        "Output and firing modes": "Like other phasers, rifle-format weapons support adjustable yield, allowing operators to scale from incapacitation to lethal effects. In practice, operators use measured bursts, wider dispersal patterns when needed, and higher yields for hardened targets or time-critical threats.",
+        "Specialized rifles": "Some missions call for specialized rifle patterns that prioritize penetration, endurance, or operation under hostile conditions. These variants appear when standard phaser output is reduced by dampening effects or when teams need a different balance of portability and power.",
+        "Operational limits and countermeasures": "Rifles remain subject to the same broad constraints as other directed-energy weapons: shielding and force fields can negate effects, and environmental interference can reduce beam quality. Even with larger power reserves, long engagements can drive heat/power management and resupply concerns."
+      },
+      "RelatedTechIDs": [
+        "st-phasers",
+        "st-force-field"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Best of Both Worlds",
+          "Season": 3,
+          "Episode": 26,
+          "Notes": "Starfleet deploys phaser rifles during defensive preparations."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Siege of AR-558",
+          "Season": 7,
+          "Episode": 8,
+          "Notes": "Rifles used for frontline defense under sustained pressure."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Basics, Part II",
+          "Season": 3,
+          "Episode": 1,
+          "Notes": "Rifles used during a hostile boarding/retaking scenario."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": 0,
+          "Episode": 0,
+          "Notes": "Rifle-format phasers used in shipboard combat conditions."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Type 3 phaser",
+          "Summary": "A common Starfleet phaser rifle pattern used for security and combat operations."
+        },
+        {
+          "Name": "Compression phaser rifle",
+          "Summary": "A specialized rifle pattern used when standard phaser effects are reduced by certain dampening conditions."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Suppressive fire",
+          "Definition": "Sustained or repeated firing intended to restrict an opponent’s movement rather than achieve immediate incapacitation."
+        },
+        {
+          "Term": "Compression phaser rifle",
+          "Definition": "A distinct phaser rifle pattern associated with improved performance in some dampening environments."
+        },
+        {
+          "Term": "Engagement standoff",
+          "Definition": "The distance a team tries to maintain to reduce exposure while still applying force effectively."
+        }
+      ],
+      "Operators": [
+        "Starfleet",
+        "Federation security",
+        "Away teams"
+      ],
+      "Constraints": [
+        "Rifle-format phasers are larger and more conspicuous, reducing concealment and increasing encumbrance on delicate missions.",
+        "Defensive fields and shields can neutralize phaser fire; teams may need to disable emitters or change tactics.",
+        "Some dampening effects can render standard phasers ineffective, driving reliance on specialized rifles or alternative tools.",
+        "A larger power reserve supports longer use but does not eliminate the need for recharging, maintenance, and emitter integrity."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY",
+          "Films"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Phaser%20Rifle.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-klingon-disruptor",
+      "Name": "Klingon disruptor",
+      "SystemID": "handheld-weapons",
+      "Type": "Weapon",
+      "Summary": "A Klingon directed-energy small arm—often issued as pistols or rifles—built for rugged combat use and typically employed as a lethal weapon. Disruptors function by breaking down matter at the molecular level, producing destructive effects that align with Klingon tactical doctrine.",
+      "Sections": {
+        "What a Klingon disruptor is": "Klingon disruptors are handheld directed-energy weapons used by Klingon forces and operatives. They appear in multiple form factors—compact pistols and longer rifles—optimized for combat durability and straightforward operation.",
+        "How disruptors differ from phasers": "Disruptors are characterized by destructive effects consistent with molecular disruption rather than the phaser emphasis on finely graded, routine non-lethal control. While output can vary by model and circumstance, Klingon disruptors are most often portrayed as combat weapons intended to disable or kill quickly.",
+        "Tactical use": "Klingon disruptors are used in boarding actions, ground assaults, and shipboard confrontations where decisive force is valued. In close quarters, operators favor quick shots and aggressive movement, pairing disruptors with bladed weapons when the fight collapses into melee range.",
+        "Forms and configurations": "Rifle variants provide improved handling and higher energy delivery compared with pistols, supporting longer-range engagements and heavier fire. Pistols emphasize portability for boarding parties, security patrols, and personal carry.",
+        "Operational limits": "Like other directed-energy weapons, disruptors can be blocked or mitigated by shielding and force fields. Environmental interference and weapon damage can reduce reliability, and power capacity limits sustained firing."
+      },
+      "RelatedTechIDs": [
+        "st-phasers",
+        "st-force-field"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "Errand of Mercy",
+          "Season": 1,
+          "Episode": 26,
+          "Notes": "Klingon ground forces employ handheld disruptors during occupation operations."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Sins of the Father",
+          "Season": 3,
+          "Episode": 17,
+          "Notes": "Klingon confrontations feature disruptor sidearms as standard armament."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Way of the Warrior",
+          "Season": 4,
+          "Episode": 1,
+          "Notes": "Klingon boarding forces carry disruptors during the station assault."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek VI: The Undiscovered Country",
+          "Season": 0,
+          "Episode": 0,
+          "Notes": "Klingon weapons are featured during high-stakes confrontations and security actions."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Disruptor pistol",
+          "Summary": "A compact sidearm pattern suited to boarding actions and personal carry."
+        },
+        {
+          "Name": "Disruptor rifle",
+          "Summary": "A longer weapon form delivering more energy than pistol patterns for heavier engagements."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Molecular disruption",
+          "Definition": "A destructive effect associated with disruptor weapons, breaking down molecular bonds in the target."
+        },
+        {
+          "Term": "Boarding action",
+          "Definition": "Close-range combat where teams attempt to seize control of a ship or station interior."
+        },
+        {
+          "Term": "Klingon doctrine",
+          "Definition": "A broad cultural preference for decisive confrontation that shapes typical weapon selection and use."
+        }
+      ],
+      "Operators": [
+        "Klingon Defense Force",
+        "Klingon Empire",
+        "Klingon warriors"
+      ],
+      "Constraints": [
+        "Shielding and force fields can block disruptor fire, forcing Klingon teams to overwhelm defenses or shift to close combat.",
+        "Handheld disruptors have finite power capacity; sustained engagements can require resupply or weapon swaps.",
+        "In confined shipboard spaces, missed shots and ricochet/over-penetration risks can endanger allies and critical systems.",
+        "Capture and reuse by opponents is a recurring risk with any portable weapon."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "Films"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "Klingon Empire"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Klingon%20Disruptor.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-batleth",
+      "Name": "Bat'leth",
+      "SystemID": "handheld-weapons",
+      "Type": "Weapon",
+      "Summary": "A Klingon bladed weapon closely tied to honor culture and martial tradition, used both as a practical close-combat tool and as a ceremonial symbol. Its distinctive form supports powerful cuts and hooks in trained hands, and it is commonly associated with Klingon rituals, duels, and warrior status.",
+      "Sections": {
+        "What a bat’leth is": "The bat’leth is a Klingon melee weapon with a distinctive multi-grip, curved blade profile meant for two-handed fighting. In Klingon culture it functions as both a weapon and a status symbol, often carried or displayed in connection with personal honor and readiness for combat.",
+        "Handling and combat role": "Bat’leth technique emphasizes leverage, controlled arcs, and quick transitions between guard and strike. In close quarters, it provides reach and defensive coverage compared with knives, while remaining usable aboard ships and stations where ranged weapons may be constrained or undesirable.",
+        "Cultural significance": "Bat’leths appear in rites, tournaments, and formal duels, where skill and restraint can matter as much as lethality. Carrying or wielding a bat’leth often signals a warrior’s identity and their willingness to meet challenges face-to-face.",
+        "Integration with modern tactics": "Even in eras dominated by energy weapons, bat’leths persist because they remain effective when technology fails or is constrained—such as in dampening fields, security restrictions, or situations where silent, close engagement is required.",
+        "Notable legacy items": "Klingon tradition includes legendary bat’leths, with mythic and political weight attached to their possession, reinforcing the weapon’s role beyond pure utility."
+      },
+      "RelatedTechIDs": [
+        "st-klingon-disruptor"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Reunion",
+          "Season": 4,
+          "Episode": 7,
+          "Notes": "First on-screen appearance of the bat'leth; Worf wields one in Klingon conflict."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek Generations",
+          "Season": 0,
+          "Episode": 0,
+          "Notes": "Bat'leth used in close-quarters Klingon combat."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Barge of the Dead",
+          "Season": 6,
+          "Episode": 3,
+          "Notes": "Bat'leth appears in a Klingon cultural/afterlife setting."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Tacking Into the Wind",
+          "Season": 7,
+          "Episode": 22,
+          "Notes": "A bat'leth duel reshapes Klingon political leadership."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Training bat'leth",
+          "Summary": "A practice version used for drills and tournaments where injury risk is controlled."
+        },
+        {
+          "Name": "Sword of Kahless",
+          "Summary": "A legendary bat'leth associated with Klingon mythology and political legitimacy."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Duel",
+          "Definition": "A formalized combat challenge, often tied to honor disputes and leadership claims."
+        },
+        {
+          "Term": "Close-quarters combat",
+          "Definition": "Fighting within arm’s reach where melee weapons and grappling dominate."
+        },
+        {
+          "Term": "Honor culture",
+          "Definition": "A Klingon social framework where status is tied to courage, direct confrontation, and reputation."
+        }
+      ],
+      "Operators": [
+        "Klingon Empire",
+        "Klingon warriors",
+        "Klingon cultural institutions"
+      ],
+      "Constraints": [
+        "Effective use depends heavily on training; unskilled wielders are at high risk of self-injury or disarmament.",
+        "Melee range requires closing distance under fire; against prepared opponents with ranged weapons this can be tactically costly.",
+        "Confined interiors can limit wide swings, pushing fighters toward short, controlled strikes and grappling.",
+        "Bladed weapons require maintenance (edge condition, balance) to remain reliable in repeated use."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY",
+          "Films"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "Klingon Empire"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Bat'leth.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-mekleth",
+      "Name": "Mek'leth",
+      "SystemID": "handheld-weapons",
+      "Type": "Weapon",
+      "Summary": "A compact Klingon bladed weapon suited to close-quarters fighting, favored as a personal sidearm alongside disruptors. Its smaller size makes it practical in shipboard interiors and boarding actions where fights can collapse into grappling range.",
+      "Sections": {
+        "What a mek’leth is": "The mek’leth is a short Klingon blade carried as a personal weapon. Compared with a bat’leth, it is easier to wear on the body and faster to draw, making it a common choice for tight corridors, crowded decks, and sudden close-range confrontations.",
+        "Combat role": "The mek’leth emphasizes quick cuts, hooks, and close-in control. It is well suited to engagements where a fighter must keep one hand free, operate in confined spaces, or transition rapidly between weapon use and grappling.",
+        "Pairing with disruptors": "Klingon fighters often treat bladed weapons as a complement to disruptors rather than an alternative. A mek’leth provides a reliable option when ranged weapons are blocked, depleted, restricted, or tactically risky, and it supports Klingon preferences for direct confrontation.",
+        "Cultural use": "While primarily practical, the mek’leth also participates in Klingon warrior identity—carried as a visible sign of readiness and used in training or ritual contexts where bladed skill is valued.",
+        "Operational limits": "As a melee weapon it requires closing distance, and its effectiveness depends on user skill and physical positioning. It is less suited than longer blades to controlling space at reach, trading that for speed and portability."
+      },
+      "RelatedTechIDs": [
+        "st-batleth",
+        "st-klingon-disruptor"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Way of the Warrior",
+          "Season": 4,
+          "Episode": 1,
+          "Notes": "First appearance of Worf's mek'leth as a personal Klingon blade."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek: First Contact",
+          "Season": 0,
+          "Episode": 0,
+          "Notes": "Worf is depicted with his mek'leth among personal weapons."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "By Inferno's Light",
+          "Season": 5,
+          "Episode": 15,
+          "Notes": "Klingon combat contexts include personal bladed weapons alongside disruptors."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Sons of Mogh",
+          "Season": 6,
+          "Episode": 15,
+          "Notes": "Worf’s Klingon identity and weapons are foregrounded in personal conflict."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Worf’s mek'leth",
+          "Summary": "A personal mek'leth associated with Worf, carried repeatedly across late DS9 and into film appearances."
+        },
+        {
+          "Name": "Ceremonial mek'leth",
+          "Summary": "A presentation or ritual blade pattern used for display or formal occasions rather than daily carry."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Sidearm",
+          "Definition": "A secondary weapon carried for quick access when a primary weapon is unavailable or unsuitable."
+        },
+        {
+          "Term": "Boarding corridor",
+          "Definition": "Tight interior combat spaces where short weapons and grappling are common."
+        },
+        {
+          "Term": "Draw speed",
+          "Definition": "How quickly a weapon can be brought into use from a carried position."
+        }
+      ],
+      "Operators": [
+        "Klingon Empire",
+        "Klingon warriors"
+      ],
+      "Constraints": [
+        "As a melee weapon, it requires closing distance under threat; opponents with ranged weapons can exploit standoff.",
+        "Confined interiors can both help and hinder: they limit an opponent’s reach but also constrain movement and footwork.",
+        "Effectiveness is highly skill-dependent; poor technique can lead to disarmament in grappling range.",
+        "Bladed weapons require upkeep and safe carry practices to avoid accidental injury."
+      ],
+      "Meta": {
+        "Series": [
+          "DS9",
+          "Films"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "Klingon Empire"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Mek'leth.png",
         "Gallery": []
       }
     }
