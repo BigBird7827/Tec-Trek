@@ -1,27 +1,27 @@
 {
-  "Version": 14,
-  "GeneratedUTC": "2025-12-15T01:00:10Z",
+  "Version": 15,
+  "GeneratedUTC": "2025-12-15T02:09:41Z",
   "Systems": [
     {
       "ID": "propulsion",
       "Name": "Propulsion",
       "Description": "Warp, impulse, maneuvering thrusters, inertial management.",
       "SortOrder": 10,
-      "SidebarText": "Propulsion is the ship’s full movement stack: warp for FTL, impulse for sublight, and thrusters for fine maneuvering, all coordinated with inertial management so the crew and structure can tolerate acceleration and rapid course changes. propulsion performance is often limited by power availability, field stability, and system damage, with crews rerouting power or compensating for imbalances to keep the ship mobile.\n\nDifferent mission profiles emphasize different modes—cruise, pursuit, evasion, station-keeping—but the common theme is that speed and maneuverability come from integration: engines, control systems, and shipwide power distribution working as one."
+      "SidebarText": "Propulsion is the ship’s full movement stack: warp for FTL, impulse for sublight, and thrusters for fine maneuvering, all coordinated with inertial management so the crew and structure can tolerate acceleration and rapid course changes. Propulsion performance is often limited by power availability, field stability, and system damage, with crews rerouting power or compensating for imbalances to keep the ship mobile.\n\nDifferent mission profiles emphasize different modes—cruise, pursuit, evasion, station-keeping—but the common theme is that speed and maneuverability come from integration: engines, control systems, and shipwide power distribution working as one."
     },
     {
       "ID": "shipboard-weapons",
       "Name": "Shipboard Weapons",
       "Description": "Phasers, torpedoes, and integrated tactical fire-control for starship combat.",
       "SortOrder": 20,
-      "SidebarText": "Shipboard weapons are a shipwide integration of sensors, targeting, and power/munition delivery that turns phasers, cannons, and torpedoes into usable combat capability. performance depends on target lock quality, firing arcs, and available power, with combat often driving rapid reconfiguration of outputs and priorities.\n\nDifferent eras emphasize different baseline fits—early NX-era armament versus later phaser-and-torpedo loadouts—but the common theme is that weapons effectiveness is limited as much by fire-control and ship systems as by the emitter or warhead itself."
+      "SidebarText": "Shipboard weapons are a shipwide integration of sensors, targeting, and power/munition delivery that turns phasers, cannons, and torpedoes into usable combat capability. Performance depends on target lock quality, firing arcs, and available power, with combat often driving rapid reconfiguration of outputs and priorities.\n\nDifferent eras emphasize different baseline fits—early NX-era armament versus later phaser-and-torpedo loadouts—but the common theme is that weapons effectiveness is limited as much by fire-control and ship systems as by the emitter or warhead itself."
     },
     {
       "ID": "holography",
       "Name": "Holography",
       "Description": "Holographic projection systems: holodecks, holoemitters, photonic interfaces, and mobile holograms.",
       "SortOrder": 30,
-      "SidebarText": "Holographic technology is the ship’s projection-and-control infrastructure: emitters, projectors, and software that generate stable photonic images and interfaces, from simple displays to fully immersive holodeck environments. the practical constraint is emitter coverage—complex holograms are usually bound to spaces and systems designed to support them.\n\nA key capability jump is mobility: taking a sophisticated holographic program outside fixed emitter grids requires specialized solutions (most notably the mobile emitter), which is treated as exceptional rather than routine."
+      "SidebarText": "Holographic technology is the ship’s projection-and-control infrastructure: emitters, projectors, and software that generate stable photonic images and interfaces, from simple displays to fully immersive holodeck environments. The practical constraint is emitter coverage—complex holograms are usually bound to spaces and systems designed to support them.\n\nA key capability jump is mobility: taking a sophisticated holographic program outside fixed emitter grids requires specialized solutions (most notably the mobile emitter), which is treated as exceptional rather than routine."
     },
     {
       "ID": "cloaking",
@@ -43,6 +43,13 @@
       "Description": "Systems that move people, craft, and cargo between ships, stations, and destinations: transporters, shuttle operations, docking interfaces, and tractor handling.",
       "SortOrder": 60,
       "SidebarText": "Transport & access is the ship’s movement-and-connection toolkit: transporters for rapid personnel/cargo transfer, shuttle operations supported by bays and traffic control, docking interfaces that create sealed physical links, and tractor beams for controlled handling, station‑keeping, and towing.\n\nThese systems are constrained by targeting and environmental conditions, and they are tightly governed by safety interlocks. In practice, reliability comes from precision—stable locks, controlled approach geometry, and careful power/field management—as much as from raw capability."
+    },
+    {
+      "ID": "replicator-systems",
+      "Name": "Replicator Systems",
+      "Description": "Matter synthesis: food, tools, and large-scale fabrication via pattern-based replication.",
+      "SortOrder": 70,
+      "SidebarText": "Replicator systems convert stored energy and feedstock matter into finished items by applying stored patterns. Standard terminals handle meals, clothing, and routine equipment; the same approach scales up into dedicated replicating centers and large industrial units for construction tasks.\n\nCapabilities are bounded by pattern libraries, security controls, and the complexity of what’s being produced. Some materials or structures are difficult or impossible to replicate reliably, and power availability can make replication a managed resource rather than an always‑on convenience."
     }
   ],
   "Technologies": [
@@ -956,6 +963,116 @@
       }
     },
     {
+      "ID": "st-holo-force-fields",
+      "Name": "Holo force fields",
+      "SystemID": "holography",
+      "Type": "System",
+      "Summary": "Star Trek holograms are repeatedly described as more than light: they are sustained by force fields that give projected objects and characters apparent solidity. On holodecks this allows users to sit, lift, and manipulate holographic props as if they were real; for operational holograms like the EMH it enables tool use, physical interaction, and believable presence. These fields are tightly governed by safety limits and by the boundaries of emitter coverage—when the underlying force-field control fails or is restricted, the hologram’s physicality can degrade or disappear.",
+      "Sections": {
+        "Photons plus force fields": "The franchise’s standard explanation for interactive holograms is a hybrid: photons provide the visible image, while force fields supply shape, resistance, and the ability to “push back” against a user’s hands, feet, or tools.",
+        "Holodeck interaction and safety": "Holodeck props feel solid because the system uses force fields to simulate texture and resistance. The same mechanism can be made dangerous if safety limits are disabled—stories treat force-field intensity as the difference between a safe recreation and a lethal environment.",
+        "Operational holograms and tool use": "The EMH and related Starfleet holograms are depicted as using force fields to manipulate instruments, interact with patients, and access consoles. This makes a medical hologram functionally useful rather than a purely visual advisor.",
+        "Boundaries and permeability": "Force fields on holodecks are portrayed as configurable: they can allow passage of real matter or present as solid barriers. However, holodeck-style fields are also treated as localized—outside the supported volume, the ‘substance’ they provide does not persist.",
+        "Emergency and containment behavior": "Force fields are shown being used for isolation and containment in sickbay and security contexts. In a holodeck emergency, a holographic force field can also be generated as part of a simulation’s control and safety response.",
+        "Failure modes and disruption": "Holographic physicality is vulnerable to the same problems that affect projection: power loss, damaged emitters, and environmental interference can reduce field stability, forcing a hologram to become intangible, distort, or shut down."
+      },
+      "RelatedTechIDs": [
+        "st-holographic-projectors",
+        "st-mobile-emitter"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Big Goodbye",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Holodeck interactions demonstrate holograms behaving as solid environments and objects."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Someone to Watch Over Me",
+          "Season": 5,
+          "Episode": 21,
+          "Notes": "The Doctor explicitly characterizes himself as ‘photons and force fields,’ underscoring the standard explanation for holographic physicality."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Twisted",
+          "Season": 2,
+          "Episode": 6,
+          "Notes": "A holographic force field is created during a holodeck emergency scenario."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Holodeck interaction fields",
+          "Summary": "Force fields used to provide tactile resistance and solidity for holodeck props, terrain, and characters."
+        },
+        {
+          "Name": "Hologram solidity fields",
+          "Summary": "Force fields that allow operational holograms (e.g., EMH) to handle tools, touch people, and manipulate controls."
+        },
+        {
+          "Name": "Safety-limited force fields",
+          "Summary": "Configured limits that cap intensity and hazardous interactions; disabling safety protocols raises risk of injury."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Solidity",
+          "Definition": "The apparent ‘physical’ resistance a hologram provides through force-field shaping rather than real mass."
+        },
+        {
+          "Term": "Safety protocols",
+          "Definition": "Holodeck control limits intended to prevent force fields and simulated hazards from causing real injury."
+        },
+        {
+          "Term": "Permeability",
+          "Definition": "A force-field setting that determines whether real matter can pass through a field or whether it behaves like a solid barrier."
+        },
+        {
+          "Term": "Holodeck matter",
+          "Definition": "A general label for holographic constructs that combine photons and force fields, sometimes augmented by replicated matter."
+        },
+        {
+          "Term": "Containment field",
+          "Definition": "A force-field configuration used to isolate people or hazards (medical quarantine, security holding, controlled environments)."
+        }
+      ],
+      "Operators": [
+        "Starfleet (holodecks, sickbay holograms, containment/isolation fields)",
+        "Commercial holosuites (recreational environments using holodeck-style interaction fields)"
+      ],
+      "Constraints": [
+        "Holodeck interaction fields are localized; their ‘substance’ does not persist outside supported projection volumes.",
+        "Force-field intensity and hazardous interactions are governed by safety settings; overriding safeties can make simulations physically dangerous.",
+        "Physicality depends on stable field control; damage, power loss, or interference can cause a hologram to lose solidity or collapse."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.webp",
+        "Gallery": []
+      }
+    },
+    {
       "ID": "st-holographic-projectors",
       "Name": "Holographic projectors",
       "SystemID": "holography",
@@ -1103,116 +1220,6 @@
       }
     },
     {
-      "ID": "st-holo-force-fields",
-      "Name": "Holo force fields",
-      "SystemID": "holography",
-      "Type": "System",
-      "Summary": "Star Trek holograms are repeatedly described as more than light: they are sustained by force fields that give projected objects and characters apparent solidity. On holodecks this allows users to sit, lift, and manipulate holographic props as if they were real; for operational holograms like the EMH it enables tool use, physical interaction, and believable presence. These fields are tightly governed by safety limits and by the boundaries of emitter coverage—when the underlying force-field control fails or is restricted, the hologram’s physicality can degrade or disappear.",
-      "Sections": {
-        "Photons plus force fields": "The franchise’s standard explanation for interactive holograms is a hybrid: photons provide the visible image, while force fields supply shape, resistance, and the ability to “push back” against a user’s hands, feet, or tools.",
-        "Holodeck interaction and safety": "Holodeck props feel solid because the system uses force fields to simulate texture and resistance. The same mechanism can be made dangerous if safety limits are disabled—stories treat force-field intensity as the difference between a safe recreation and a lethal environment.",
-        "Operational holograms and tool use": "The EMH and related Starfleet holograms are depicted as using force fields to manipulate instruments, interact with patients, and access consoles. This makes a medical hologram functionally useful rather than a purely visual advisor.",
-        "Boundaries and permeability": "Force fields on holodecks are portrayed as configurable: they can allow passage of real matter or present as solid barriers. However, holodeck-style fields are also treated as localized—outside the supported volume, the ‘substance’ they provide does not persist.",
-        "Emergency and containment behavior": "Force fields are shown being used for isolation and containment in sickbay and security contexts. In a holodeck emergency, a holographic force field can also be generated as part of a simulation’s control and safety response.",
-        "Failure modes and disruption": "Holographic physicality is vulnerable to the same problems that affect projection: power loss, damaged emitters, and environmental interference can reduce field stability, forcing a hologram to become intangible, distort, or shut down."
-      },
-      "RelatedTechIDs": [
-        "st-holographic-projectors",
-        "st-mobile-emitter"
-      ],
-      "Appearances": [
-        {
-          "RefType": "Episode",
-          "Series": "TNG",
-          "Title": "The Big Goodbye",
-          "Season": 1,
-          "Episode": 12,
-          "Notes": "Holodeck interactions demonstrate holograms behaving as solid environments and objects."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "VOY",
-          "Title": "Someone to Watch Over Me",
-          "Season": 5,
-          "Episode": 21,
-          "Notes": "The Doctor explicitly characterizes himself as ‘photons and force fields,’ underscoring the standard explanation for holographic physicality."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "VOY",
-          "Title": "Twisted",
-          "Season": 2,
-          "Episode": 6,
-          "Notes": "A holographic force field is created during a holodeck emergency scenario."
-        }
-      ],
-      "Variants": [
-        {
-          "Name": "Holodeck interaction fields",
-          "Summary": "Force fields used to provide tactile resistance and solidity for holodeck props, terrain, and characters."
-        },
-        {
-          "Name": "Hologram solidity fields",
-          "Summary": "Force fields that allow operational holograms (e.g., EMH) to handle tools, touch people, and manipulate controls."
-        },
-        {
-          "Name": "Safety-limited force fields",
-          "Summary": "Configured limits that cap intensity and hazardous interactions; disabling safety protocols raises risk of injury."
-        }
-      ],
-      "KeyTerms": [
-        {
-          "Term": "Solidity",
-          "Definition": "The apparent ‘physical’ resistance a hologram provides through force-field shaping rather than real mass."
-        },
-        {
-          "Term": "Safety protocols",
-          "Definition": "Holodeck control limits intended to prevent force fields and simulated hazards from causing real injury."
-        },
-        {
-          "Term": "Permeability",
-          "Definition": "A force-field setting that determines whether real matter can pass through a field or whether it behaves like a solid barrier."
-        },
-        {
-          "Term": "Holodeck matter",
-          "Definition": "A general label for holographic constructs that combine photons and force fields, sometimes augmented by replicated matter."
-        },
-        {
-          "Term": "Containment field",
-          "Definition": "A force-field configuration used to isolate people or hazards (medical quarantine, security holding, controlled environments)."
-        }
-      ],
-      "Operators": [
-        "Starfleet (holodecks, sickbay holograms, containment/isolation fields)",
-        "Commercial holosuites (recreational environments using holodeck-style interaction fields)"
-      ],
-      "Constraints": [
-        "Holodeck interaction fields are localized; their ‘substance’ does not persist outside supported projection volumes.",
-        "Force-field intensity and hazardous interactions are governed by safety settings; overriding safeties can make simulations physically dangerous.",
-        "Physicality depends on stable field control; damage, power loss, or interference can cause a hologram to lose solidity or collapse."
-      ],
-      "Meta": {
-        "Series": [
-          "TNG",
-          "DS9",
-          "VOY"
-        ],
-        "Era": [
-          "24th century"
-        ],
-        "Affiliations": [
-          "United Federation of Planets",
-          "Starfleet"
-        ],
-        "FirstSeen": "",
-        "LastSeen": ""
-      },
-      "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.webp",
-        "Gallery": []
-      }
-    },
-    {
       "ID": "st-mobile-emitter",
       "Name": "Mobile emitter",
       "SystemID": "holography",
@@ -1353,6 +1360,111 @@
       }
     },
     {
+      "ID": "st-klingon-cloaking-device",
+      "Name": "Klingon Cloaking Device",
+      "SystemID": "cloaking",
+      "Type": "Device",
+      "Summary": "A shipboard cloaking system used to conceal Klingon vessels—most iconically Birds-of-Prey—while they maneuver into position for attack or withdrawal. On screen, Klingon cloak tactics emphasize ambush: close while hidden, reveal briefly to strike, then disappear again.\n\nBaseline portrayals generally require a ship to decloak to fire, and opponents can sometimes reveal cloaked ships using specialized detection methods such as tachyon-based scans and grids. A notable exception is a prototype Bird‑of‑Prey depicted as firing torpedoes while remaining cloaked.",
+      "Sections": {
+        "Tactical pattern": "Klingon cloak use is typically staged as an ambush tool. Cloaked ships close to favorable range and angle, decloak to attack, and recloak to reposition or disengage.\n\nThis makes the cloak less about permanent invisibility and more about controlling engagement distance and timing.",
+        "Platforms and deployment": "Cloaking is strongly associated with Klingon Birds-of-Prey across multiple eras, and it also appears on other Klingon vessels in various stories. Regardless of platform, the cloak is treated as integrated ship equipment rather than a one-off trick.",
+        "Typical limitations": "Most portrayals keep a consistent baseline: a ship decloaks to fire. This baseline matters because stories treat the ability to fire while cloaked as a special case rather than a default feature.",
+        "Detection and exposure": "Cloaked Klingon ships can still produce indirect cues under certain conditions. In one film depiction, observers notice spatial distortions associated with a cloaked Bird-of-Prey.\n\nPrepared opponents also employ tachyon-based methods and detection grids to expose cloaked ships.",
+        "Exceptional variants": "A prototype Bird-of-Prey is depicted as firing torpedoes while remaining cloaked. The capability is portrayed as extraordinary and strategically dangerous."
+      },
+      "RelatedTechIDs": [],
+      "Appearances": [
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek III: The Search for Spock",
+          "Season": null,
+          "Episode": null,
+          "Notes": "A Klingon Bird-of-Prey uses a cloaking device; spatial distortions are noticed by Enterprise crew."
+        },
+        {
+          "RefType": "Film",
+          "Series": "Film",
+          "Title": "Star Trek VI: The Undiscovered Country",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Prototype Bird-of-Prey is depicted as firing torpedoes while cloaked."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TAS",
+          "Title": "The Time Trap",
+          "Season": 1,
+          "Episode": 12,
+          "Notes": "Early depiction referencing Klingon cloaking capability."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Redemption II",
+          "Season": 5,
+          "Episode": 1,
+          "Notes": "Tachyon detection grid is deployed as a cloak countermeasure in a conflict involving Klingon/Romulan forces."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Standard Bird-of-Prey cloak",
+          "Summary": "Baseline cloak behavior used for approach and ambush; typically paired with decloak-to-fire staging."
+        },
+        {
+          "Name": "Fire-while-cloaked prototype",
+          "Summary": "Rare variant depicted as enabling torpedo fire while cloaked; treated as extraordinary rather than standard."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Cloak-state transition",
+          "Definition": "The activation/deactivation phase of the cloak where a ship may briefly become detectable or tactically committed."
+        },
+        {
+          "Term": "Spatial distortion",
+          "Definition": "A subtle visual cue associated with a cloaked ship in at least one on-screen depiction."
+        },
+        {
+          "Term": "Tachyon scan",
+          "Definition": "A tachyon-based search method used to detect signatures associated with cloaking fields."
+        },
+        {
+          "Term": "Tachyon detection grid",
+          "Definition": "A multi-ship field of tachyon beams used to reveal cloaked vessels passing through."
+        }
+      ],
+      "Operators": [
+        "Klingon Empire"
+      ],
+      "Constraints": [
+        "Standard operation is generally staged as decloak-to-fire, with rare special-case exceptions.",
+        "Cloaked vessels can sometimes be exposed by specialized countermeasures such as tachyon-based methods.",
+        "Cloak tactics are timing-dependent; concealment helps but does not eliminate risk."
+      ],
+      "Meta": {
+        "Series": [
+          "FILM",
+          "TAS",
+          "TNG"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "Klingon Empire"
+        ],
+        "FirstSeen": "FILM: Star Trek III: The Search for Spock",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Klingon%20Cloaking%20Device.webp",
+        "Gallery": []
+      }
+    },
+    {
       "ID": "st-romulan-cloaking-device",
       "Name": "Romulan Cloaking Device",
       "SystemID": "cloaking",
@@ -1467,107 +1579,81 @@
       }
     },
     {
-      "ID": "st-klingon-cloaking-device",
-      "Name": "Klingon Cloaking Device",
-      "SystemID": "cloaking",
-      "Type": "Device",
-      "Summary": "A shipboard cloaking system used to conceal Klingon vessels—most iconically Birds-of-Prey—while they maneuver into position for attack or withdrawal. On screen, Klingon cloak tactics emphasize ambush: close while hidden, reveal briefly to strike, then disappear again.\n\nBaseline portrayals generally require a ship to decloak to fire, and opponents can sometimes reveal cloaked ships using specialized detection methods such as tachyon-based scans and grids. A notable exception is a prototype Bird‑of‑Prey depicted as firing torpedoes while remaining cloaked.",
+      "ID": "st-ablative-armor",
+      "Name": "Ablative Armor",
+      "SystemID": "defensive-systems",
+      "Type": "System",
+      "Summary": "Ablative armor is protective hull armor designed to reduce damage by sacrificing material or protective layers to dissipate energy impacts. It complements shields by adding a physical (or projected) layer of survivability when shield strength is low, overwhelmed, or bypassed.\n\nStarfleet is shown fielding ablative concepts in multiple forms, including advanced generator-based variants that project an ablative layer around the hull and are treated as a major defensive upgrade when available.",
       "Sections": {
-        "Tactical pattern": "Klingon cloak use is typically staged as an ambush tool. Cloaked ships close to favorable range and angle, decloak to attack, and recloak to reposition or disengage.\n\nThis makes the cloak less about permanent invisibility and more about controlling engagement distance and timing.",
-        "Platforms and deployment": "Cloaking is strongly associated with Klingon Birds-of-Prey across multiple eras, and it also appears on other Klingon vessels in various stories. Regardless of platform, the cloak is treated as integrated ship equipment rather than a one-off trick.",
-        "Typical limitations": "Most portrayals keep a consistent baseline: a ship decloaks to fire. This baseline matters because stories treat the ability to fire while cloaked as a special case rather than a default feature.",
-        "Detection and exposure": "Cloaked Klingon ships can still produce indirect cues under certain conditions. In one film depiction, observers notice spatial distortions associated with a cloaked Bird-of-Prey.\n\nPrepared opponents also employ tachyon-based methods and detection grids to expose cloaked ships.",
-        "Exceptional variants": "A prototype Bird-of-Prey is depicted as firing torpedoes while remaining cloaked. The capability is portrayed as extraordinary and strategically dangerous."
+        "Core idea": "Ablative protection reduces incoming damage by rapidly dissipating energy and/or shedding protective material so the underlying structure takes less direct stress.",
+        "Relationship to shields": "Ablative armor is a second line of defense. It does not replace shields; it helps a ship survive when shields are weakened or when impacts leak through.",
+        "Generator-based variant": "A notable advanced implementation uses emitters to generate an ablative layer around a ship, portrayed as providing unusually high protection for as long as the system remains active."
       },
-      "RelatedTechIDs": [],
+      "RelatedTechIDs": [
+        "st-deflector-shields"
+      ],
       "Appearances": [
         {
-          "RefType": "Film",
-          "Series": "Film",
-          "Title": "Star Trek III: The Search for Spock",
-          "Season": null,
-          "Episode": null,
-          "Notes": "A Klingon Bird-of-Prey uses a cloaking device; spatial distortions are noticed by Enterprise crew."
-        },
-        {
-          "RefType": "Film",
-          "Series": "Film",
-          "Title": "Star Trek VI: The Undiscovered Country",
-          "Season": null,
-          "Episode": null,
-          "Notes": "Prototype Bird-of-Prey is depicted as firing torpedoes while cloaked."
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "Past Tense, Part I",
+          "Season": 3,
+          "Episode": 11,
+          "Notes": "Early Starfleet reference to ablative armor technology."
         },
         {
           "RefType": "Episode",
-          "Series": "TAS",
-          "Title": "The Time Trap",
-          "Season": 1,
-          "Episode": 12,
-          "Notes": "Early depiction referencing Klingon cloaking capability."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "TNG",
-          "Title": "Redemption II",
-          "Season": 5,
-          "Episode": 1,
-          "Notes": "Tachyon detection grid is deployed as a cloak countermeasure in a conflict involving Klingon/Romulan forces."
+          "Series": "VOY",
+          "Title": "Endgame",
+          "Season": 7,
+          "Episode": 25,
+          "Notes": "Voyager employs an ablative generator system providing a high-protection ablative layer."
         }
       ],
       "Variants": [
         {
-          "Name": "Standard Bird-of-Prey cloak",
-          "Summary": "Baseline cloak behavior used for approach and ambush; typically paired with decloak-to-fire staging."
+          "Name": "Physical ablative plating",
+          "Summary": "Ablative concepts can be applied as hull materials or plating that absorb and shed energy, reducing structural damage."
         },
         {
-          "Name": "Fire-while-cloaked prototype",
-          "Summary": "Rare variant depicted as enabling torpedo fire while cloaked; treated as extraordinary rather than standard."
+          "Name": "Ablative generator layer",
+          "Summary": "Emitter-driven ablative protection forms a hull-hugging defensive layer that degrades over sustained attack."
         }
       ],
       "KeyTerms": [
         {
-          "Term": "Cloak-state transition",
-          "Definition": "The activation/deactivation phase of the cloak where a ship may briefly become detectable or tactically committed."
+          "Term": "Ablation",
+          "Definition": "A damage-mitigation approach where material or protective layers are consumed to carry away energy."
         },
         {
-          "Term": "Spatial distortion",
-          "Definition": "A subtle visual cue associated with a cloaked ship in at least one on-screen depiction."
-        },
-        {
-          "Term": "Tachyon scan",
-          "Definition": "A tachyon-based search method used to detect signatures associated with cloaking fields."
-        },
-        {
-          "Term": "Tachyon detection grid",
-          "Definition": "A multi-ship field of tachyon beams used to reveal cloaked vessels passing through."
+          "Term": "Ablative generator",
+          "Definition": "A system that projects an ablative protective layer around a ship’s hull."
         }
       ],
       "Operators": [
-        "Klingon Empire"
+        "United Federation of Planets / Starfleet"
       ],
       "Constraints": [
-        "Standard operation is generally staged as decloak-to-fire, with rare special-case exceptions.",
-        "Cloaked vessels can sometimes be exposed by specialized countermeasures such as tachyon-based methods.",
-        "Cloak tactics are timing-dependent; concealment helps but does not eliminate risk."
+        "Armor adds mass/complexity and cannot prevent all damage, especially under sustained fire.",
+        "Generator-based ablative protection depends on emitters and power; it degrades over time under concentrated attack.",
+        "Armor effectiveness varies with attack type and hit concentration."
       ],
       "Meta": {
         "Series": [
-          "FILM",
-          "TAS",
-          "TNG"
+          "DS9",
+          "VOY"
         ],
         "Era": [
-          "23rd century",
           "24th century"
         ],
         "Affiliations": [
-          "Klingon Empire"
+          "United Federation of Planets"
         ],
-        "FirstSeen": "FILM: Star Trek III: The Search for Spock",
-        "LastSeen": ""
+        "FirstSeen": "DS9: Past Tense, Part I",
+        "LastSeen": "VOY: Endgame"
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Klingon%20Cloaking%20Device.webp",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Ablative%20Armor.webp",
         "Gallery": []
       }
     },
@@ -1659,163 +1745,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
-        "Gallery": []
-      }
-    },
-    {
-      "ID": "st-structural-integrity-field",
-      "Name": "Structural Integrity Field",
-      "SystemID": "defensive-systems",
-      "Type": "Subsystem",
-      "Summary": "A structural integrity field (SIF) is a reinforcing force field used to supplement the physical strength of a ship’s frame and hull under load. It is treated as a continuous “keep-the-ship-together” system: when acceleration, combat damage, or other stresses exceed what structure alone can safely tolerate, the SIF provides additional reinforcement.\n\nBecause it draws on ship power and ties into internal support systems, SIF is managed like other critical resources—boosted when margins are thin, rerouted in emergencies, and vulnerable to degradation when field generators or control systems are damaged.",
-      "Sections": {
-        "Purpose": "SIF reinforces bulkheads, superstructure, and hull framing so the ship can survive high stress without catastrophic structural failure.",
-        "Operational use": "Engineers raise or reconfigure structural integrity fields when maneuvering aggressively, sustaining damage, or operating in hazardous conditions that strain the frame.",
-        "Power tradeoffs": "SIF is portrayed as part of the ship’s power budget. In emergencies, its allocation can be adjusted, sometimes at the cost of reduced safety margins elsewhere."
-      },
-      "RelatedTechIDs": [
-        "st-force-fields"
-      ],
-      "Appearances": [
-        {
-          "RefType": "Episode",
-          "Series": "TNG",
-          "Title": "The Defector",
-          "Season": 3,
-          "Episode": 10,
-          "Notes": "Structural integrity power is referenced as a resource that can be reallocated during combat."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "DS9",
-          "Title": "The Way of the Warrior",
-          "Season": 4,
-          "Episode": 1,
-          "Notes": "High-stress combat contexts highlight the need to maintain structural integrity under damage."
-        }
-      ],
-      "Variants": [
-        {
-          "Name": "Localized reinforcement",
-          "Summary": "SIF can be implied as being redistributed to reinforce particular sections when a ship is taking concentrated damage or executing extreme maneuvers."
-        }
-      ],
-      "KeyTerms": [
-        {
-          "Term": "SIF",
-          "Definition": "Acronym used for structural integrity field; a reinforcing force field supplementing physical structure."
-        },
-        {
-          "Term": "Structural integrity power",
-          "Definition": "Power allocation dedicated to maintaining structural reinforcement during operation."
-        }
-      ],
-      "Operators": [
-        "United Federation of Planets / Starfleet",
-        "Many spacefaring powers"
-      ],
-      "Constraints": [
-        "SIF draws power and can be compromised by damage to field generators or control systems.",
-        "Reducing SIF allocation increases risk during high-stress maneuvers or when the structure is weakened.",
-        "SIF is supportive rather than absolute—severe forces can still cause structural failure."
-      ],
-      "Meta": {
-        "Series": [
-          "TNG",
-          "DS9",
-          "VOY"
-        ],
-        "Era": [
-          "24th century"
-        ],
-        "Affiliations": [
-          "United Federation of Planets"
-        ],
-        "FirstSeen": "",
-        "LastSeen": ""
-      },
-      "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
-        "Gallery": []
-      }
-    },
-    {
-      "ID": "st-ablative-armor",
-      "Name": "Ablative Armor",
-      "SystemID": "defensive-systems",
-      "Type": "System",
-      "Summary": "Ablative armor is protective hull armor designed to reduce damage by sacrificing material or protective layers to dissipate energy impacts. It complements shields by adding a physical (or projected) layer of survivability when shield strength is low, overwhelmed, or bypassed.\n\nStarfleet is shown fielding ablative concepts in multiple forms, including advanced generator-based variants that project an ablative layer around the hull and are treated as a major defensive upgrade when available.",
-      "Sections": {
-        "Core idea": "Ablative protection reduces incoming damage by rapidly dissipating energy and/or shedding protective material so the underlying structure takes less direct stress.",
-        "Relationship to shields": "Ablative armor is a second line of defense. It does not replace shields; it helps a ship survive when shields are weakened or when impacts leak through.",
-        "Generator-based variant": "A notable advanced implementation uses emitters to generate an ablative layer around a ship, portrayed as providing unusually high protection for as long as the system remains active."
-      },
-      "RelatedTechIDs": [
-        "st-deflector-shields"
-      ],
-      "Appearances": [
-        {
-          "RefType": "Episode",
-          "Series": "DS9",
-          "Title": "Past Tense, Part I",
-          "Season": 3,
-          "Episode": 11,
-          "Notes": "Early Starfleet reference to ablative armor technology."
-        },
-        {
-          "RefType": "Episode",
-          "Series": "VOY",
-          "Title": "Endgame",
-          "Season": 7,
-          "Episode": 25,
-          "Notes": "Voyager employs an ablative generator system providing a high-protection ablative layer."
-        }
-      ],
-      "Variants": [
-        {
-          "Name": "Physical ablative plating",
-          "Summary": "Ablative concepts can be applied as hull materials or plating that absorb and shed energy, reducing structural damage."
-        },
-        {
-          "Name": "Ablative generator layer",
-          "Summary": "Emitter-driven ablative protection forms a hull-hugging defensive layer that degrades over sustained attack."
-        }
-      ],
-      "KeyTerms": [
-        {
-          "Term": "Ablation",
-          "Definition": "A damage-mitigation approach where material or protective layers are consumed to carry away energy."
-        },
-        {
-          "Term": "Ablative generator",
-          "Definition": "A system that projects an ablative protective layer around a ship’s hull."
-        }
-      ],
-      "Operators": [
-        "United Federation of Planets / Starfleet"
-      ],
-      "Constraints": [
-        "Armor adds mass/complexity and cannot prevent all damage, especially under sustained fire.",
-        "Generator-based ablative protection depends on emitters and power; it degrades over time under concentrated attack.",
-        "Armor effectiveness varies with attack type and hit concentration."
-      ],
-      "Meta": {
-        "Series": [
-          "DS9",
-          "VOY"
-        ],
-        "Era": [
-          "24th century"
-        ],
-        "Affiliations": [
-          "United Federation of Planets"
-        ],
-        "FirstSeen": "DS9: Past Tense, Part I",
-        "LastSeen": "VOY: Endgame"
-      },
-      "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Deflector%20Shields.jpg",
         "Gallery": []
       }
     },
@@ -1906,116 +1836,187 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.webp",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Force%20Field.png",
         "Gallery": []
       }
     },
     {
-      "ID": "st-transporter",
-      "Name": "Transporter",
-      "SystemID": "transport-access",
-      "Type": "Personnel & Cargo Transport",
-      "Summary": "Transporters transfer people and material by converting matter to an energy pattern, transmitting it, and reconstructing it at the destination. They enable rapid ship‑to‑surface movement and emergency retrieval, but depend on stable targeting, clean environmental conditions, and high‑integrity pattern handling.",
+      "ID": "st-structural-integrity-field",
+      "Name": "Structural Integrity Field",
+      "SystemID": "defensive-systems",
+      "Type": "Subsystem",
+      "Summary": "A structural integrity field (SIF) is a reinforcing force field used to supplement the physical strength of a ship’s frame and hull under load. It is treated as a continuous “keep-the-ship-together” system: when acceleration, combat damage, or other stresses exceed what structure alone can safely tolerate, the SIF provides additional reinforcement.\n\nBecause it draws on ship power and ties into internal support systems, SIF is managed like other critical resources—boosted when margins are thin, rerouted in emergencies, and vulnerable to degradation when field generators or control systems are damaged.",
       "Sections": {
-        "Purpose & Use": "Transporters move people, cargo, and equipment between locations by converting matter to an energy pattern, transmitting it, and reassembling it at the destination. Starships use transporter rooms for routine transfers and also for rapid boarding, medical evacuation, and emergency retrieval when shuttles are impractical. Variants include personnel and cargo transporters, as well as point‑to‑point and site‑to‑site operations depending on the platform and situation.",
-        "Transport Cycle": "A typical transport begins with a target acquisition and a coordinate lock, followed by a controlled dematerialization. The subject is carried as a contained matter stream within a confinement beam, then reconstructed by the receiving system. Operators monitor pattern integrity and timing, and can pause, redirect, or abort the cycle when conditions degrade. Because transport is a tightly timed sequence, interruptions can produce partial or unstable materialization.",
-        "Pattern Storage": "Transporters can temporarily store a subject’s pattern in a buffer. This allows short holds during routing changes or recovery steps, and in exceptional circumstances a pattern can be sustained far longer than intended by deliberately keeping it in the buffer. Buffer management is one reason transporters are treated as controlled spaces: patterns are sensitive to corruption if storage, power stability, or timing falls out of tolerance.",
-        "Targeting & Locks": "Successful transport depends on resolving the destination volume and maintaining a stable lock on the subject. Ships use sensors and transporter targeting to compensate for motion, distance, and local interference. In complex environments, crews may employ enhancers or other aids to strengthen acquisition and improve pattern resolution. When the lock is weak, transport becomes slower, less precise, or impossible.",
-        "Safety Systems": "Transporters incorporate safeguards intended to prevent hazards from being carried aboard. Biofilters screen patterns during transfer, and systems can be configured for quarantine or containment procedures. Operators also watch for pattern anomalies and can rematerialize to a safe staging point or back to the origin when reconstruction is unsafe. Even with safeguards, transport can introduce risk when the subject’s pattern is altered or merged by unusual conditions.",
-        "Operational Constraints": "Transport is limited by environmental and tactical factors. Active shields, dense interference, and certain atmospheric or subspace conditions can block or distort a beam. Extreme relative motion and rapidly changing geometry can break a lock. Power loss or emitter damage can interrupt the cycle at the worst moment, forcing emergency procedures and rapid troubleshooting to restore pattern integrity."
+        "Purpose": "SIF reinforces bulkheads, superstructure, and hull framing so the ship can survive high stress without catastrophic structural failure.",
+        "Operational use": "Engineers raise or reconfigure structural integrity fields when maneuvering aggressively, sustaining damage, or operating in hazardous conditions that strain the frame.",
+        "Power tradeoffs": "SIF is portrayed as part of the ship’s power budget. In emergencies, its allocation can be adjusted, sometimes at the cost of reduced safety margins elsewhere."
       },
       "RelatedTechIDs": [
-        "st-shuttlebays-launch-bays",
-        "st-docking-systems",
-        "st-tractor-beam"
+        "st-force-fields"
       ],
       "Appearances": [
         {
-          "Series": "TOS",
-          "Title": "The Man Trap",
-          "Season": 1,
-          "Episode": 1,
-          "Notes": "Early routine ship-to-surface transport."
-        },
-        {
-          "Series": "TOS",
-          "Title": "The Enemy Within",
-          "Season": 1,
-          "Episode": 4,
-          "Notes": "A malfunction splits one individual into two physical counterparts."
-        },
-        {
+          "RefType": "Episode",
           "Series": "TNG",
-          "Title": "Realm of Fear",
-          "Season": 6,
-          "Episode": 2,
-          "Notes": "Transport anxiety and a dangerous pattern event during transit."
-        },
-        {
-          "Series": "TNG",
-          "Title": "Relics",
-          "Season": 6,
-          "Episode": 4,
-          "Notes": "A pattern is intentionally sustained in a transporter buffer."
-        },
-        {
-          "Series": "VOY",
-          "Title": "Tuvix",
-          "Season": 2,
-          "Episode": 24,
-          "Notes": "A malfunction merges two individuals into one being."
-        },
-        {
-          "Series": "ENT",
-          "Title": "Daedalus",
-          "Season": 4,
+          "Title": "The Defector",
+          "Season": 3,
           "Episode": 10,
-          "Notes": "Early transporter research and risk during development."
+          "Notes": "Structural integrity power is referenced as a resource that can be reallocated during combat."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "DS9",
+          "Title": "The Way of the Warrior",
+          "Season": 4,
+          "Episode": 1,
+          "Notes": "High-stress combat contexts highlight the need to maintain structural integrity under damage."
         }
       ],
       "Variants": [
-        "Personnel transporter",
-        "Cargo transporter",
-        "Site‑to‑site transport",
-        "Emergency transport",
-        "Pattern enhancer support"
+        {
+          "Name": "Localized reinforcement",
+          "Summary": "SIF can be implied as being redistributed to reinforce particular sections when a ship is taking concentrated damage or executing extreme maneuvers."
+        }
       ],
       "KeyTerms": [
         {
-          "Term": "Pattern buffer",
-          "Definition": "A storage system that temporarily holds a transport pattern during routing, recovery, or controlled delay."
+          "Term": "SIF",
+          "Definition": "Acronym used for structural integrity field; a reinforcing force field supplementing physical structure."
         },
         {
-          "Term": "Annular confinement beam",
-          "Definition": "A containment beam used to maintain a coherent matter stream during transport."
-        },
-        {
-          "Term": "Matter stream",
-          "Definition": "The subject carried in transit as an energy pattern within the confinement field."
-        },
-        {
-          "Term": "Heisenberg compensator",
-          "Definition": "A subsystem used to address measurement limits that would otherwise prevent precise pattern reconstruction."
-        },
-        {
-          "Term": "Biofilter",
-          "Definition": "A screening function intended to prevent biological contaminants or hazards from being transported."
-        },
-        {
-          "Term": "Site‑to‑site transport",
-          "Definition": "Transport where both origin and destination are away from a fixed transporter room."
+          "Term": "Structural integrity power",
+          "Definition": "Power allocation dedicated to maintaining structural reinforcement during operation."
         }
       ],
       "Operators": [
-        "Transporter operator",
-        "Operations officer",
-        "Chief engineer (systems oversight)"
+        "United Federation of Planets / Starfleet",
+        "Many spacefaring powers"
       ],
       "Constraints": [
-        "Blocked or degraded by shields and many forms of interference",
-        "Requires a stable target lock and sufficient pattern resolution",
-        "Sensitive to power instability and emitter damage",
-        "Pattern integrity can degrade if a buffer hold is extended or compromised"
+        "SIF draws power and can be compromised by damage to field generators or control systems.",
+        "Reducing SIF allocation increases risk during high-stress maneuvers or when the structure is weakened.",
+        "SIF is supportive rather than absolute—severe forces can still cause structural failure."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Structural%20Integrity.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-docking-systems",
+      "Name": "Docking Systems",
+      "SystemID": "transport-access",
+      "Type": "System",
+      "Summary": "Docking systems secure ships and craft to stations or other vessels for safe transfer of people, cargo, and services. They combine precision alignment, mechanical securing hardware, and pressure‑managed interfaces such as docking ports and airlocks.",
+      "Sections": {
+        "Purpose & Use": "Docking systems secure a ship or craft to another vessel, station, or facility to transfer personnel, cargo, and services. They provide a controlled physical interface—aligning structures, sealing an opening, and managing atmosphere—so movement between hulls is safe and routine. Docking can be external (port‑to‑port) or internal (into a docking bay) depending on the design.",
+        "Interfaces": "Common docking interfaces include hull docking ports and airlocks, as well as collars and ring structures sized for specific craft. Ports are designed for precise alignment so seals can engage without stressing the hull. An airlock or transfer tunnel provides a buffer zone for pressure equalization and prevents uncontrolled decompression during entry and exit.",
+        "Approach & Alignment": "Docking begins with a controlled approach, relative‑motion matching, and a final alignment solution. Ships may use thrusters for fine positioning and tractor assistance when available. Guidance lights, beacons, and automated docking controls can reduce risk, but crews still treat the final meters as a high‑precision maneuver because even a small misalignment can prevent seal engagement.",
+        "Securing & Seals": "Once aligned, docking clamps or latches secure the two structures so they can’t drift apart under thrust or station‑keeping loads. A pressure seal then engages to hold atmosphere across the interface. Systems monitor seal integrity and can isolate the connection if pressure drops or the structure is compromised, preventing a localized breach from propagating into the ship.",
+        "Transfer & Services": "With a secure seal, docking supports movement of people and cargo and can also provide service connections—power, data, life support, and refueling—depending on the facility. Internal bay docking adds another layer of safety by keeping operations within a controlled volume, while external docking prioritizes direct access and rapid turnaround.",
+        "Operational Constraints": "Docking depends on compatible geometry and a stable platform. High relative velocity, turbulence, or combat damage can prevent safe engagement. In emergencies, systems must support rapid separation, including manual releases or emergency clamp procedures. The interface is also a vulnerability: a compromised seal or structural failure can force immediate isolation and evacuation of the docked area."
+      },
+      "RelatedTechIDs": [
+        "st-tractor-beam",
+        "st-shuttlebays-launch-bays",
+        "st-transporter"
+      ],
+      "Appearances": [
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part I)",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part II)",
+          "Season": 1,
+          "Episode": 2,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "TNG",
+          "Title": "11001001",
+          "Season": 1,
+          "Episode": 15,
+          "Notes": "Starship docking at a starbase for maintenance."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Bounty",
+          "Season": 4,
+          "Episode": 17,
+          "Notes": "Use of emergency docking clamps in a critical situation."
+        },
+        {
+          "Series": "TOS",
+          "Title": "The Tholian Web",
+          "Season": 3,
+          "Episode": 9,
+          "Notes": "Transfer and docking-adjacent operations under hazardous conditions."
+        },
+        {
+          "Series": "FILM",
+          "Title": "Star Trek: The Motion Picture",
+          "Season": null,
+          "Episode": null,
+          "Notes": "Large‑scale spacedock docking operations."
+        }
+      ],
+      "Variants": [
+        "Docking port / hatch",
+        "Docking collar",
+        "Internal docking bay"
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Docking port",
+          "Definition": "A hull interface that allows access between a ship and another vessel or station."
+        },
+        {
+          "Term": "Airlock",
+          "Definition": "A controlled entry point that provides a pressure buffer between two environments."
+        },
+        {
+          "Term": "Docking clamp",
+          "Definition": "A mechanical device that holds a ship in place while docked."
+        },
+        {
+          "Term": "Pressure seal",
+          "Definition": "A seal that maintains atmosphere across a docking interface."
+        },
+        {
+          "Term": "Docking bay",
+          "Definition": "A protected facility where ships can offload or receive cargo and personnel."
+        }
+      ],
+      "Operators": [
+        "Helm",
+        "Docking control (station or ship)",
+        "Operations officer"
+      ],
+      "Constraints": [
+        "Requires compatible docking geometry and a controlled approach",
+        "Seal integrity can be compromised by damage or misalignment",
+        "High relative velocity or unstable station‑keeping increases collision risk",
+        "Emergency separation procedures may be required under hazard or attack"
       ],
       "Meta": {
         "Series": [
@@ -2037,11 +2038,137 @@
           "United Federation of Planets",
           "Starfleet"
         ],
-        "FirstSeen": "TOS: \"The Man Trap\"",
+        "FirstSeen": "",
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Transporter.png"
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Docking%20Ring.png"
+      }
+    },
+    {
+      "ID": "st-shuttlebays-launch-bays",
+      "Name": "Shuttlebays & Launch Bays",
+      "SystemID": "transport-access",
+      "Type": "Facility",
+      "Summary": "Shuttlebays and launch bays are ship facilities for operating small craft—launch, recovery, storage, and maintenance. They provide an option when transporters cannot be used, and rely on doors, containment fields, and guidance procedures to manage safe movement between the ship’s interior and open space.",
+      "Sections": {
+        "Purpose & Use": "Shuttlebays and launch bays are facilities for launching, receiving, storing, and servicing small craft. They support away missions, logistics, medical evacuation, and contingency operations when transporters are unavailable or inappropriate. Bays include traffic control procedures, ground handling, and maintenance infrastructure tailored to the ship class and mission profile.",
+        "Access & Containment": "External access is controlled through bay doors, while internal pressure doors and field barriers manage atmosphere and safety. When operations require opening to space, force‑field containment can provide a working barrier so craft can enter or exit without venting the entire bay. Lighting, markings, and guidance systems aid approach and departure in limited visibility.",
+        "Launch & Recovery": "Launch sequences coordinate bay clearance, door or field status, and craft power‑up. Recovery emphasizes controlled approach, speed limits, and final alignment to landing pads or docking points within the bay. In tight bays, tractor assistance or guidance beacons may be used to steady a craft during the last meters of motion.",
+        "Maintenance & Support": "Bays serve as workshops and staging areas for refit, repair, and payload preparation. Equipment typically includes fueling and power interfaces, tooling, diagnostics, and storage for mission kits. Because shuttles are often exposed to hazards that the main ship avoids, bays must be able to contain damage, isolate contaminated craft, and support rapid turnaround.",
+        "Operational Constraints": "Bay operations depend on ship attitude control, local traffic conditions, and the integrity of doors and containment fields. Damage to bay doors or power interruptions can force a halt to flight operations. Under combat or high‑risk conditions, crews may restrict launches to avoid exposing the ship’s interior or compromising hull integrity around the bay aperture."
+      },
+      "RelatedTechIDs": [
+        "st-docking-systems",
+        "st-tractor-beam",
+        "st-transporter"
+      ],
+      "Appearances": [
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part I)",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Emissary (Part II)",
+          "Season": 1,
+          "Episode": 2,
+          "Notes": "Series premiere. Docking/traffic context."
+        },
+        {
+          "Series": "TNG",
+          "Title": "The Child",
+          "Season": 2,
+          "Episode": 1,
+          "Notes": "Shuttle operations from an internal bay."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Evolution",
+          "Season": 3,
+          "Episode": 1,
+          "Notes": "Shuttlebay logistics and staging of equipment."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Cause and Effect",
+          "Season": 5,
+          "Episode": 18,
+          "Notes": "Emergency decompression and bay hazards."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Broken Bow",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Series premiere (originally double-length; later split as 1x01/02 in some releases)."
+        }
+      ],
+      "Variants": [
+        "Main shuttlebay",
+        "Auxiliary shuttlebay",
+        "Launch bay",
+        "Docking bay (internal)"
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Shuttlebay",
+          "Definition": "A facility where shuttlecraft are launched, received, stored, and maintained."
+        },
+        {
+          "Term": "Hangar doors",
+          "Definition": "External bay doors that open to space for craft movement."
+        },
+        {
+          "Term": "Pressure doors",
+          "Definition": "Internal doors that isolate the bay from the ship’s pressurized interior."
+        },
+        {
+          "Term": "Containment field",
+          "Definition": "An energy barrier used to retain atmosphere when bay doors are open."
+        },
+        {
+          "Term": "Landing pad",
+          "Definition": "A marked area for shuttle touchdown and securing within the bay."
+        }
+      ],
+      "Operators": [
+        "Flight control",
+        "Hangar deck crew",
+        "Helm (traffic coordination)"
+      ],
+      "Constraints": [
+        "Bay operations can be restricted by damage, power limits, or combat conditions",
+        "Containment fields and doors must be carefully sequenced to protect atmosphere",
+        "Traffic control is required to manage relative motion and approach geometry",
+        "Large craft or high‑speed approaches increase collision risk inside the bay"
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "FILM",
+          "PIC"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Shuttle%20Launch%20Bay.webp"
       }
     },
     {
@@ -2179,231 +2306,111 @@
       }
     },
     {
-      "ID": "st-shuttlebays-launch-bays",
-      "Name": "Shuttlebays & Launch Bays",
+      "ID": "st-transporter",
+      "Name": "Transporter",
       "SystemID": "transport-access",
-      "Type": "Facility",
-      "Summary": "Shuttlebays and launch bays are ship facilities for operating small craft—launch, recovery, storage, and maintenance. They provide an option when transporters cannot be used, and rely on doors, containment fields, and guidance procedures to manage safe movement between the ship’s interior and open space.",
+      "Type": "Personnel & Cargo Transport",
+      "Summary": "Transporters transfer people and material by converting matter to an energy pattern, transmitting it, and reconstructing it at the destination. They enable rapid ship‑to‑surface movement and emergency retrieval, but depend on stable targeting, clean environmental conditions, and high‑integrity pattern handling.",
       "Sections": {
-        "Purpose & Use": "Shuttlebays and launch bays are facilities for launching, receiving, storing, and servicing small craft. They support away missions, logistics, medical evacuation, and contingency operations when transporters are unavailable or inappropriate. Bays include traffic control procedures, ground handling, and maintenance infrastructure tailored to the ship class and mission profile.",
-        "Access & Containment": "External access is controlled through bay doors, while internal pressure doors and field barriers manage atmosphere and safety. When operations require opening to space, force‑field containment can provide a working barrier so craft can enter or exit without venting the entire bay. Lighting, markings, and guidance systems aid approach and departure in limited visibility.",
-        "Launch & Recovery": "Launch sequences coordinate bay clearance, door or field status, and craft power‑up. Recovery emphasizes controlled approach, speed limits, and final alignment to landing pads or docking points within the bay. In tight bays, tractor assistance or guidance beacons may be used to steady a craft during the last meters of motion.",
-        "Maintenance & Support": "Bays serve as workshops and staging areas for refit, repair, and payload preparation. Equipment typically includes fueling and power interfaces, tooling, diagnostics, and storage for mission kits. Because shuttles are often exposed to hazards that the main ship avoids, bays must be able to contain damage, isolate contaminated craft, and support rapid turnaround.",
-        "Operational Constraints": "Bay operations depend on ship attitude control, local traffic conditions, and the integrity of doors and containment fields. Damage to bay doors or power interruptions can force a halt to flight operations. Under combat or high‑risk conditions, crews may restrict launches to avoid exposing the ship’s interior or compromising hull integrity around the bay aperture."
+        "Purpose & Use": "Transporters move people, cargo, and equipment between locations by converting matter to an energy pattern, transmitting it, and reassembling it at the destination. Starships use transporter rooms for routine transfers and also for rapid boarding, medical evacuation, and emergency retrieval when shuttles are impractical. Variants include personnel and cargo transporters, as well as point‑to‑point and site‑to‑site operations depending on the platform and situation.",
+        "Transport Cycle": "A typical transport begins with a target acquisition and a coordinate lock, followed by a controlled dematerialization. The subject is carried as a contained matter stream within a confinement beam, then reconstructed by the receiving system. Operators monitor pattern integrity and timing, and can pause, redirect, or abort the cycle when conditions degrade. Because transport is a tightly timed sequence, interruptions can produce partial or unstable materialization.",
+        "Pattern Storage": "Transporters can temporarily store a subject’s pattern in a buffer. This allows short holds during routing changes or recovery steps, and in exceptional circumstances a pattern can be sustained far longer than intended by deliberately keeping it in the buffer. Buffer management is one reason transporters are treated as controlled spaces: patterns are sensitive to corruption if storage, power stability, or timing falls out of tolerance.",
+        "Targeting & Locks": "Successful transport depends on resolving the destination volume and maintaining a stable lock on the subject. Ships use sensors and transporter targeting to compensate for motion, distance, and local interference. In complex environments, crews may employ enhancers or other aids to strengthen acquisition and improve pattern resolution. When the lock is weak, transport becomes slower, less precise, or impossible.",
+        "Safety Systems": "Transporters incorporate safeguards intended to prevent hazards from being carried aboard. Biofilters screen patterns during transfer, and systems can be configured for quarantine or containment procedures. Operators also watch for pattern anomalies and can rematerialize to a safe staging point or back to the origin when reconstruction is unsafe. Even with safeguards, transport can introduce risk when the subject’s pattern is altered or merged by unusual conditions.",
+        "Operational Constraints": "Transport is limited by environmental and tactical factors. Active shields, dense interference, and certain atmospheric or subspace conditions can block or distort a beam. Extreme relative motion and rapidly changing geometry can break a lock. Power loss or emitter damage can interrupt the cycle at the worst moment, forcing emergency procedures and rapid troubleshooting to restore pattern integrity."
       },
       "RelatedTechIDs": [
-        "st-docking-systems",
-        "st-tractor-beam",
-        "st-transporter"
-      ],
-      "Appearances": [
-        {
-          "Series": "DS9",
-          "Title": "Emissary (Part I)",
-          "Season": 1,
-          "Episode": 1,
-          "Notes": "Series premiere. Docking/traffic context."
-        },
-        {
-          "Series": "DS9",
-          "Title": "Emissary (Part II)",
-          "Season": 1,
-          "Episode": 2,
-          "Notes": "Series premiere. Docking/traffic context."
-        },
-        {
-          "Series": "TNG",
-          "Title": "The Child",
-          "Season": 2,
-          "Episode": 1,
-          "Notes": "Shuttle operations from an internal bay."
-        },
-        {
-          "Series": "TNG",
-          "Title": "Evolution",
-          "Season": 3,
-          "Episode": 1,
-          "Notes": "Shuttlebay logistics and staging of equipment."
-        },
-        {
-          "Series": "TNG",
-          "Title": "Cause and Effect",
-          "Season": 5,
-          "Episode": 18,
-          "Notes": "Emergency decompression and bay hazards."
-        },
-        {
-          "Series": "ENT",
-          "Title": "Broken Bow",
-          "Season": 1,
-          "Episode": 1,
-          "Notes": "Series premiere (originally double-length; later split as 1x01/02 in some releases)."
-        }
-      ],
-      "Variants": [
-        "Main shuttlebay",
-        "Auxiliary shuttlebay",
-        "Launch bay",
-        "Docking bay (internal)"
-      ],
-      "KeyTerms": [
-        {
-          "Term": "Shuttlebay",
-          "Definition": "A facility where shuttlecraft are launched, received, stored, and maintained."
-        },
-        {
-          "Term": "Hangar doors",
-          "Definition": "External bay doors that open to space for craft movement."
-        },
-        {
-          "Term": "Pressure doors",
-          "Definition": "Internal doors that isolate the bay from the ship’s pressurized interior."
-        },
-        {
-          "Term": "Containment field",
-          "Definition": "An energy barrier used to retain atmosphere when bay doors are open."
-        },
-        {
-          "Term": "Landing pad",
-          "Definition": "A marked area for shuttle touchdown and securing within the bay."
-        }
-      ],
-      "Operators": [
-        "Flight control",
-        "Hangar deck crew",
-        "Helm (traffic coordination)"
-      ],
-      "Constraints": [
-        "Bay operations can be restricted by damage, power limits, or combat conditions",
-        "Containment fields and doors must be carefully sequenced to protect atmosphere",
-        "Traffic control is required to manage relative motion and approach geometry",
-        "Large craft or high‑speed approaches increase collision risk inside the bay"
-      ],
-      "Meta": {
-        "Series": [
-          "TOS",
-          "TNG",
-          "DS9",
-          "VOY",
-          "FILM",
-          "PIC"
-        ],
-        "Era": [
-          "23rd century",
-          "24th century",
-          "25th century"
-        ],
-        "Affiliations": [
-          "United Federation of Planets",
-          "Starfleet"
-        ],
-        "FirstSeen": "",
-        "LastSeen": ""
-      },
-      "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Shuttle%20Launch%20Bay.webp"
-      }
-    },
-    {
-      "ID": "st-docking-systems",
-      "Name": "Docking Systems",
-      "SystemID": "transport-access",
-      "Type": "System",
-      "Summary": "Docking systems secure ships and craft to stations or other vessels for safe transfer of people, cargo, and services. They combine precision alignment, mechanical securing hardware, and pressure‑managed interfaces such as docking ports and airlocks.",
-      "Sections": {
-        "Purpose & Use": "Docking systems secure a ship or craft to another vessel, station, or facility to transfer personnel, cargo, and services. They provide a controlled physical interface—aligning structures, sealing an opening, and managing atmosphere—so movement between hulls is safe and routine. Docking can be external (port‑to‑port) or internal (into a docking bay) depending on the design.",
-        "Interfaces": "Common docking interfaces include hull docking ports and airlocks, as well as collars and ring structures sized for specific craft. Ports are designed for precise alignment so seals can engage without stressing the hull. An airlock or transfer tunnel provides a buffer zone for pressure equalization and prevents uncontrolled decompression during entry and exit.",
-        "Approach & Alignment": "Docking begins with a controlled approach, relative‑motion matching, and a final alignment solution. Ships may use thrusters for fine positioning and tractor assistance when available. Guidance lights, beacons, and automated docking controls can reduce risk, but crews still treat the final meters as a high‑precision maneuver because even a small misalignment can prevent seal engagement.",
-        "Securing & Seals": "Once aligned, docking clamps or latches secure the two structures so they can’t drift apart under thrust or station‑keeping loads. A pressure seal then engages to hold atmosphere across the interface. Systems monitor seal integrity and can isolate the connection if pressure drops or the structure is compromised, preventing a localized breach from propagating into the ship.",
-        "Transfer & Services": "With a secure seal, docking supports movement of people and cargo and can also provide service connections—power, data, life support, and refueling—depending on the facility. Internal bay docking adds another layer of safety by keeping operations within a controlled volume, while external docking prioritizes direct access and rapid turnaround.",
-        "Operational Constraints": "Docking depends on compatible geometry and a stable platform. High relative velocity, turbulence, or combat damage can prevent safe engagement. In emergencies, systems must support rapid separation, including manual releases or emergency clamp procedures. The interface is also a vulnerability: a compromised seal or structural failure can force immediate isolation and evacuation of the docked area."
-      },
-      "RelatedTechIDs": [
-        "st-tractor-beam",
         "st-shuttlebays-launch-bays",
-        "st-transporter"
+        "st-docking-systems",
+        "st-tractor-beam"
       ],
       "Appearances": [
         {
-          "Series": "DS9",
-          "Title": "Emissary (Part I)",
+          "Series": "TOS",
+          "Title": "The Man Trap",
           "Season": 1,
           "Episode": 1,
-          "Notes": "Series premiere. Docking/traffic context."
-        },
-        {
-          "Series": "DS9",
-          "Title": "Emissary (Part II)",
-          "Season": 1,
-          "Episode": 2,
-          "Notes": "Series premiere. Docking/traffic context."
-        },
-        {
-          "Series": "TNG",
-          "Title": "11001001",
-          "Season": 1,
-          "Episode": 15,
-          "Notes": "Starship docking at a starbase for maintenance."
-        },
-        {
-          "Series": "ENT",
-          "Title": "Bounty",
-          "Season": 4,
-          "Episode": 17,
-          "Notes": "Use of emergency docking clamps in a critical situation."
+          "Notes": "Early routine ship-to-surface transport."
         },
         {
           "Series": "TOS",
-          "Title": "The Tholian Web",
-          "Season": 3,
-          "Episode": 9,
-          "Notes": "Transfer and docking-adjacent operations under hazardous conditions."
+          "Title": "The Enemy Within",
+          "Season": 1,
+          "Episode": 4,
+          "Notes": "A malfunction splits one individual into two physical counterparts."
         },
         {
-          "Series": "FILM",
-          "Title": "Star Trek: The Motion Picture",
-          "Season": null,
-          "Episode": null,
-          "Notes": "Large‑scale spacedock docking operations."
+          "Series": "TNG",
+          "Title": "Realm of Fear",
+          "Season": 6,
+          "Episode": 2,
+          "Notes": "Transport anxiety and a dangerous pattern event during transit."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "A pattern is intentionally sustained in a transporter buffer."
+        },
+        {
+          "Series": "VOY",
+          "Title": "Tuvix",
+          "Season": 2,
+          "Episode": 24,
+          "Notes": "A malfunction merges two individuals into one being."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Daedalus",
+          "Season": 4,
+          "Episode": 10,
+          "Notes": "Early transporter research and risk during development."
         }
       ],
       "Variants": [
-        "Docking port / hatch",
-        "Docking collar",
-        "Internal docking bay"
+        "Personnel transporter",
+        "Cargo transporter",
+        "Site‑to‑site transport",
+        "Emergency transport",
+        "Pattern enhancer support"
       ],
       "KeyTerms": [
         {
-          "Term": "Docking port",
-          "Definition": "A hull interface that allows access between a ship and another vessel or station."
+          "Term": "Pattern buffer",
+          "Definition": "A storage system that temporarily holds a transport pattern during routing, recovery, or controlled delay."
         },
         {
-          "Term": "Airlock",
-          "Definition": "A controlled entry point that provides a pressure buffer between two environments."
+          "Term": "Annular confinement beam",
+          "Definition": "A containment beam used to maintain a coherent matter stream during transport."
         },
         {
-          "Term": "Docking clamp",
-          "Definition": "A mechanical device that holds a ship in place while docked."
+          "Term": "Matter stream",
+          "Definition": "The subject carried in transit as an energy pattern within the confinement field."
         },
         {
-          "Term": "Pressure seal",
-          "Definition": "A seal that maintains atmosphere across a docking interface."
+          "Term": "Heisenberg compensator",
+          "Definition": "A subsystem used to address measurement limits that would otherwise prevent precise pattern reconstruction."
         },
         {
-          "Term": "Docking bay",
-          "Definition": "A protected facility where ships can offload or receive cargo and personnel."
+          "Term": "Biofilter",
+          "Definition": "A screening function intended to prevent biological contaminants or hazards from being transported."
+        },
+        {
+          "Term": "Site‑to‑site transport",
+          "Definition": "Transport where both origin and destination are away from a fixed transporter room."
         }
       ],
       "Operators": [
-        "Helm",
-        "Docking control (station or ship)",
-        "Operations officer"
+        "Transporter operator",
+        "Operations officer",
+        "Chief engineer (systems oversight)"
       ],
       "Constraints": [
-        "Requires compatible docking geometry and a controlled approach",
-        "Seal integrity can be compromised by damage or misalignment",
-        "High relative velocity or unstable station‑keeping increases collision risk",
-        "Emergency separation procedures may be required under hazard or attack"
+        "Blocked or degraded by shields and many forms of interference",
+        "Requires a stable target lock and sufficient pattern resolution",
+        "Sensitive to power instability and emitter damage",
+        "Pattern integrity can degrade if a buffer hold is extended or compromised"
       ],
       "Meta": {
         "Series": [
@@ -2425,11 +2432,357 @@
           "United Federation of Planets",
           "Starfleet"
         ],
+        "FirstSeen": "TOS: \"The Man Trap\"",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Transporter.png"
+      }
+    },
+    {
+      "ID": "st-industrial-replicator",
+      "Name": "Industrial Replicator",
+      "SystemID": "replicator-systems",
+      "Type": "Facility",
+      "Summary": "An industrial replicator is a large‑scale replication installation used for construction and bulk fabrication. Instead of producing a meal or handheld tool at a wall terminal, an industrial unit is sized and powered to turn pattern files into structural components, machinery, or large assemblies. Because it can manufacture high‑energy or hazardous items if misused, access controls and auditing are critical to safe operation.",
+      "Sections": {
+        "Role": "Industrial replicators extend replication from personal convenience to infrastructure, enabling rapid fabrication of large quantities of parts and components for rebuilding and construction.",
+        "Scale & Throughput": "These units are sized for higher power draw and output volume than standard terminals, with heavier power conversion and material handling to support sustained production runs.",
+        "Security Considerations": "Industrial replicators are high‑risk assets: overriding security blocks can enable fabrication of dangerous compounds or devices, so control interfaces are tightly managed and logs are monitored.",
+        "Operational Integration": "On major stations, an industrial replicator may be housed in a dedicated level or bay with service access, maintenance schedules, and supporting cargo handling for produced components.",
+        "Limits": "Industrial scale improves throughput, not fundamentals: output still depends on pattern availability, allowed materials, and complexity limits inherent to replication.",
+        "Strategic Value": "Because they can accelerate reconstruction, industrial replicators are treated as significant aid assets and are sensitive during wartime logistics and sabotage threats."
+      },
+      "RelatedTechIDs": [
+        "st-matter-replicator"
+      ],
+      "Appearances": [
+        {
+          "Series": "DS9",
+          "Title": "For the Cause",
+          "Season": 4,
+          "Episode": 22,
+          "Notes": "Industrial replicators are discussed as major reconstruction assets and targeted for theft."
+        },
+        {
+          "Series": "DS9",
+          "Title": "By Inferno's Light",
+          "Season": 5,
+          "Episode": 15,
+          "Notes": "An industrial replicator is used in a sabotage plot after security overrides."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Let He Who Is Without Sin...",
+          "Season": 5,
+          "Episode": 7,
+          "Notes": "Industrial replicators are referenced in a discussion of environmental control and large‑scale fabrication."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Sons and Daughters",
+          "Season": 6,
+          "Episode": 3,
+          "Notes": "Industrial replicators are mentioned in the context of aid and regional logistics during the Dominion War."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Class 4 industrial replicator",
+          "Summary": "A named industrial class referenced as a standardized large‑scale replication capability."
+        },
+        {
+          "Name": "Vehicle replicator",
+          "Summary": "A specialized industrial application intended for fabricating vehicle-scale items using replication principles."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Throughput",
+          "Definition": "The sustained output rate of a fabrication system, limited by power conversion and material handling."
+        },
+        {
+          "Term": "Security blocks",
+          "Definition": "Software and hardware controls that restrict patterns, materials, and outputs to approved sets."
+        },
+        {
+          "Term": "Memory core",
+          "Definition": "Storage and control computing that can retain—or lose—replication records depending on system state and tampering."
+        },
+        {
+          "Term": "Construction patterns",
+          "Definition": "Pattern sets optimized for repeatable structural components rather than bespoke personal items."
+        },
+        {
+          "Term": "Material handling",
+          "Definition": "Feedstock storage, recycling, and delivery systems that keep an industrial replicator supplied during production runs."
+        }
+      ],
+      "Operators": [
+        "Federation and allied reconstruction authorities",
+        "Station engineering and logistics departments",
+        "Authorized civilian construction contractors with access controls"
+      ],
+      "Constraints": [
+        "High power demand can require dedicated feeds and scheduling alongside other station or ship loads.",
+        "Security overrides or weak access control can enable production of hazardous devices or compounds.",
+        "Output still depends on pattern libraries and replication limits; size does not eliminate complexity constraints.",
+        "Maintenance windows and component wear increase with sustained industrial duty cycles."
+      ],
+      "Meta": {
+        "Series": [
+          "DS9"
+        ],
+        "Era": [
+          "24th century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
         "FirstSeen": "",
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Docking%20Ring.png"
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Industrial%20Replicator.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-matter-replicator",
+      "Name": "Matter Replicator",
+      "SystemID": "replicator-systems",
+      "Type": "Subsystem",
+      "Summary": "A matter replicator is a pattern‑driven fabrication system that assembles foodstuffs and manufactured items by processing feedstock and energy through a matter‑energy conversion stage and applying a stored molecular pattern. On Federation starships and stations it supports day‑to‑day life (meals, clothing, standard tools) and can also produce complex components when authorized. Replicators recycle returned dishes and waste into usable raw material, but practical output is governed by available power, pattern availability, and safety/security blocks.",
+      "Sections": {
+        "Core Function": "Replicators synthesize inanimate items by applying a stored pattern to converted matter, producing a finished object at the terminal. Output quality is determined by the pattern definition and the device’s calibration.",
+        "Subsystems & Controls": "Key elements include pattern buffers, a matter‑energy conversion matrix, waveguide and power conversion hardware, and control software that selects, validates, and logs patterns.",
+        "Everyday Use Cases": "Crew commonly replicate meals and beverages (often defaulting to synthehol), uniforms and clothing, small tools, and routine spare parts. Larger replicating centers can provide multiple terminals for higher‑throughput use.",
+        "Safety & Security": "Starfleet replicators enforce safety limits (e.g., blocking lethal poisons) and can be administratively restricted to prevent weapon replication or to limit access for confined personnel.",
+        "Limits": "Replication can fail when an item’s molecular/functional complexity exceeds the device’s ability to reproduce it precisely. Some substances are difficult to replicate and latinum is treated as non‑replicable.",
+        "Power & Logistics": "Replication consumes ship power and relies on available feedstock and recycling loops. Under constrained conditions, usage can be rationed as an energy‑management policy."
+      },
+      "RelatedTechIDs": [
+        "st-transporter"
+      ],
+      "Appearances": [
+        {
+          "Series": "TNG",
+          "Title": "The Enemy",
+          "Season": 3,
+          "Episode": 7,
+          "Notes": "Replication is discussed as limited by molecular complexity when medical materials are needed."
+        },
+        {
+          "Series": "TNG",
+          "Title": "Data's Day",
+          "Season": 4,
+          "Episode": 11,
+          "Notes": "A replicating center with multiple terminals is shown aboard the Enterprise-D."
+        },
+        {
+          "Series": "DS9",
+          "Title": "Emissary",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Public replicator banks are shown as part of the station’s promenade food service."
+        },
+        {
+          "Series": "VOY",
+          "Title": "The Cloud",
+          "Season": 1,
+          "Episode": 6,
+          "Notes": "Replication is rationed as part of power conservation early in Voyager’s journey."
+        },
+        {
+          "Series": "VOY",
+          "Title": "Death Wish",
+          "Season": 2,
+          "Episode": 18,
+          "Notes": "Safety limits are referenced regarding replication of fatal poisons."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Portable matter replicator",
+          "Summary": "A compact unit carried for limited field use, intended for small‑item replication rather than continuous shipboard provisioning."
+        },
+        {
+          "Name": "Drink / food replicator terminals",
+          "Summary": "Dedicated terminals optimized for rapid food and beverage service (including public banks in civilian venues)."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Pattern",
+          "Definition": "A stored specification that defines the molecular structure and configuration of the desired item."
+        },
+        {
+          "Term": "Pattern buffer",
+          "Definition": "A staging area that holds and processes a pattern during replication, analogous to buffering in transport processes."
+        },
+        {
+          "Term": "Matter‑energy conversion matrix",
+          "Definition": "Hardware that handles conversion and reconstitution stages used during replication."
+        },
+        {
+          "Term": "Replicator waveguide",
+          "Definition": "A component that routes the converted stream and pattern application to the output aperture."
+        },
+        {
+          "Term": "Biofilter",
+          "Definition": "Automatic screening that removes contaminants from replicated output and recycled input streams."
+        },
+        {
+          "Term": "Safety limits",
+          "Definition": "Policy and firmware rules that block or constrain dangerous patterns (poisons, weapons, restricted items)."
+        },
+        {
+          "Term": "Synthehol",
+          "Definition": "A default replicated substitute for alcoholic beverages that can be adjusted to produce real alcohol under certain settings."
+        },
+        {
+          "Term": "Replicator ration",
+          "Definition": "An energy-allocation unit used to manage replicator consumption under constrained power conditions."
+        }
+      ],
+      "Operators": [
+        "Starfleet (Federation starships and installations)",
+        "Federation civilian facilities with authorized pattern libraries",
+        "Non-Federation users with compatible replication technology"
+      ],
+      "Constraints": [
+        "Replication output is limited by available power, feedstock/recycling throughput, and terminal duty cycle.",
+        "Patterns can be restricted or unavailable; authorization and logging are commonly enforced on starship systems.",
+        "Some items are too complex to reproduce precisely; medical and bio‑technological components can exceed replicator capability.",
+        "Safety blocks can prevent production of poisons, weapons, and other prohibited items unless overridden by policy or security breach.",
+        "Certain substances are difficult to replicate, and latinum is treated as non‑replicable."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY",
+          "PIC",
+          "LDS",
+          "PRO",
+          "DIS",
+          "FILM"
+        ],
+        "Era": [
+          "24th century",
+          "25th century",
+          "32nd century"
+        ],
+        "Affiliations": [
+          "United Federation of Planets",
+          "Starfleet"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Food%20Replicator.png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-protein-resequencer",
+      "Name": "Protein Resequencer",
+      "SystemID": "replicator-systems",
+      "Type": "Device",
+      "Summary": "A protein resequencer is an earlier food-production technology that can be programmed to produce a limited range of foods. It appears aboard 22nd‑century Starfleet vessels as a supplement to a galley and other provisions, providing familiar meals from a constrained menu. Compared to later replicators, its capability is narrower and focused on victuals rather than general fabrication.",
+      "Sections": {
+        "Purpose": "Resequencers provide prepared foods from programmed recipes, reducing storage burden and supporting long deployments when fresh supplies are limited.",
+        "Capabilities": "The system can produce a variety of common meals and staples from stored inputs, but is not a general-purpose manufacturing device.",
+        "Integration": "Aboard early Starfleet ships, the resequencer supplements the galley and other food sources rather than replacing them entirely.",
+        "User Experience": "Crew often treat output as serviceable but not equivalent to freshly prepared meals, and the device becomes a familiar part of shipboard routine.",
+        "Evolution": "Food synthesizers and later replicators expand from limited recipes to pattern‑based synthesis with broader menus and non-food items.",
+        "Constraints": "Output is bounded by programming, available inputs, and the device’s food-focused architecture."
+      },
+      "RelatedTechIDs": [
+        "st-matter-replicator"
+      ],
+      "Appearances": [
+        {
+          "Series": "ENT",
+          "Title": "Breaking the Ice",
+          "Season": 1,
+          "Episode": 8,
+          "Notes": "Protein resequencers are referenced as food-production technology."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Shadows of P'Jem",
+          "Season": 1,
+          "Episode": 15,
+          "Notes": "A protein resequencer is discussed as a notable feature aboard Enterprise."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Oasis",
+          "Season": 2,
+          "Episode": 20,
+          "Notes": "A protein resequencer is used as a gift, programmed with multiple foods."
+        },
+        {
+          "Series": "ENT",
+          "Title": "Cold Station 12",
+          "Season": 4,
+          "Episode": 5,
+          "Notes": "A protein resequencer is used as part of sustaining a small colony."
+        }
+      ],
+      "Variants": [
+        {
+          "Name": "Shipboard resequencer (NX-era)",
+          "Summary": "Installed aboard early Starfleet vessels as a limited menu food-production system."
+        }
+      ],
+      "KeyTerms": [
+        {
+          "Term": "Recipe programming",
+          "Definition": "A set of stored instructions that define how a meal is produced within the resequencer’s limits."
+        },
+        {
+          "Term": "Victual technology",
+          "Definition": "Shipboard systems dedicated to producing, storing, and serving food and beverages."
+        },
+        {
+          "Term": "Food synthesizer",
+          "Definition": "A later 23rd‑century food-production approach that bridges limited recipe devices and full replicators."
+        },
+        {
+          "Term": "Limited menu",
+          "Definition": "A practical constraint where only programmed or supported items can be produced."
+        }
+      ],
+      "Operators": [
+        "Starfleet crews (22nd century deployments)",
+        "Small settlements using programmed food-production equipment"
+      ],
+      "Constraints": [
+        "Food-focused architecture limits output to supported meals rather than arbitrary manufactured items.",
+        "Programming and stored inputs bound menu variety and volume.",
+        "Not a substitute for later full replication when broad fabrication is required."
+      ],
+      "Meta": {
+        "Series": [
+          "ENT"
+        ],
+        "Era": [
+          "22nd century"
+        ],
+        "Affiliations": [
+          "Starfleet",
+          "United Federation of Planets"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Matter%20Replicator.png",
+        "Gallery": []
       }
     }
   ]
