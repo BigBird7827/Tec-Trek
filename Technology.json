@@ -4212,7 +4212,7 @@
         "Notes": "Communication arrays are treated as antenna networks that manage channels/frequencies and may depend on relays or deployed subspace amplifiers for range extension."
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Communications%20Array.png",
         "Gallery": []
       }
     },
@@ -4353,7 +4353,7 @@
         "Notes": "Combadges are described as communications and universal translation devices that replace many hand-held communicator roles in later eras."
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Comm%20Badge.png",
         "Gallery": []
       }
     },
@@ -4485,7 +4485,7 @@
         "Notes": "Communicators are personal transmit/receive devices typically using subspace frequencies and later replaced by combadges for many roles."
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Communicator.png",
         "Gallery": []
       }
     },
@@ -4636,7 +4636,7 @@
         "Notes": "Deployable devices include distress beacons, warning buoys/marker beacons, recorder markers (log buoys), and subspace amplifiers used to extend communications range."
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Comm%20Beacon.png",
         "Gallery": []
       }
     },
@@ -4813,7 +4813,7 @@
         "LastSeen": ""
       },
       "Media": {
-        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Placeholder.png",
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Universal%20Translator%20(Final).png",
         "Gallery": []
       }
     }
