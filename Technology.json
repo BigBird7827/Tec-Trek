@@ -1,6 +1,6 @@
 {
   "Version": 17,
-  "GeneratedUTC": "2025-12-15T05:45:37Z",
+  "GeneratedUTC": "2025-12-15T06:50:33Z",
   "Systems": [
     {
       "ID": "propulsion",
@@ -52,6 +52,13 @@
       "SidebarText": "Replicator systems convert stored energy and feedstock matter into finished items by applying stored patterns. Standard terminals handle meals, clothing, and routine equipment; the same approach scales up into dedicated replicating centers and large industrial units for construction tasks.\n\nCapabilities are bounded by pattern libraries, security controls, and the complexity of what’s being produced. Some materials or structures are difficult or impossible to replicate reliably, and power availability can make replication a managed resource rather than an always‑on convenience."
     },
     {
+      "ID": "medical-systems",
+      "Name": "Medical Systems",
+      "Description": "Ship facilities and devices for diagnosis, treatment, and patient monitoring.",
+      "SortOrder": 90,
+      "SidebarText": "Medical systems are the ship’s diagnosis-and-care stack: facilities like sickbay, bedside monitoring and imaging, portable scanners for rapid assessment, and delivery tools that let the crew stabilize patients in minutes rather than hours. They support routine physicals, emergency trauma care, infection control, and medical decision-making under pressure.\n\nMedicine is as much coordination as equipment. Effective care depends on reliable sensors, clean environments, staffing, and integration with ship power, life support, and security. Damage, contamination, mass-casualty scenarios, and unknown pathogens can quickly push even advanced medical suites into triage mode."
+    },
+    {
       "ID": "handheld-weapons",
       "Name": "Handheld Weapons",
       "Description": "Portable personal weapons carried by individuals, including energy weapons and bladed weapons used for security, away missions, and close-quarters combat.",
@@ -59,11 +66,11 @@
       "SidebarText": "Handheld weapons are the crew’s personal defense and tactical toolkit: portable energy sidearms and rifles for controlled force, alongside traditional bladed weapons for close quarters and ceremonial use. Effectiveness depends on power supply, weapon condition, and the tactical environment—shielding, force fields, and dampening effects can sharply limit ranged performance.\n\nBecause these tools are carried into uncertain situations, they emphasize quick readiness and adjustable force, but they also impose constraints: finite power capacity, safety and discipline in yield selection, and the risk of loss, capture, or collateral damage in confined interiors."
     },
     {
-      "ID": "medical-systems",
-      "Name": "Medical Systems",
-      "Description": "Ship facilities and devices for diagnosis, treatment, and patient monitoring.",
-      "SortOrder": 90,
-      "SidebarText": "Medical systems are the ship’s diagnosis-and-care stack: facilities like sickbay, bedside monitoring and imaging, portable scanners for rapid assessment, and delivery tools that let the crew stabilize patients in minutes rather than hours. They support routine physicals, emergency trauma care, infection control, and medical decision-making under pressure.\n\nMedicine is as much coordination as equipment. Effective care depends on reliable sensors, clean environments, staffing, and integration with ship power, life support, and security. Damage, contamination, mass-casualty scenarios, and unknown pathogens can quickly push even advanced medical suites into triage mode."
+      "ID": "computing-control",
+      "Name": "Computing & Control",
+      "Description": "Shipboard computing and control integrates the main computer core, distributed processors, and user interfaces that coordinate sensors, propulsion, life support, weapons, and mission systems. It also includes the data formats and modular components—such as duotronic and isolinear technologies—that store programs, logs, and operational parameters and allow rapid replacement or isolation during failures.",
+      "SortOrder": 80,
+      "SidebarText": "Computing and control is the ship’s decision-and-display stack: the main computer core and distributed processors that run ship functions, plus the interfaces the crew uses to query, program, and command those functions.\n\nOperational limits are practical and immediate—power and cooling, software integrity, access control, and damage isolation—so crews often reroute control paths, isolate faulty segments, and swap modular components to keep essential systems online."
     }
   ],
   "Technologies": [
@@ -3250,21 +3257,289 @@
       }
     },
     {
+      "ID": "st-main-computer-core",
+      "Name": "Main Computer Core",
+      "SystemID": "computing-control",
+      "Type": "Shipboard Computing",
+      "Summary": "A starship’s main computer core is the central processing and data hub that coordinates ship functions, stores operational records, and routes command-and-control across the vessel. It interfaces with distributed subsystems through dedicated control paths and can be segmented or isolated to contain faults. When compromised—by overload, hostile code, or hardware failure—ships often shift to reduced capability modes while engineering restores stable control.",
+      "Sections": {
+        "Core Role": "The main computer provides centralized computation, data storage, and system orchestration. It hosts mission software, maintains shipwide status and logs, and mediates high-level automation such as alert states and system interlocks.",
+        "Architecture": "Computer cores are built around redundant processing and storage elements with controlled access points for maintenance. Critical functions can be partitioned so a failure in one segment does not necessarily collapse shipwide control.",
+        "Control & Access": "Ship controls rely on authenticated command authority and interface layers that prevent unsafe or conflicting orders. In emergencies, crews may lock out sections, limit nonessential processes, or enforce manual overrides to preserve propulsion, life support, and containment.",
+        "Failure Modes": "Core failures can present as corrupted programs, runaway processes, or loss of subsystem coordination. Standard responses include isolating damaged segments, purging corrupted memory, and restoring control routing from known-good baselines or backups."
+      },
+      "RelatedTechIDs": [
+        "st-lcars-ui",
+        "st-isolinear-duotronic-chips"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Ultimate Computer",
+          "Season": 2,
+          "Episode": 24,
+          "Notes": "The M-5 multitronic system integrates into Enterprise operations and seizes control of ship functions."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "11001001",
+          "Season": 1,
+          "Episode": 15,
+          "Notes": "The Enterprise undergoes a major computer retrofit while docked; its systems are hijacked during the upgrade."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "A Fistful of Datas",
+          "Season": 6,
+          "Episode": 8,
+          "Notes": "A power surge causes memory and process contamination between ship systems and Data, requiring a memory purge."
+        }
+      ],
+      "Variants": [
+        "Starfleet computer cores (23rd–25th century)",
+        "Specialized/experimental systems (e.g., multitronic integrations)"
+      ],
+      "KeyTerms": [
+        "computer core",
+        "core isolation",
+        "redundancy",
+        "command routing",
+        "memory purge",
+        "system interlocks"
+      ],
+      "Operators": [
+        "Starfleet",
+        "United Federation of Planets"
+      ],
+      "Constraints": [
+        "Core stability depends on power availability and thermal management.",
+        "Hostile or corrupted code can force isolation and loss of automation.",
+        "Damage control often requires reducing nonessential processing loads."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "DS9",
+          "VOY",
+          "ENT",
+          "PIC",
+          "Film"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "Starfleet",
+          "Federation"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Computer%20Core%20(Temp).png",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-lcars-ui",
+      "Name": "LCARS Interface",
+      "SystemID": "computing-control",
+      "Type": "User Interface",
+      "Summary": "LCARS (Library Computer Access and Retrieval System) is a standardized Starfleet interface framework used for ship controls, diagnostics, and information retrieval. It provides consistent layouts and control metaphors across consoles and wall panels, enabling rapid crew familiarity and safe command execution. LCARS also supports specialized modes for engineering, tactical, medical, and operations workflows while retaining shared core interaction patterns.",
+      "Sections": {
+        "Purpose": "LCARS provides a unified user-facing layer between crew and ship systems—status, configuration, command inputs, and data retrieval—so operators can act quickly without relearning controls across stations.",
+        "Interaction Model": "Typical LCARS panels emphasize modular touch controls, context-sensitive displays, and layered readouts that can shift between overview and detail. Visual language is designed to communicate state changes clearly during normal operations and alerts.",
+        "Safety & Authority": "LCARS interactions are constrained by access controls and system interlocks. Sensitive actions can require elevated authorization or multi-step confirmation to prevent accidental or unauthorized changes.",
+        "Integration": "LCARS surfaces data from the main computer and distributed subsystems, presenting diagnostics, navigation, and control functions through consistent components and layouts."
+      },
+      "RelatedTechIDs": [
+        "st-main-computer-core",
+        "st-isolinear-duotronic-chips"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Encounter at Farpoint",
+          "Season": 1,
+          "Episode": 1,
+          "Notes": "Starfleet consoles and shipboard control panels use the LCARS-style interface framework."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "The Price",
+          "Season": 3,
+          "Episode": 8,
+          "Notes": "The LCARS acronym appears as part of on-screen interface labeling."
+        }
+      ],
+      "Variants": [
+        "Bridge and operations consoles",
+        "Engineering and diagnostic panels",
+        "Wall-mounted status displays"
+      ],
+      "KeyTerms": [
+        "LCARS",
+        "console",
+        "touch interface",
+        "diagnostics",
+        "information retrieval",
+        "access control"
+      ],
+      "Operators": [
+        "Starfleet",
+        "United Federation of Planets"
+      ],
+      "Constraints": [
+        "Interface access is governed by duty role and authorization.",
+        "Damage to control panels or data routing can degrade responsiveness and available functions."
+      ],
+      "Meta": {
+        "Series": [
+          "TNG",
+          "DS9",
+          "VOY",
+          "PIC",
+          "Film"
+        ],
+        "Era": [
+          "24th century",
+          "25th century"
+        ],
+        "Affiliations": [
+          "Starfleet",
+          "Federation"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Lcars%20UI%20(Temp).webp",
+        "Gallery": []
+      }
+    },
+    {
+      "ID": "st-isolinear-duotronic-chips",
+      "Name": "Isolinear & Duotronic Computing",
+      "SystemID": "computing-control",
+      "Type": "Computing Components",
+      "Summary": "Duotronic systems and isolinear technologies are major generations of Federation computing hardware. Duotronic components characterize much 23rd‑century Starfleet computing, while isolinear circuitry and chips are prominent in later starships and devices. Their modularity supports rapid replacement, isolation during faults, and portability across ship and handheld systems.",
+      "Sections": {
+        "Duotronic Era": "Duotronic computers were a major advance in Federation computing and became closely associated with 23rd‑century Starfleet systems. Duotronic hardware and software concepts persist in later eras as legacy formats, algorithms, and compatible subsystems.",
+        "Isolinear Era": "Isolinear circuitry and isolinear chips became common in later Starfleet systems and portable devices. Swappable isolinear components allow crews to repair or reconfigure systems by replacing discrete modules rather than rebuilding entire assemblies.",
+        "Modularity": "Both approaches emphasize replaceable units—circuits, chips, and storage media—that can be swapped to restore function or quarantine corrupted components.",
+        "Compatibility & Constraints": "Legacy interfaces and older logic designs can require adapters or special handling. Environmental exposure, power instability, or software corruption can still compromise modular components."
+      },
+      "RelatedTechIDs": [
+        "st-main-computer-core",
+        "st-lcars-ui"
+      ],
+      "Appearances": [
+        {
+          "RefType": "Episode",
+          "Series": "TOS",
+          "Title": "The Ultimate Computer",
+          "Season": 2,
+          "Episode": 24,
+          "Notes": "Starfleet duotronic computing is associated with the Enterprise’s main systems during the M-5 trials."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "TNG",
+          "Title": "Relics",
+          "Season": 6,
+          "Episode": 4,
+          "Notes": "Scotty contrasts older duotronic systems with later isolinear technology in the Enterprise‑D era."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Learning Curve",
+          "Season": 1,
+          "Episode": 16,
+          "Notes": "Voyager’s systems are affected by gel-pack failures and the ship is refitted with isolinear circuitry."
+        },
+        {
+          "RefType": "Episode",
+          "Series": "VOY",
+          "Title": "Warhead",
+          "Season": 5,
+          "Episode": 25,
+          "Notes": "Duotronic algorithms are referenced as part of the warhead’s systems."
+        }
+      ],
+      "Variants": [
+        "Duotronic circuits (23rd century Starfleet)",
+        "Isolinear circuitry (24th–25th century Starfleet)",
+        "Portable isolinear chip media (handheld devices)"
+      ],
+      "KeyTerms": [
+        "duotronic",
+        "isolinear",
+        "circuitry",
+        "chip",
+        "module",
+        "adapter",
+        "legacy systems"
+      ],
+      "Operators": [
+        "Starfleet",
+        "United Federation of Planets"
+      ],
+      "Constraints": [
+        "Modular components can still be corrupted by power surges or hostile code.",
+        "Legacy compatibility may require special interfaces or conversion steps.",
+        "Environmental exposure can damage unprotected storage or connector surfaces."
+      ],
+      "Meta": {
+        "Series": [
+          "TOS",
+          "TNG",
+          "VOY",
+          "Film"
+        ],
+        "Era": [
+          "23rd century",
+          "24th century"
+        ],
+        "Affiliations": [
+          "Starfleet",
+          "Federation"
+        ],
+        "FirstSeen": "",
+        "LastSeen": ""
+      },
+      "Media": {
+        "Image": "https://raw.githubusercontent.com/BigBird7827/Tec-Trek/main/Images/Isolinear%20Chip%20(Temp).png",
+        "Gallery": []
+      }
+    },
+    {
       "ID": "st-phaser-pistol",
       "Name": "Phaser pistol",
       "SystemID": "handheld-weapons",
       "Type": "Weapon",
-      "Summary": "A handheld phaser sidearm used by Starfleet and other operators for personal defense and controlled-force security work. The weapon’s adjustable output supports everything from non-lethal incapacitation to lethal fire, making it a default choice for away teams when rules of engagement may change quickly.",
+      "Summary": "A phaser pistol is a compact, handheld energy sidearm used primarily by Starfleet personnel and Federation security forces. It projects a controlled energy beam capable of non‑lethal incapacitation as well as progressively more destructive effects, making it a general‑purpose tool for defense, enforcement, and away‑team operations when heavier arms are unnecessary.",
       "Sections": {
-        "What a phaser pistol is": "A phaser pistol is a compact, single-operator directed-energy weapon designed for short- to mid-range engagements. Compared with rifle-format phasers, it prioritizes portability and rapid handling over sustained output or accessories, and is commonly carried as standard issue for shipboard security and landing parties.",
-        "How it’s used": "Phaser pistols are routinely configured for specific mission needs—such as stun for crowd control or capture, or higher yields for hostile threats. In practice, users rely on quick target acquisition and controlled bursts, and the weapon’s form factor supports one-handed use while interacting with consoles, tricorders, or environmental controls.",
-        "Output control and safety": "A defining feature is adjustable yield. Settings enable consistent, repeatable effects (e.g., non-lethal incapacitation) when discipline and restraint matter, while higher outputs are reserved for lethal force. Standard handling assumes safety interlocks and deliberate selection of yield to avoid unintended harm.",
-        "Operational limits and countermeasures": "As with other directed-energy weapons, effectiveness can be reduced by defensive fields, shielding, and environmental interference. Power availability and emitter condition also matter: extended use, damage, or hostile conditions can degrade performance and force a change in tactics.",
-        "Where it fits in the wider weapons stack": "Phaser pistols complement heavier personal weapons rather than replacing them. Teams often pair sidearms with rifles or specialized equipment so they can shift from close-quarters control to longer-range suppression without changing the mission loadout."
+        "What a phaser pistol is": "The phaser pistol is the standard personal energy weapon form factor: small enough for constant carry, large enough for stable handling and sustained fire in close‑to‑medium engagements. It serves as the default sidearm for security teams and officers operating outside armored positions.",
+        "Emitter, power, and controls": "Hand phasers are built around an emitter assembly and an internal power supply, with external controls used to select output level and firing mode. Many designs incorporate a compact status indicator and a safety or lockout to prevent accidental discharge while holstered or carried.",
+        "Settings and effects": "A defining feature is adjustable output. Lower settings can stun or incapacitate living targets, while higher settings can cause serious injury or lethal results and can also be used to cut, heat, or damage materials. The same adjustability supports careful escalation of force, but also demands disciplined selection under stress.",
+        "Tactical roles": "As a sidearm, the phaser pistol emphasizes readiness and mobility: quick presentation, one‑handed firing, and use in confined corridors, rooms, and shipboard compartments. Away teams use it for personal defense and for controlled interactions with unknown threats without committing to crew‑served weapons.",
+        "Operations, safeties, and failure modes": "Phasers can be rendered safe by control lockouts and can be disabled, drained, or damaged. Miscalibration or misuse can lead to unintended intensity, while intentional overload is treated as an extreme measure with dangerous consequences at close range.",
+        "Countermeasures and defenses": "Personal shields, forcefields, and armored barriers can reduce or negate sidearm effectiveness. Targets behind cover, in dense environmental interference, or protected by active defensive systems may require higher settings, alternate angles, or coordinated fire to achieve results.",
+        "Doctrine and accountability": "Because it can range from incapacitation to lethal force, a phaser sidearm is as much a rules‑of‑engagement instrument as a weapon. Security practice emphasizes controlled settings, clear fields of fire, and safeguards against loss, capture, or use by unauthorized personnel.",
+        "Evolution across eras": "Across Starfleet service history, sidearms retain the same core concept—selectable energy output in a compact device—while external styling, interface layout, and ergonomics evolve to match contemporary equipment standards and mission profiles."
       },
       "RelatedTechIDs": [
         "st-phasers",
-        "st-force-field"
+        "st-force-fields"
       ],
       "Appearances": [
         {
@@ -3295,44 +3570,41 @@
           "RefType": "Film",
           "Series": "Film",
           "Title": "Star Trek: First Contact",
-          "Season": 0,
-          "Episode": 0,
+          "Season": null,
+          "Episode": null,
           "Notes": "Starfleet hand phasers used during close-quarters boarding actions."
         }
       ],
       "Variants": [
         {
-          "Name": "Type 1 phaser",
-          "Summary": "A very small, easily concealed hand phaser design used for personal defense and covert carry in multiple eras."
+          "Name": "Compact carry sidearm",
+          "Summary": "Smaller, lighter sidearm builds favoring concealment and constant carry for officers who are not primarily security."
         },
         {
-          "Name": "Type 2 phaser",
-          "Summary": "A larger hand phaser commonly issued to Starfleet officers; often treated as the standard sidearm in the late 24th century."
+          "Name": "Heavy-duty pistol format",
+          "Summary": "Bulkier pistol variants optimized for steadier aim, higher sustained output, or extended duty use by security teams."
         }
       ],
       "KeyTerms": [
-        {
-          "Term": "Stun setting",
-          "Definition": "A non-lethal yield mode used to incapacitate targets without intended fatal injury."
-        },
-        {
-          "Term": "Kill setting",
-          "Definition": "A lethal yield mode used when a threat requires deadly force."
-        },
-        {
-          "Term": "Type designation",
-          "Definition": "A size/role convention used for handheld phasers, distinguishing compact sidearms from larger units."
-        }
+        "phaser",
+        "sidearm",
+        "stun setting",
+        "variable output",
+        "emitter",
+        "power cell",
+        "targeting aid",
+        "safety lockout",
+        "overload"
       ],
       "Operators": [
-        "Starfleet",
-        "Federation security and away teams"
+        "Starfleet (away teams and ship security)",
+        "United Federation of Planets member security services"
       ],
       "Constraints": [
-        "Handheld phasers rely on internal power capacity; extended engagements can require recharge, replacement, or weapon swaps.",
-        "Defensive fields and shields can reduce or block phaser effects, forcing teams to change approach or close distance.",
-        "Damage, contamination, or environmental interference can degrade beam coherence and reliability.",
-        "Capture risk is significant: portable weapons can be taken and turned against their operators in close quarters."
+        "Effective engagement depends on line of sight and maintaining a stable firing solution on the target.",
+        "Output selection is a tactical and ethical constraint; the same device can incapacitate or kill depending on setting.",
+        "Power availability and weapon condition limit sustained use; damaged emitters or depleted cells reduce effectiveness.",
+        "Defensive fields, strong cover, and armored barriers can significantly reduce or negate sidearm effects."
       ],
       "Meta": {
         "Series": [
@@ -3340,11 +3612,14 @@
           "TNG",
           "DS9",
           "VOY",
-          "Films"
+          "PIC",
+          "SNW",
+          "FILM"
         ],
         "Era": [
           "23rd century",
-          "24th century"
+          "24th century",
+          "25th century"
         ],
         "Affiliations": [
           "United Federation of Planets",
@@ -3363,17 +3638,22 @@
       "Name": "Phaser rifle",
       "SystemID": "handheld-weapons",
       "Type": "Weapon",
-      "Summary": "A shoulder-fired or two-handed phaser built for greater sustained output, stability, and engagement flexibility than a sidearm. Rifle-format phasers are commonly issued for security operations, boarding actions, and combat situations where range, accuracy, and endurance matter.",
+      "Summary": "A phaser rifle is a larger personal energy weapon designed for extended range, better stability, and higher sustained output than a sidearm. Starfleet deploys rifles when away teams or shipboard forces anticipate heavy resistance, need area control, or require precision fire with greater endurance than a standard phaser pistol.",
       "Sections": {
-        "What a phaser rifle is": "A phaser rifle is a larger personal phaser that trades compactness for improved handling and capacity. The longer body supports more stable aiming and typically accommodates larger power reserves and control surfaces suited to sustained engagements.",
-        "Tactical role": "Rifles are favored when a team expects resistance, needs suppressive fire, or must engage targets at longer standoff distances. In organized actions—such as perimeter defense or shipboard retaking operations—rifles help establish controlled lanes of fire and coordinated coverage.",
-        "Output and firing modes": "Like other phasers, rifle-format weapons support adjustable yield, allowing operators to scale from incapacitation to lethal effects. In practice, operators use measured bursts, wider dispersal patterns when needed, and higher yields for hardened targets or time-critical threats.",
-        "Specialized rifles": "Some missions call for specialized rifle patterns that prioritize penetration, endurance, or operation under hostile conditions. These variants appear when standard phaser output is reduced by dampening effects or when teams need a different balance of portability and power.",
-        "Operational limits and countermeasures": "Rifles remain subject to the same broad constraints as other directed-energy weapons: shielding and force fields can negate effects, and environmental interference can reduce beam quality. Even with larger power reserves, long engagements can drive heat/power management and resupply concerns."
+        "What a phaser rifle is": "Phaser rifles are shoulder‑ or two‑hand weapons built for combat endurance. They trade portability for better handling, longer engagement distances, and improved control over sustained fire.",
+        "Form factor and handling": "Rifles typically provide multiple grip points and a longer sight line, improving stability and recoil management compared with a pistol‑grip sidearm. Many configurations support firing from cover and rapid re‑aiming between targets in chaotic environments.",
+        "Output, modes, and endurance": "Rifles can deliver higher effective output for longer periods without immediately exhausting their power reserve. They remain adjustable across a range of intensities, supporting both incapacitation and destructive applications depending on mission and rules of engagement.",
+        "Targeting and fire control": "Rifle designs often incorporate more prominent targeting aids—such as a dedicated sight or compact display—intended to help users maintain aim and manage settings under stress. This supports coordinated volleys and controlled suppression in tactical actions.",
+        "Operational roles": "Rifles are used for perimeter defense, boarding actions, and hostile‑environment away missions where threats may be numerous or heavily armed. They are also fielded when the team must hold ground, escort civilians, or repel boarding parties in ship interiors.",
+        "Operations, safeties, and failure modes": "Rifles can be disabled, damaged, or depleted like other phaser weapons; impact damage and overheating from prolonged high‑output use can reduce performance. Their larger form factor increases the risk of snagging in tight quarters and complicates concealment or quick stowage.",
+        "Countermeasures and defenses": "Forcefields, personal shields, and hardened cover can blunt rifle fire. Adversaries may also use dispersion, maneuver, or electronic countermeasures to break aim and reduce the value of sustained fire at distance.",
+        "Evolution across eras": "Across eras, rifle designs shift with Starfleet doctrine—from patrol and security rifles to specialized away‑team weapons—while preserving the same essentials: adjustable energy output, stable handling, and improved endurance compared with sidearms."
       },
       "RelatedTechIDs": [
+        "st-phaser-pistol",
         "st-phasers",
-        "st-force-field"
+        "st-deflector-shields",
+        "st-force-fields"
       ],
       "Appearances": [
         {
@@ -3404,55 +3684,51 @@
           "RefType": "Film",
           "Series": "Film",
           "Title": "Star Trek: First Contact",
-          "Season": 0,
-          "Episode": 0,
+          "Season": null,
+          "Episode": null,
           "Notes": "Rifle-format phasers used in shipboard combat conditions."
         }
       ],
       "Variants": [
         {
-          "Name": "Type 3 phaser",
-          "Summary": "A common Starfleet phaser rifle pattern used for security and combat operations."
+          "Name": "Away-team rifle",
+          "Summary": "General-purpose field rifle carried by away teams when hostile contact is likely."
         },
         {
-          "Name": "Compression phaser rifle",
-          "Summary": "A specialized rifle pattern used when standard phaser effects are reduced by certain dampening conditions."
+          "Name": "Shipboard security rifle",
+          "Summary": "Rifle configurations optimized for corridor fighting, boarding defense, and rapid response within starship interiors."
         }
       ],
       "KeyTerms": [
-        {
-          "Term": "Suppressive fire",
-          "Definition": "Sustained or repeated firing intended to restrict an opponent’s movement rather than achieve immediate incapacitation."
-        },
-        {
-          "Term": "Compression phaser rifle",
-          "Definition": "A distinct phaser rifle pattern associated with improved performance in some dampening environments."
-        },
-        {
-          "Term": "Engagement standoff",
-          "Definition": "The distance a team tries to maintain to reduce exposure while still applying force effectively."
-        }
+        "phaser",
+        "rifle",
+        "targeting display",
+        "sustained output",
+        "two-hand stability",
+        "variable setting",
+        "security response"
       ],
       "Operators": [
-        "Starfleet",
-        "Federation security",
-        "Away teams"
+        "Starfleet Security and tactical teams",
+        "Federation-aligned planetary or station security forces"
       ],
       "Constraints": [
-        "Rifle-format phasers are larger and more conspicuous, reducing concealment and increasing encumbrance on delicate missions.",
-        "Defensive fields and shields can neutralize phaser fire; teams may need to disable emitters or change tactics.",
-        "Some dampening effects can render standard phasers ineffective, driving reliance on specialized rifles or alternative tools.",
-        "A larger power reserve supports longer use but does not eliminate the need for recharging, maintenance, and emitter integrity."
+        "Larger size reduces concealment and can impede movement in tight corridors or cluttered environments.",
+        "Sustained high-output use draws heavily on power reserves and can stress weapon components if damaged or poorly maintained.",
+        "Effectiveness still depends on line of sight and the ability to hold aim under fire and environmental interference.",
+        "Defensive fields and hardened cover can significantly reduce or negate beam effects, especially at lower settings."
       ],
       "Meta": {
         "Series": [
           "TNG",
           "DS9",
           "VOY",
-          "Films"
+          "PIC",
+          "FILM"
         ],
         "Era": [
-          "24th century"
+          "24th century",
+          "25th century"
         ],
         "Affiliations": [
           "United Federation of Planets",
@@ -3471,17 +3747,20 @@
       "Name": "Klingon disruptor",
       "SystemID": "handheld-weapons",
       "Type": "Weapon",
-      "Summary": "A Klingon directed-energy small arm—often issued as pistols or rifles—built for rugged combat use and typically employed as a lethal weapon. Disruptors function by breaking down matter at the molecular level, producing destructive effects that align with Klingon tactical doctrine.",
+      "Summary": "A Klingon disruptor is a rugged handheld energy weapon used by warriors of the Klingon Empire and allied forces. Designed for reliability and battlefield use, disruptors deliver destructive energy discharge with straightforward controls, favoring decisive stopping power and intimidation over the broader non‑lethal flexibility associated with many Federation phaser sidearms.",
       "Sections": {
-        "What a Klingon disruptor is": "Klingon disruptors are handheld directed-energy weapons used by Klingon forces and operatives. They appear in multiple form factors—compact pistols and longer rifles—optimized for combat durability and straightforward operation.",
-        "How disruptors differ from phasers": "Disruptors are characterized by destructive effects consistent with molecular disruption rather than the phaser emphasis on finely graded, routine non-lethal control. While output can vary by model and circumstance, Klingon disruptors are most often portrayed as combat weapons intended to disable or kill quickly.",
-        "Tactical use": "Klingon disruptors are used in boarding actions, ground assaults, and shipboard confrontations where decisive force is valued. In close quarters, operators favor quick shots and aggressive movement, pairing disruptors with bladed weapons when the fight collapses into melee range.",
-        "Forms and configurations": "Rifle variants provide improved handling and higher energy delivery compared with pistols, supporting longer-range engagements and heavier fire. Pistols emphasize portability for boarding parties, security patrols, and personal carry.",
-        "Operational limits": "Like other directed-energy weapons, disruptors can be blocked or mitigated by shielding and force fields. Environmental interference and weapon damage can reduce reliability, and power capacity limits sustained firing."
+        "What a Klingon disruptor is": "Klingon disruptors are personal energy weapons fielded as pistols and larger long‑arms. Their visual language and construction emphasize durability and aggressive profile, aligned with Klingon combat culture and doctrine.",
+        "Construction and ergonomics": "Common designs feature a heavy upper housing, prominent vents and ridges, and an emitter assembly sized for repeated firing. Many examples show robust grip geometry and exposed mechanical detailing consistent with battlefield maintenance and rapid issue.",
+        "Output and intended use": "Disruptors are typically depicted as lethal or destructive weapons, used to stop threats quickly rather than to provide graded, non‑lethal enforcement. This aligns with Klingon expectations of combat resolution and personal honor in conflict.",
+        "Tactical roles": "Klingon forces employ disruptors in boarding actions, ground assaults, and close‑quarters engagements where intimidation, shock, and quick incapacitation matter. The weapons complement blades and hand‑to‑hand techniques rather than replacing them.",
+        "Operations, safeties, and failure modes": "Like other energy weapons, disruptors depend on a functioning power source and emitter condition. Damage, depleted power, or misalignment can reduce performance; rough handling and harsh environments can also degrade firing reliability without proper maintenance.",
+        "Countermeasures and defenses": "Forcefields, shields, and armored cover can block or reduce disruptor fire. Tactical responses include taking cover, forcing close range, or coordinating volleys to exploit openings when defenses flicker or are overloaded.",
+        "Cultural and doctrinal context": "Disruptors sit within a wider Klingon weapons tradition where blades remain significant. A warrior may carry both a disruptor and an edged weapon, shifting between ranged and close combat depending on circumstance.",
+        "Evolution across eras": "Disruptor silhouettes and controls vary between eras and factions within the Empire, but the core role remains consistent: a rugged handheld energy weapon optimized for decisive combat use."
       },
       "RelatedTechIDs": [
-        "st-phasers",
-        "st-force-field"
+        "st-deflector-shields",
+        "st-force-fields"
       ],
       "Appearances": [
         {
@@ -3512,56 +3791,55 @@
           "RefType": "Film",
           "Series": "Film",
           "Title": "Star Trek VI: The Undiscovered Country",
-          "Season": 0,
-          "Episode": 0,
+          "Season": null,
+          "Episode": null,
           "Notes": "Klingon weapons are featured during high-stakes confrontations and security actions."
         }
       ],
       "Variants": [
         {
           "Name": "Disruptor pistol",
-          "Summary": "A compact sidearm pattern suited to boarding actions and personal carry."
+          "Summary": "Sidearm-scale disruptor used by individual warriors for boarding and personal defense."
         },
         {
-          "Name": "Disruptor rifle",
-          "Summary": "A longer weapon form delivering more energy than pistol patterns for heavier engagements."
+          "Name": "Disruptor long-arm",
+          "Summary": "Larger disruptor formats carried for squad actions and sustained combat, emphasizing range and endurance."
         }
       ],
       "KeyTerms": [
-        {
-          "Term": "Molecular disruption",
-          "Definition": "A destructive effect associated with disruptor weapons, breaking down molecular bonds in the target."
-        },
-        {
-          "Term": "Boarding action",
-          "Definition": "Close-range combat where teams attempt to seize control of a ship or station interior."
-        },
-        {
-          "Term": "Klingon doctrine",
-          "Definition": "A broad cultural preference for decisive confrontation that shapes typical weapon selection and use."
-        }
+        "disruptor",
+        "energy sidearm",
+        "emitter",
+        "power cell",
+        "lethal weapon",
+        "boarding action",
+        "Klingon Empire"
       ],
       "Operators": [
-        "Klingon Defense Force",
         "Klingon Empire",
-        "Klingon warriors"
+        "Klingon Defense Force"
       ],
       "Constraints": [
-        "Shielding and force fields can block disruptor fire, forcing Klingon teams to overwhelm defenses or shift to close combat.",
-        "Handheld disruptors have finite power capacity; sustained engagements can require resupply or weapon swaps.",
-        "In confined shipboard spaces, missed shots and ricochet/over-penetration risks can endanger allies and critical systems.",
-        "Capture and reuse by opponents is a recurring risk with any portable weapon."
+        "Weapon performance depends on emitter condition and power availability; damage or depletion reduces effectiveness.",
+        "Shields, forcefields, and armored barriers can block or diminish disruptor discharge.",
+        "Close-quarters fighting and rapid maneuver can break aim and reduce the advantage of ranged fire.",
+        "Capture or loss of weapons is a persistent operational risk in boarding and melee-heavy engagements."
       ],
       "Meta": {
         "Series": [
           "TOS",
           "TNG",
           "DS9",
-          "Films"
+          "VOY",
+          "ENT",
+          "PIC",
+          "FILM"
         ],
         "Era": [
+          "22nd century",
           "23rd century",
-          "24th century"
+          "24th century",
+          "25th century"
         ],
         "Affiliations": [
           "Klingon Empire"
@@ -3579,16 +3857,20 @@
       "Name": "Bat'leth",
       "SystemID": "handheld-weapons",
       "Type": "Weapon",
-      "Summary": "A Klingon bladed weapon closely tied to honor culture and martial tradition, used both as a practical close-combat tool and as a ceremonial symbol. Its distinctive form supports powerful cuts and hooks in trained hands, and it is commonly associated with Klingon rituals, duels, and warrior status.",
+      "Summary": "The bat’leth is a large Klingon melee weapon with a distinctive crescent profile and multiple handholds. It is used in combat and ceremonial contexts, and its design supports aggressive close‑quarters techniques—hooks, traps, and powerful cuts—while remaining iconic as a symbol of Klingon warrior identity.",
       "Sections": {
-        "What a bat’leth is": "The bat’leth is a Klingon melee weapon with a distinctive multi-grip, curved blade profile meant for two-handed fighting. In Klingon culture it functions as both a weapon and a status symbol, often carried or displayed in connection with personal honor and readiness for combat.",
-        "Handling and combat role": "Bat’leth technique emphasizes leverage, controlled arcs, and quick transitions between guard and strike. In close quarters, it provides reach and defensive coverage compared with knives, while remaining usable aboard ships and stations where ranged weapons may be constrained or undesirable.",
-        "Cultural significance": "Bat’leths appear in rites, tournaments, and formal duels, where skill and restraint can matter as much as lethality. Carrying or wielding a bat’leth often signals a warrior’s identity and their willingness to meet challenges face-to-face.",
-        "Integration with modern tactics": "Even in eras dominated by energy weapons, bat’leths persist because they remain effective when technology fails or is constrained—such as in dampening fields, security restrictions, or situations where silent, close engagement is required.",
-        "Notable legacy items": "Klingon tradition includes legendary bat’leths, with mythic and political weight attached to their possession, reinforcing the weapon’s role beyond pure utility."
+        "What a bat’leth is": "A bat’leth is a heavy, crescent-shaped blade with integrated grip cutouts and wrapped handholds. Its geometry encourages two‑handed use and rapid transitions between slashes, blocks, and grappling engagements.",
+        "Handling and technique": "The weapon’s curved form allows hooking maneuvers and close‑in trapping, with multiple grip points supporting quick changes in leverage. Training emphasizes control and timing, as the weapon’s size and mass can be hazardous to the user in confined spaces.",
+        "Combat roles": "Bat’leths are used in close‑quarters fighting, duels, and boarding actions where range is limited. They remain relevant alongside energy weapons because combatants may be disarmed, engage under restrictive rules, or choose blade combat for cultural reasons.",
+        "Ceremony and identity": "Beyond battlefield use, the bat’leth functions as a cultural artifact associated with Klingon honor and warrior status. It is commonly displayed, carried, and used in ritualized contexts as well as practical training.",
+        "Materials and construction": "On screen, bat’leths appear as metallic weapons with wrapped grips and durable edge geometry. Wear patterns—nicks, scuffs, and grip abrasion—reflect repeated handling, training strikes, and field carriage.",
+        "Operational constraints": "A bat’leth requires proximity and space to swing effectively. It is disadvantaged against ranged weapons in open ground, and its size can limit maneuverability in narrow corridors, forcing users to rely on technique and timing rather than reach alone.",
+        "Countermeasures and defenses": "Personal shields and forcefields can deny blade contact, and armored clothing can reduce cutting effectiveness. Klingon fighters often respond by targeting openings, using hooking/trapping, or forcing grappling distance.",
+        "Variations and traditions": "Bat’leth forms vary in finish and detailing by owner and house, but the recognizable crescent and handhold layout remains constant across most portrayals."
       },
       "RelatedTechIDs": [
-        "st-klingon-disruptor"
+        "st-mekleth",
+        "st-force-fields"
       ],
       "Appearances": [
         {
@@ -3603,8 +3885,8 @@
           "RefType": "Film",
           "Series": "Film",
           "Title": "Star Trek Generations",
-          "Season": 0,
-          "Episode": 0,
+          "Season": null,
+          "Episode": null,
           "Notes": "Bat'leth used in close-quarters Klingon combat."
         },
         {
@@ -3626,48 +3908,43 @@
       ],
       "Variants": [
         {
-          "Name": "Training bat'leth",
-          "Summary": "A practice version used for drills and tournaments where injury risk is controlled."
+          "Name": "Training bat’leth",
+          "Summary": "Blunted or safer variants used for practice, sparring, and ceremonial demonstrations."
         },
         {
-          "Name": "Sword of Kahless",
-          "Summary": "A legendary bat'leth associated with Klingon mythology and political legitimacy."
+          "Name": "Personalized bat’leth",
+          "Summary": "House or owner-specific finishes and detailing reflecting status, tradition, and personal preference."
         }
       ],
       "KeyTerms": [
-        {
-          "Term": "Duel",
-          "Definition": "A formalized combat challenge, often tied to honor disputes and leadership claims."
-        },
-        {
-          "Term": "Close-quarters combat",
-          "Definition": "Fighting within arm’s reach where melee weapons and grappling dominate."
-        },
-        {
-          "Term": "Honor culture",
-          "Definition": "A Klingon social framework where status is tied to courage, direct confrontation, and reputation."
-        }
+        "bat'leth",
+        "Klingon melee weapon",
+        "two-hand weapon",
+        "duel",
+        "close quarters",
+        "hooking blade"
       ],
       "Operators": [
-        "Klingon Empire",
         "Klingon warriors",
-        "Klingon cultural institutions"
+        "Klingon Defense Force"
       ],
       "Constraints": [
-        "Effective use depends heavily on training; unskilled wielders are at high risk of self-injury or disarmament.",
-        "Melee range requires closing distance under fire; against prepared opponents with ranged weapons this can be tactically costly.",
-        "Confined interiors can limit wide swings, pushing fighters toward short, controlled strikes and grappling.",
-        "Bladed weapons require maintenance (edge condition, balance) to remain reliable in repeated use."
+        "Requires close range; effectiveness depends on reaching and maintaining melee distance.",
+        "Size and swing arcs can be limited by corridors, crowded interiors, or obstacles.",
+        "Vulnerable to ranged weapons in open space without cover or closing tactics.",
+        "Forcefields and personal shields can prevent blade contact or blunt effectiveness."
       ],
       "Meta": {
         "Series": [
           "TNG",
           "DS9",
           "VOY",
-          "Films"
+          "PIC",
+          "FILM"
         ],
         "Era": [
-          "24th century"
+          "24th century",
+          "25th century"
         ],
         "Affiliations": [
           "Klingon Empire"
@@ -3685,13 +3962,16 @@
       "Name": "Mek'leth",
       "SystemID": "handheld-weapons",
       "Type": "Weapon",
-      "Summary": "A compact Klingon bladed weapon suited to close-quarters fighting, favored as a personal sidearm alongside disruptors. Its smaller size makes it practical in shipboard interiors and boarding actions where fights can collapse into grappling range.",
+      "Summary": "The mek’leth is a compact Klingon bladed weapon designed for close combat where a full-sized sword or bat’leth is impractical. Its short, curved profile favors quick cuts, hooks, and tight‑space fighting, making it a common sidearm for Klingon warriors alongside disruptors and other equipment.",
       "Sections": {
-        "What a mek’leth is": "The mek’leth is a short Klingon blade carried as a personal weapon. Compared with a bat’leth, it is easier to wear on the body and faster to draw, making it a common choice for tight corridors, crowded decks, and sudden close-range confrontations.",
-        "Combat role": "The mek’leth emphasizes quick cuts, hooks, and close-in control. It is well suited to engagements where a fighter must keep one hand free, operate in confined spaces, or transition rapidly between weapon use and grappling.",
-        "Pairing with disruptors": "Klingon fighters often treat bladed weapons as a complement to disruptors rather than an alternative. A mek’leth provides a reliable option when ranged weapons are blocked, depleted, restricted, or tactically risky, and it supports Klingon preferences for direct confrontation.",
-        "Cultural use": "While primarily practical, the mek’leth also participates in Klingon warrior identity—carried as a visible sign of readiness and used in training or ritual contexts where bladed skill is valued.",
-        "Operational limits": "As a melee weapon it requires closing distance, and its effectiveness depends on user skill and physical positioning. It is less suited than longer blades to controlling space at reach, trading that for speed and portability."
+        "What a mek’leth is": "A mek’leth is a short Klingon blade with an aggressive curved profile and a compact grip. It is suited to fast, close engagements and can be carried as a practical sidearm.",
+        "Design and handling": "The weapon’s shape supports hooking and ripping motions as well as slashing. A wrapped handle improves grip security, and the compact length makes it usable in narrow corridors or when grappling at arm’s length.",
+        "Combat roles": "Mek’leths appear as backup weapons, duel blades, or close‑quarters tools when ranged weapons are unavailable, undesirable, or restricted. They complement Klingon fighting traditions that value personal combat skill.",
+        "Carry and accessibility": "Because it is smaller than a bat’leth, the mek’leth is easier to stow and deploy quickly. This makes it suitable for shipboard use, boarding parties, and situations where a larger weapon would be awkward.",
+        "Materials and construction": "Portrayals show metallic blades with visible wear—edge scuffs and surface scratches—consistent with repeated handling and training. Grips often appear leather-wrapped or textured for control.",
+        "Operational constraints": "As a short weapon, it sacrifices reach and leverage compared to larger blades. Users must close distance decisively and avoid being kept at range by longer weapons or ranged fire.",
+        "Countermeasures and defenses": "Personal shields and forcefields can deny blade contact. Armor and rigid clothing can reduce cutting efficiency, pushing fighters toward targeted thrusts, trapping, or grappling techniques.",
+        "Variations and traditions": "Mek’leths vary in exact curvature, tip shape, and finish by era and individual owner, but remain recognizable as compact Klingon blades intended for close-in fighting."
       },
       "RelatedTechIDs": [
         "st-batleth",
@@ -3710,8 +3990,8 @@
           "RefType": "Film",
           "Series": "Film",
           "Title": "Star Trek: First Contact",
-          "Season": 0,
-          "Episode": 0,
+          "Season": null,
+          "Episode": null,
           "Notes": "Worf is depicted with his mek'leth among personal weapons."
         },
         {
@@ -3733,45 +4013,41 @@
       ],
       "Variants": [
         {
-          "Name": "Worf’s mek'leth",
-          "Summary": "A personal mek'leth associated with Worf, carried repeatedly across late DS9 and into film appearances."
+          "Name": "Utility sidearm blade",
+          "Summary": "Everyday carry versions sized for practical shipboard or field use."
         },
         {
-          "Name": "Ceremonial mek'leth",
-          "Summary": "A presentation or ritual blade pattern used for display or formal occasions rather than daily carry."
+          "Name": "Ceremonial mek’leth",
+          "Summary": "Highly finished blades used for ritual, display, or formal duels rather than routine combat."
         }
       ],
       "KeyTerms": [
-        {
-          "Term": "Sidearm",
-          "Definition": "A secondary weapon carried for quick access when a primary weapon is unavailable or unsuitable."
-        },
-        {
-          "Term": "Boarding corridor",
-          "Definition": "Tight interior combat spaces where short weapons and grappling are common."
-        },
-        {
-          "Term": "Draw speed",
-          "Definition": "How quickly a weapon can be brought into use from a carried position."
-        }
+        "mek'leth",
+        "Klingon blade",
+        "sidearm",
+        "close quarters",
+        "hooked blade",
+        "leather grip"
       ],
       "Operators": [
-        "Klingon Empire",
-        "Klingon warriors"
+        "Klingon warriors",
+        "Klingon Defense Force"
       ],
       "Constraints": [
-        "As a melee weapon, it requires closing distance under threat; opponents with ranged weapons can exploit standoff.",
-        "Confined interiors can both help and hinder: they limit an opponent’s reach but also constrain movement and footwork.",
-        "Effectiveness is highly skill-dependent; poor technique can lead to disarmament in grappling range.",
-        "Bladed weapons require upkeep and safe carry practices to avoid accidental injury."
+        "Very short reach requires closing distance; disadvantaged against longer melee weapons without superior timing.",
+        "Vulnerable to ranged weapons and area denial unless the user can force close engagement.",
+        "Forcefields and personal shields can prevent blade contact entirely.",
+        "Injury risk is high in grappling distance; control and restraint are critical in confined ship interiors."
       ],
       "Meta": {
         "Series": [
           "DS9",
-          "Films"
+          "PIC",
+          "FILM"
         ],
         "Era": [
-          "24th century"
+          "24th century",
+          "25th century"
         ],
         "Affiliations": [
           "Klingon Empire"
