@@ -254,14 +254,15 @@
       .sysHero{ grid-template-columns: 1fr; }
     }
   </style>
-<style id="mainConsoleInlineStyle">
-  .main-console-inline{
+<style id="mainConsoleLeftStyle">
+  .mainConsoleLeftWrap{
     display:flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:flex-start;
+    margin-top: 10px;
   }
-  .main-console-inline a{
-    text-decoration:none;
+  .mainConsoleLeftWrap a,
+  .mainConsoleLeftWrap button{
+    cursor:pointer;
   }
 </style>
 </head>
@@ -271,9 +272,9 @@
       <div class="titleRow">
         <div class="brand">
           <h1>TEC‑TREK</h1>
-          <div class="sub">Science & Technology Database</div>
-        <div class="main-console-inline" style="margin-top:12px;"><a class="btn" href="https://bigbird7827.github.io/Main-Console/">MAIN CONSOLE</a></div>
+        <div class="mainConsoleLeftWrap" style="margin: 14px 0 14px;"><button class="chipBtn" type="button" onclick="window.location.href='https://bigbird7827.github.io/Main-Console/'">Main Console</button></div>
 
+          <div class="sub">Science & Technology Database</div>
         </div>
         <div class="badgeRow">
           <div class="badge"><span>Total Tech</span> <b id="totalTech">0</b></div>
